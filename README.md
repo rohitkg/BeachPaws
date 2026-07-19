@@ -1,6 +1,8 @@
-# Kent Beach Filter
+# BeachPaws
 
-A static webpage to find Kent beaches by sand type and dog-friendliness, backed by real data. Filter by beach name, sediment (sand only / mixed), dog rules (year-round friendly, friendly in a given month, banned, unknown) and EA water-quality monitoring status.
+A static webpage to find your dog's perfect beach, backed by real data. Filter by beach name, sediment (sand only / mixed), dog rules (year-round friendly, friendly in a given month, banned, unknown) and EA water-quality monitoring status.
+
+Currently covers **Kent**. Built to expand nation by nation — see [Expand coverage](#expand-coverage).
 
 ## Data sources
 
@@ -48,7 +50,11 @@ The pipeline **never modifies the curated files**. To update dog rules or add be
 
 ## Expand coverage
 
+**Rest of England** (same EA API, same pipeline):
+
 1. Add districts to `data/config.json` (names must match the EA API exactly, e.g. `"Folkestone and Hythe"`).
 2. Rerun the pipeline; every new beach is flagged `WARN: no dog data`.
 3. Research the council's dog PSPO for each new beach and add entries to `data/dog_rules.json` with `source` + `accessed`.
 4. Rerun again until the warnings you care about are gone.
+
+**Wales / Scotland / Northern Ireland** (not yet implemented): water-quality monitoring is run by separate agencies — Natural Resources Wales (NRW), SEPA (Scotland), DAERA (Northern Ireland) — each with a different data format, and none confirmed to have as clean an API as the EA's. Adding a nation means a new fetch function per agency in `scripts/build_data.py`, plus the same manual council-by-council dog-rule curation. Bigger lift than adding an English district; scope it separately when the time comes.
