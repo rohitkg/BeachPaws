@@ -14,8 +14,11 @@ No build step. Surface = browser GUI.
    bathing waters + 6 curated extras in `data/extra_beaches.json`,
    which carry a grey "Not an EA bathing water" badge):
    - Dogs "Friendly year round" → 13 of 36
-   - Sand "Sandy" + "Friendly year round" → 12 (incl. Kingsgate Bay,
-     Dumpton Gap)
+   - Sand "Sand only" → 5 (Viking, Joss, Louisa, Palm, Ramsgate Sands);
+     "Mixed sand & shingle/rock" → 27. Shingle-only and
+     sediment-unknown beaches appear only under "Any"
+   - Search "margaret's" → 1 (backtick in EA name normalized)
+   - Reset filters button → all controls to Any/empty, 36 shown
    - Dogs "Friendly in month…": April/October → 36, May–Sep → 20
      (13 friendly + 7 amber "restricted hours" beaches)
    - Dogs "Not allowed" → 0, empty state, markers cleared

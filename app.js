@@ -6,7 +6,7 @@
     "July", "August", "September", "October", "November", "December"];
 
   var state = {
-    sandy: "any",              // any | yes | no
+    sandy: "any",              // any | sand-only | mixed
     dog: "any",                // any | yearround | month | banned | unknown
     month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
     monitored: "any",          // any | yes | no — EA-designated bathing water
@@ -73,9 +73,11 @@
     var query = normalize(state.query.trim());
     beaches.forEach(function (beach) {
       if (query && normalize(beach.name).indexOf(query) === -1) return;
-      // Beaches with no EA sediment data only appear under "Any".
-      if (state.sandy === "yes" && !beach.sandy) return;
-      if (state.sandy === "no" && (beach.sandy || !beach.sediments.length)) return;
+      // Beaches with no sediment data only appear under "Any".
+      if (state.sandy === "sand-only" &&
+          !(beach.sandy && beach.sediments.length === 1)) return;
+      if (state.sandy === "mixed" &&
+          !(beach.sandy && beach.sediments.length > 1)) return;
       if (state.monitored === "yes" && beach.eaMonitored !== true) return;
       if (state.monitored === "no" && beach.eaMonitored !== false) return;
       var dm = dogMatch(beach);
@@ -118,8 +120,10 @@
   function badgesFor(beach, restrictedHours) {
     var wrap = document.createElement("div");
     wrap.className = "badges";
-    if (beach.sandy) {
-      wrap.appendChild(makeBadge("Sandy", "badge-sand"));
+    if (beach.sandy && beach.sediments.length === 1) {
+      wrap.appendChild(makeBadge("Sand only", "badge-sand"));
+    } else if (beach.sandy) {
+      wrap.appendChild(makeBadge("Mixed sand", "badge-sand"));
     } else if (beach.sediments.length) {
       wrap.appendChild(makeBadge("Not sandy", "badge-neutral"));
     } else {
@@ -304,6 +308,20 @@
     });
     document.getElementById("search-filter").addEventListener("input", function (ev) {
       state.query = ev.target.value;
+      applyFilters();
+    });
+    document.getElementById("reset-filters").addEventListener("click", function () {
+      state.sandy = "any";
+      state.dog = "any";
+      state.month = new Date().getMonth() + 1;
+      state.monitored = "any";
+      state.query = "";
+      document.getElementById("sandy-filter").value = "any";
+      document.getElementById("dog-filter").value = "any";
+      monthSelect.value = String(state.month);
+      document.getElementById("monitored-filter").value = "any";
+      document.getElementById("search-filter").value = "";
+      document.getElementById("month-group").hidden = true;
       applyFilters();
     });
   }

@@ -44,6 +44,17 @@ h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
 
 .result-count { margin-left: auto; color: #52606d; font-size: 0.9rem; }
 
+.reset-btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background: #fff;
+  color: #3e4c59;
+  cursor: pointer;
+}
+.reset-btn:hover { background: #e4e7eb; }
+
 .info-btn {
   width: 1.1rem;
   height: 1.1rem;
