@@ -10,10 +10,14 @@ No build step. Surface = browser GUI.
 1. Serve: `python3 -m http.server 8741` from repo root (fetch of
    `data/beaches.json` fails on `file://`).
 2. Open `http://localhost:8741` in the browser (claude-in-chrome works).
-3. Drive the filters and check counts against the dataset:
-   - Dogs "Friendly year round" → 7 of 30
-   - Dogs "Friendly in month…": April/October → 30, May–Sep → 14
-     (7 friendly + 7 amber "restricted hours" beaches)
+3. Drive the filters and check counts against the dataset (30 EA
+   bathing waters + 6 curated extras in `data/extra_beaches.json`,
+   which carry a grey "Not an EA bathing water" badge):
+   - Dogs "Friendly year round" → 13 of 36
+   - Sand "Sandy" + "Friendly year round" → 12 (incl. Kingsgate Bay,
+     Dumpton Gap)
+   - Dogs "Friendly in month…": April/October → 36, May–Sep → 20
+     (13 friendly + 7 amber "restricted hours" beaches)
    - Dogs "Not allowed" → 0, empty state, markers cleared
    - Sand "Not sandy" → 3 (Sandgate excluded: no EA sediment data,
      appears only under "Any" with grey "Sediment unknown" badge)

@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated": "2026-07-19T19:16:14Z",
+  "generated": "2026-07-19T19:28:45Z",
   "county": "Kent",
   "attribution": "Beach locations, sediment types and water quality from the Environment Agency Bathing Water Quality API (environment.data.gov.uk/bwq), Open Government Licence v3.0. Dog restrictions hand-curated from council PSPO pages; see per-beach source and accessed date.",
-  "beachCount": 30
+  "beachCount": 36
  },
  "beaches": [
   {
@@ -21,6 +21,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "East of Herne Bay pier, outside the seasonal exclusion zone (which runs pier west to Lane End); dogs on lead on the promenade",
@@ -43,6 +44,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -69,6 +71,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -94,6 +97,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "No PSPO beach restriction at West Beach; Canterbury council says most of its coastline is dog friendly all year",
@@ -115,6 +119,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -142,6 +147,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "No seasonal beach ban at Sandwich Bay; dogs are excluded from the mudflats and salt marshes year round and must be on a lead on the golf course dunes path",
@@ -164,6 +170,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -191,6 +198,7 @@
     "class": "Poor",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -217,6 +225,7 @@
     "class": "Sufficient",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -243,6 +252,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -269,6 +279,7 @@
     "class": "Poor",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -289,6 +300,7 @@
    "sandy": false,
    "sediments": [],
    "waterQuality": null,
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -315,6 +327,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -341,6 +354,7 @@
     "class": "Sufficient",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -367,6 +381,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -393,6 +408,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -418,6 +434,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -444,6 +461,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -471,6 +489,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -497,6 +516,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -504,6 +524,66 @@
      "to": "09-30"
     },
     "notes": "Viking Bay: dogs completely banned 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-dumpton-gap",
+   "name": "Dumpton Gap, Broadstairs",
+   "district": "Thanet",
+   "lat": 51.3466,
+   "lng": 1.4293,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "One of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-epple-bay",
+   "name": "Epple Bay, Birchington",
+   "district": "Thanet",
+   "lat": 51.3834,
+   "lng": 1.308,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "One of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-grenham-bay",
+   "name": "Grenham Bay, Birchington",
+   "district": "Thanet",
+   "lat": 51.3819,
+   "lng": 1.2952,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "One of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
     "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
     "accessed": "2026-07-19"
    }
@@ -522,6 +602,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -530,6 +611,45 @@
      "daily": "10:00-18:00"
     },
     "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-kingsgate-bay",
+   "name": "Kingsgate Bay, Broadstairs",
+   "district": "Thanet",
+   "lat": 51.3856,
+   "lng": 1.441,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "One of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-louisa-bay",
+   "name": "Louisa Bay, Broadstairs",
+   "district": "Thanet",
+   "lat": 51.3535,
+   "lng": 1.4386,
+   "sandy": true,
+   "sediments": [
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
     "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
     "accessed": "2026-07-19"
    }
@@ -549,6 +669,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "Fulsam Rock is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
@@ -571,6 +692,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -597,6 +719,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -604,6 +727,25 @@
      "to": "09-30"
     },
     "notes": "Dogs banned from the main area of Minnis Bay 1 May-30 Sep; northern seawall stretch stays dog friendly year round",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "x-thanet-palm-bay",
+   "name": "Palm Bay, Cliftonville",
+   "district": "Thanet",
+   "lat": 51.3936,
+   "lng": 1.409,
+   "sandy": true,
+   "sediments": [
+    "sand"
+   ],
+   "waterQuality": null,
+   "eaMonitored": false,
+   "dogs": {
+    "status": "friendly",
+    "notes": "One of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
     "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
     "accessed": "2026-07-19"
    }
@@ -622,6 +764,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -648,6 +791,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "Western Undercliff is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
@@ -670,6 +814,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -697,6 +842,7 @@
     "class": "Good",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
@@ -719,6 +865,7 @@
     "class": "Sufficient",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "seasonal",
     "ban": {
@@ -746,6 +893,7 @@
     "class": "Excellent",
     "year": 2025
    },
+   "eaMonitored": true,
    "dogs": {
     "status": "friendly",
     "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",

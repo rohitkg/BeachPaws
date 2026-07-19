@@ -1,0 +1,59 @@
+{
+  "_comment": "Hand-curated beaches that are NOT EA-designated bathing waters (so absent from the EA API, and have no official water-quality or sediment record). Coordinates approximate, placed between adjacent EA sampling points. Dog rules for these ids live in dog_rules.json like any other beach. Never written by the pipeline.",
+  "beaches": [
+    {
+      "id": "x-thanet-grenham-bay",
+      "name": "Grenham Bay, Birchington",
+      "district": "Thanet",
+      "lat": 51.3819,
+      "lng": 1.2952,
+      "sediments": ["rock", "sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    },
+    {
+      "id": "x-thanet-epple-bay",
+      "name": "Epple Bay, Birchington",
+      "district": "Thanet",
+      "lat": 51.3834,
+      "lng": 1.3080,
+      "sediments": ["rock", "sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    },
+    {
+      "id": "x-thanet-palm-bay",
+      "name": "Palm Bay, Cliftonville",
+      "district": "Thanet",
+      "lat": 51.3936,
+      "lng": 1.4090,
+      "sediments": ["sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    },
+    {
+      "id": "x-thanet-kingsgate-bay",
+      "name": "Kingsgate Bay, Broadstairs",
+      "district": "Thanet",
+      "lat": 51.3856,
+      "lng": 1.4410,
+      "sediments": ["rock", "sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    },
+    {
+      "id": "x-thanet-louisa-bay",
+      "name": "Louisa Bay, Broadstairs",
+      "district": "Thanet",
+      "lat": 51.3535,
+      "lng": 1.4386,
+      "sediments": ["sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    },
+    {
+      "id": "x-thanet-dumpton-gap",
+      "name": "Dumpton Gap, Broadstairs",
+      "district": "Thanet",
+      "lat": 51.3466,
+      "lng": 1.4293,
+      "sediments": ["rock", "sand"],
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
+    }
+  ]
+}

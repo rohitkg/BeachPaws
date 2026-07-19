@@ -122,6 +122,9 @@
         "Water: " + beach.waterQuality.class + " (" + beach.waterQuality.year + ")",
         "badge-wq-" + beach.waterQuality.class));
     }
+    if (beach.eaMonitored === false) {
+      wrap.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
+    }
     return wrap;
   }
 

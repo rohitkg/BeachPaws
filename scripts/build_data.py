@@ -132,7 +132,31 @@ def fetch_beach(beach_id, district):
         "sandy": "sand" in sediments,
         "sediments": sediments,
         "waterQuality": quality,
+        "eaMonitored": True,
     }
+
+
+def load_extra_beaches():
+    """Curated beaches that are not EA-designated bathing waters."""
+    path = DATA / "extra_beaches.json"
+    if not path.exists():
+        return []
+    extras = json.loads(path.read_text(encoding="utf-8"))["beaches"]
+    out = []
+    for e in extras:
+        sediments = sorted(e.get("sediments", []))
+        out.append({
+            "id": e["id"],
+            "name": e["name"],
+            "district": e["district"],
+            "lat": e.get("lat"),
+            "lng": e.get("lng"),
+            "sandy": "sand" in sediments,
+            "sediments": sediments,
+            "waterQuality": None,
+            "eaMonitored": False,
+        })
+    return out
 
 
 def main():
@@ -156,6 +180,13 @@ def main():
             beach = fetch_beach(beach_id, district)
             beaches.append(beach)
             seen_ids.add(beach_id)
+
+    for beach in load_extra_beaches():
+        if beach["id"] in seen_ids:
+            warn(f'extra beach {beach["id"]} duplicates an EA beach — skipped')
+            continue
+        beaches.append(beach)
+        seen_ids.add(beach["id"])
 
     # Merge curated dog rules; validate both directions.
     for rule_id in dog_rules:
