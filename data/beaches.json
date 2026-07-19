@@ -1,0 +1,757 @@
+{
+ "meta": {
+  "generated": "2026-07-19T19:16:14Z",
+  "county": "Kent",
+  "attribution": "Beach locations, sediment types and water quality from the Environment Agency Bathing Water Quality API (environment.data.gov.uk/bwq), Open Government Licence v3.0. Dog restrictions hand-curated from council PSPO pages; see per-beach source and accessed date.",
+  "beachCount": 30
+ },
+ "beaches": [
+  {
+   "id": "ukj4202-12200",
+   "name": "Herne Bay",
+   "district": "Canterbury",
+   "lat": 51.37435710325768,
+   "lng": 1.139544400747574,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "East of Herne Bay pier, outside the seasonal exclusion zone (which runs pier west to Lane End); dogs on lead on the promenade",
+    "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4202-12150",
+   "name": "Herne Bay Central",
+   "district": "Canterbury",
+   "lat": 51.372039870464164,
+   "lng": 1.118548468494485,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned 1 May-30 Sep from Herne Bay pier west to Lane End; this bathing water sits inside that zone",
+    "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4202-12120",
+   "name": "Tankerton",
+   "district": "Canterbury",
+   "lat": 51.36543634344041,
+   "lng": 1.045826991432158,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned 1 May-30 Sep on the stretch level with Pier Avenue west to The Street; slopes and beach east of the zone stay dog friendly",
+    "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4202-12100",
+   "name": "West Beach, Whitstable",
+   "district": "Canterbury",
+   "lat": 51.3543282013388,
+   "lng": 1.011764270825496,
+   "sandy": false,
+   "sediments": [
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "No PSPO beach restriction at West Beach; Canterbury council says most of its coastline is dog friendly all year",
+    "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4204-13100",
+   "name": "Deal Castle",
+   "district": "Dover",
+   "lat": 51.22486304198136,
+   "lng": 1.404925707974265,
+   "sandy": false,
+   "sediments": [
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "09:00-18:00"
+    },
+    "notes": "Dogs banned 9am-6pm 1 May-30 Sep between Deal Castle and Sandown Castle; allowed outside those hours, and on a lead on the pier and promenade year round",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4204-13000",
+   "name": "Sandwich Bay",
+   "district": "Dover",
+   "lat": 51.28259786416355,
+   "lng": 1.379663263660137,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "No seasonal beach ban at Sandwich Bay; dogs are excluded from the mudflats and salt marshes year round and must be on a lead on the golf course dunes path",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4204-13200",
+   "name": "St Margaret`s Bay",
+   "district": "Dover",
+   "lat": 51.1506235954886,
+   "lng": 1.385739372031037,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "09:00-18:00"
+    },
+    "notes": "Dogs banned 9am-6pm 1 May-30 Sep from the southwest end of the slipway to Ness Point; allowed outside those hours; leads required on the promenade and car park",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13600",
+   "name": "Dymchurch",
+   "district": "Folkestone and Hythe",
+   "lat": 51.024613309377024,
+   "lng": 0.996611814185222,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Poor",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dog-free zone 1 May-30 Sep between Sycamore Gardens and the Martello car park; beach outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13300",
+   "name": "Folkestone",
+   "district": "Folkestone and Hythe",
+   "lat": 51.08196357311625,
+   "lng": 1.191314626866399,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Sufficient",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Sunny Sands: whole beach is dog free 1 May-30 Sep under the district PSPO",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13500",
+   "name": "Hythe",
+   "district": "Folkestone and Hythe",
+   "lat": 51.064683030745755,
+   "lng": 1.081421889530718,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dog-free zone 1 May-30 Sep between Twiss Road and St Leonards Road; beach outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13800",
+   "name": "Littlestone",
+   "district": "Folkestone and Hythe",
+   "lat": 50.97678874193849,
+   "lng": 0.96731518804359,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Poor",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dog-free zone 1 May-30 Sep between the water tower at Madeira Road and Clark Road; beach outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13350",
+   "name": "Sandgate Granville Parade",
+   "district": "Folkestone and Hythe",
+   "lat": 51.073164967502315,
+   "lng": 1.145905463450204,
+   "sandy": false,
+   "sediments": [],
+   "waterQuality": null,
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dog-free zone 1 May-30 Sep between Sandgate Castle and the BP service station; coastline outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13400",
+   "name": "Seabrook",
+   "district": "Folkestone and Hythe",
+   "lat": 51.07080697611591,
+   "lng": 1.121803015201279,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Seabrook frontage falls in the Sandgate Castle to BP service station dog-free zone 1 May-30 Sep; coastline outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4208-13700",
+   "name": "St Mary's Bay (Kent)",
+   "district": "Folkestone and Hythe",
+   "lat": 51.01058771257017,
+   "lng": 0.982304921293757,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Sufficient",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dog-free zone 1 May-30 Sep between The Fairway and the river outfall; beach outside the zone stays available",
+    "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4209-12000",
+   "name": "Leysdown",
+   "district": "Swale",
+   "lat": 51.40014835227358,
+   "lng": 0.921827823102863,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned 1 May-30 Sep from Stokes Amusements to the beach steps at the Promenade Road roundabout",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4209-11975",
+   "name": "Minster Leas",
+   "district": "Swale",
+   "lat": 51.43293721413515,
+   "lng": 0.805325503474074,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned 1 May-30 Sep from the Playa pub east to the vehicle ramp at Sea Side Avenue; the grass expanse above the promenade is not restricted",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4209-11950",
+   "name": "Sheerness",
+   "district": "Swale",
+   "lat": 51.44326276918685,
+   "lng": 0.760235343877594,
+   "sandy": false,
+   "sediments": [
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned 1 May-30 Sep from Jacobs Bank to the sea-wall steps by the swimming pool; leads required on the promenade",
+    "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12660",
+   "name": "Botany Bay, Broadstairs",
+   "district": "Thanet",
+   "lat": 51.38944157243337,
+   "lng": 1.435294752968038,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "10:00-18:00"
+    },
+    "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12750",
+   "name": "Broadstairs, Stone Bay",
+   "district": "Thanet",
+   "lat": 51.366271970965286,
+   "lng": 1.4453279329694,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "10:00-18:00"
+    },
+    "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12800",
+   "name": "Broadstairs, Viking Bay",
+   "district": "Thanet",
+   "lat": 51.357732765963895,
+   "lng": 1.442977096679106,
+   "sandy": true,
+   "sediments": [
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Viking Bay: dogs completely banned 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12700",
+   "name": "Joss Bay, Broadstairs",
+   "district": "Thanet",
+   "lat": 51.379219014808704,
+   "lng": 1.446142630132952,
+   "sandy": true,
+   "sediments": [
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "10:00-18:00"
+    },
+    "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12600",
+   "name": "Margate Fulsam Rock",
+   "district": "Thanet",
+   "lat": 51.392678701614855,
+   "lng": 1.386538154257397,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "Fulsam Rock is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12500",
+   "name": "Margate The Bay",
+   "district": "Thanet",
+   "lat": 51.38769982307236,
+   "lng": 1.375790552419346,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Margate Main Sands: dogs completely banned 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12300",
+   "name": "Minnis Bay, Birchington",
+   "district": "Thanet",
+   "lat": 51.38029832223167,
+   "lng": 1.283684806754969,
+   "sandy": true,
+   "sediments": [
+    "sand",
+    "shingle"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Dogs banned from the main area of Minnis Bay 1 May-30 Sep; northern seawall stretch stays dog friendly year round",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12850",
+   "name": "Ramsgate Sands",
+   "district": "Thanet",
+   "lat": 51.33223078633673,
+   "lng": 1.424911174620844,
+   "sandy": true,
+   "sediments": [
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Ramsgate Main Sands (harbour end): dogs completely banned 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12900",
+   "name": "Ramsgate Western Undercliffe",
+   "district": "Thanet",
+   "lat": 51.32660421706023,
+   "lng": 1.406272751424865,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "Western Undercliff is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12400",
+   "name": "St Mildred's Bay, Westgate",
+   "district": "Thanet",
+   "lat": 51.384887262981415,
+   "lng": 1.342764656145183,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "10:00-18:00"
+    },
+    "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12630",
+   "name": "Walpole Bay, Margate",
+   "district": "Thanet",
+   "lat": 51.392250950887004,
+   "lng": 1.399130061418621,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Good",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12350",
+   "name": "West Bay, Westgate",
+   "district": "Thanet",
+   "lat": 51.38319742671541,
+   "lng": 1.33230604116729,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Sufficient",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30",
+     "daily": "10:00-18:00"
+    },
+    "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  },
+  {
+   "id": "ukj4210-12450",
+   "name": "Westbrook Bay, Margate",
+   "district": "Thanet",
+   "lat": 51.38613803927582,
+   "lng": 1.363168673097685,
+   "sandy": true,
+   "sediments": [
+    "rock",
+    "sand"
+   ],
+   "waterQuality": {
+    "class": "Excellent",
+    "year": 2025
+   },
+   "dogs": {
+    "status": "friendly",
+    "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
+    "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+    "accessed": "2026-07-19"
+   }
+  }
+ ]
+}

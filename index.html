@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kent Beach Filter</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kent Beach Filter</h1>
+    <p class="tagline">Find sandy, dog-friendly beaches — built on Environment Agency data and council dog rules.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Beach filters">
+    <div class="filter-group">
+      <label for="sandy-filter">Sand</label>
+      <select id="sandy-filter">
+        <option value="any">Any</option>
+        <option value="yes">Sandy</option>
+        <option value="no">Not sandy</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="dog-filter">Dogs</label>
+      <select id="dog-filter">
+        <option value="any">Any</option>
+        <option value="yearround">Friendly year round</option>
+        <option value="month">Friendly in month&hellip;</option>
+        <option value="banned">Not allowed</option>
+        <option value="unknown">Unknown rules</option>
+      </select>
+    </div>
+    <div class="filter-group" id="month-group" hidden>
+      <label for="month-filter">Month</label>
+      <select id="month-filter"></select>
+    </div>
+    <div class="result-count" id="result-count" aria-live="polite"></div>
+  </div>
+
+  <main>
+    <section id="beach-list" aria-label="Beach results"></section>
+    <div id="map" aria-label="Map of beaches"></div>
+  </main>
+
+  <footer>
+    <p>Beach locations, sediment types and water quality:
+      <a href="https://environment.data.gov.uk/bwq/" rel="external">Environment Agency Bathing Water Quality data</a>,
+      used under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="external">Open Government Licence v3.0</a>.</p>
+    <p>Dog rules hand-curated from council PSPO pages (source and date on every beach card).
+      Restrictions change — <strong>check the council page before travelling</strong>.</p>
+    <p id="data-generated"></p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

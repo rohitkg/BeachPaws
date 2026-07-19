@@ -1,0 +1,208 @@
+{
+  "_comment": "Hand-curated from council PSPO pages. Keyed by EA bathing-water ID. status: friendly (year-round) | seasonal (ban window in 'ban'; 'daily' present means the ban applies only during those hours) | banned (year-round). Never written by the pipeline.",
+  "entries": {
+    "ukj4210-12300": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned from the main area of Minnis Bay 1 May-30 Sep; northern seawall stretch stays dog friendly year round",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12350": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12400": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12450": {
+      "status": "friendly",
+      "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12500": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Margate Main Sands: dogs completely banned 1 May-30 Sep",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12600": {
+      "status": "friendly",
+      "notes": "Fulsam Rock is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12630": {
+      "status": "friendly",
+      "notes": "Dogs allowed year round but must be on a lead 10am-6pm 1 May-30 Sep",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12660": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12700": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12750": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12800": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Viking Bay: dogs completely banned 1 May-30 Sep",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12850": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Ramsgate Main Sands (harbour end): dogs completely banned 1 May-30 Sep",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4210-12900": {
+      "status": "friendly",
+      "notes": "Western Undercliff is one of Thanet's year-round dog friendly beaches; keep dogs on a lead on adjacent promenades",
+      "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4202-12100": {
+      "status": "friendly",
+      "notes": "No PSPO beach restriction at West Beach; Canterbury council says most of its coastline is dog friendly all year",
+      "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+      "accessed": "2026-07-19"
+    },
+    "ukj4202-12120": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned 1 May-30 Sep on the stretch level with Pier Avenue west to The Street; slopes and beach east of the zone stay dog friendly",
+      "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+      "accessed": "2026-07-19"
+    },
+    "ukj4202-12150": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned 1 May-30 Sep from Herne Bay pier west to Lane End; this bathing water sits inside that zone",
+      "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+      "accessed": "2026-07-19"
+    },
+    "ukj4202-12200": {
+      "status": "friendly",
+      "notes": "East of Herne Bay pier, outside the seasonal exclusion zone (which runs pier west to Lane End); dogs on lead on the promenade",
+      "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
+      "accessed": "2026-07-19"
+    },
+    "ukj4209-11950": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned 1 May-30 Sep from Jacobs Bank to the sea-wall steps by the swimming pool; leads required on the promenade",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4209-11975": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned 1 May-30 Sep from the Playa pub east to the vehicle ramp at Sea Side Avenue; the grass expanse above the promenade is not restricted",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4209-12000": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dogs banned 1 May-30 Sep from Stokes Amusements to the beach steps at the Promenade Road roundabout",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4204-13000": {
+      "status": "friendly",
+      "notes": "No seasonal beach ban at Sandwich Bay; dogs are excluded from the mudflats and salt marshes year round and must be on a lead on the golf course dunes path",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4204-13100": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
+      "notes": "Dogs banned 9am-6pm 1 May-30 Sep between Deal Castle and Sandown Castle; allowed outside those hours, and on a lead on the pier and promenade year round",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4204-13200": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
+      "notes": "Dogs banned 9am-6pm 1 May-30 Sep from the southwest end of the slipway to Ness Point; allowed outside those hours; leads required on the promenade and car park",
+      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13300": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Sunny Sands: whole beach is dog free 1 May-30 Sep under the district PSPO",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13350": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dog-free zone 1 May-30 Sep between Sandgate Castle and the BP service station; coastline outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13400": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Seabrook frontage falls in the Sandgate Castle to BP service station dog-free zone 1 May-30 Sep; coastline outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13500": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dog-free zone 1 May-30 Sep between Twiss Road and St Leonards Road; beach outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13600": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dog-free zone 1 May-30 Sep between Sycamore Gardens and the Martello car park; beach outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13700": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dog-free zone 1 May-30 Sep between The Fairway and the river outfall; beach outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    },
+    "ukj4208-13800": {
+      "status": "seasonal",
+      "ban": { "from": "05-01", "to": "09-30" },
+      "notes": "Dog-free zone 1 May-30 Sep between the water tower at Madeira Road and Clark Road; beach outside the zone stays available",
+      "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
+      "accessed": "2026-07-19"
+    }
+  }
+}
