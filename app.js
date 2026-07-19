@@ -9,8 +9,15 @@
     sandy: "any",              // any | yes | no
     dog: "any",                // any | yearround | month | banned | unknown
     month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
-    monitored: "any"           // any | yes | no — EA-designated bathing water
+    monitored: "any",          // any | yes | no — EA-designated bathing water
+    query: ""                  // beach-name substring search
   };
+
+  // Case-insensitive; treats backtick / curly quote / apostrophe alike
+  // (EA data has "St Margaret`s Bay").
+  function normalize(s) {
+    return s.toLowerCase().replace(/[`’']/g, "'");
+  }
 
   var beaches = [];
   var map, markerLayer;
@@ -63,7 +70,9 @@
   function applyFilters() {
     var visible = [];
     var hiddenUnknown = 0;
+    var query = normalize(state.query.trim());
     beaches.forEach(function (beach) {
+      if (query && normalize(beach.name).indexOf(query) === -1) return;
       // Beaches with no EA sediment data only appear under "Any".
       if (state.sandy === "yes" && !beach.sandy) return;
       if (state.sandy === "no" && (beach.sandy || !beach.sediments.length)) return;
@@ -291,6 +300,10 @@
     });
     document.getElementById("monitored-filter").addEventListener("change", function (ev) {
       state.monitored = ev.target.value;
+      applyFilters();
+    });
+    document.getElementById("search-filter").addEventListener("input", function (ev) {
+      state.query = ev.target.value;
       applyFilters();
     });
   }
