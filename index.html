@@ -37,8 +37,31 @@
       <label for="month-filter">Month</label>
       <select id="month-filter"></select>
     </div>
+    <div class="filter-group">
+      <label for="monitored-filter">Water monitoring
+        <button type="button" id="monitored-info" class="info-btn"
+                aria-expanded="false" aria-controls="monitored-explainer"
+                title="What does this mean?">?</button>
+      </label>
+      <select id="monitored-filter">
+        <option value="any">Any</option>
+        <option value="yes">EA-monitored</option>
+        <option value="no">Not monitored</option>
+      </select>
+    </div>
     <div class="result-count" id="result-count" aria-live="polite"></div>
   </div>
+
+  <p id="monitored-explainer" class="explainer" hidden>
+    A <strong>designated bathing water</strong> is a swimming spot officially recognised
+    under the Bathing Water Regulations 2013. The Environment Agency samples its water
+    quality weekly from May to September and publishes an annual classification
+    (Excellent, Good, Sufficient or Poor) — that is where the water-quality badges come from.
+    Designation says <strong>nothing about lifeguards, safety patrols or facilities</strong>;
+    it is purely about water-quality monitoring. Beaches marked
+    &ldquo;Not an EA bathing water&rdquo; can be just as good — they simply have no official
+    monitoring record.
+  </p>
 
   <main>
     <section id="beach-list" aria-label="Beach results"></section>

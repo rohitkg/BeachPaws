@@ -8,7 +8,8 @@
   var state = {
     sandy: "any",              // any | yes | no
     dog: "any",                // any | yearround | month | banned | unknown
-    month: new Date().getMonth() + 1  // 1-12, used when dog === "month"
+    month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
+    monitored: "any"           // any | yes | no — EA-designated bathing water
   };
 
   var beaches = [];
@@ -66,6 +67,8 @@
       // Beaches with no EA sediment data only appear under "Any".
       if (state.sandy === "yes" && !beach.sandy) return;
       if (state.sandy === "no" && (beach.sandy || !beach.sediments.length)) return;
+      if (state.monitored === "yes" && beach.eaMonitored !== true) return;
+      if (state.monitored === "no" && beach.eaMonitored !== false) return;
       var dm = dogMatch(beach);
       if (dm === "no") {
         if (state.dog === "month" && beach.dogs.status === "unknown") hiddenUnknown++;
@@ -286,7 +289,21 @@
       state.month = parseInt(ev.target.value, 10);
       applyFilters();
     });
+    document.getElementById("monitored-filter").addEventListener("change", function (ev) {
+      state.monitored = ev.target.value;
+      applyFilters();
+    });
   }
+
+  // Bound immediately (not in initControls) so the explainer works before data loads.
+  (function () {
+    var infoBtn = document.getElementById("monitored-info");
+    var explainer = document.getElementById("monitored-explainer");
+    infoBtn.addEventListener("click", function () {
+      explainer.hidden = !explainer.hidden;
+      infoBtn.setAttribute("aria-expanded", String(!explainer.hidden));
+    });
+  })();
 
   fetch("data/beaches.json")
     .then(function (resp) {

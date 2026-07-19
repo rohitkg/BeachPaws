@@ -19,6 +19,9 @@ No build step. Surface = browser GUI.
    - Dogs "Friendly in month…": April/October → 36, May–Sep → 20
      (13 friendly + 7 amber "restricted hours" beaches)
    - Dogs "Not allowed" → 0, empty state, markers cleared
+   - Water monitoring "Not monitored" → 6 (the curated extras);
+     "EA-monitored" → 30. "?" button toggles the designation explainer
+     (works pre-data-load; listener bound outside initControls)
    - Sand "Not sandy" → 3 (Sandgate excluded: no EA sediment data,
      appears only under "Any" with grey "Sediment unknown" badge)
 4. Click a list card → map pans + popup opens with same badges.
