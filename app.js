@@ -10,6 +10,7 @@
     dog: "any",                // any | yearround | month | banned | unknown
     month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
     monitored: "any",          // any | yes | no — EA-designated bathing water
+    region: "any",             // any | one of the EA regionalOrganization labels
     query: ""                  // beach-name substring search
   };
 
@@ -80,6 +81,7 @@
           !(beach.sandy && beach.sediments.length > 1)) return;
       if (state.monitored === "yes" && beach.eaMonitored !== true) return;
       if (state.monitored === "no" && beach.eaMonitored !== false) return;
+      if (state.region !== "any" && beach.region !== state.region) return;
       var dm = dogMatch(beach);
       if (dm === "no") {
         if (state.dog === "month" && beach.dogs.status === "unknown") hiddenUnknown++;
@@ -144,6 +146,16 @@
     return wrap;
   }
 
+  /* ---------- directions ---------- */
+
+  function directionsUrl(beach) {
+    if (beach.lat !== null && beach.lng !== null) {
+      return "https://www.google.com/maps/dir/?api=1&destination=" + beach.lat + "," + beach.lng;
+    }
+    return "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(beach.name + ", " + beach.district);
+  }
+
   /* ---------- list rendering ---------- */
 
   function renderList(visible, hiddenUnknown) {
@@ -194,6 +206,26 @@
           " · checked " + beach.dogs.accessed));
         card.appendChild(source);
       }
+
+      if (beach.eaMonitored) {
+        var dataSource = document.createElement("p");
+        dataSource.className = "source";
+        var dataLink = document.createElement("a");
+        dataLink.href = "https://environment.data.gov.uk/doc/bathing-water/" + beach.id;
+        dataLink.rel = "external";
+        dataLink.target = "_blank";
+        dataLink.textContent = "Beach data source (Environment Agency)";
+        dataSource.appendChild(dataLink);
+        card.appendChild(dataSource);
+      }
+
+      var directions = document.createElement("a");
+      directions.className = "directions";
+      directions.href = directionsUrl(beach);
+      directions.target = "_blank";
+      directions.rel = "noopener external";
+      directions.textContent = "Get directions";
+      card.appendChild(directions);
 
       card.addEventListener("click", function (ev) {
         if (ev.target.tagName === "A") return; // let source links work
@@ -276,7 +308,22 @@
       attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
     }).addTo(map);
     markerLayer = L.layerGroup().addTo(map);
-    map.setView([51.3, 1.1], 9); // Kent coast fallback before first fitBounds
+    map.setView([52.8, -1.5], 6); // England fallback before first fitBounds
+  }
+
+  function initRegionOptions(beaches) {
+    var select = document.getElementById("region-filter");
+    var regions = [];
+    beaches.forEach(function (b) {
+      if (b.region && regions.indexOf(b.region) === -1) regions.push(b.region);
+    });
+    regions.sort();
+    regions.forEach(function (r) {
+      var opt = document.createElement("option");
+      opt.value = r;
+      opt.textContent = r;
+      select.appendChild(opt);
+    });
   }
 
   function initControls() {
@@ -306,6 +353,10 @@
       state.monitored = ev.target.value;
       applyFilters();
     });
+    document.getElementById("region-filter").addEventListener("change", function (ev) {
+      state.region = ev.target.value;
+      applyFilters();
+    });
     document.getElementById("search-filter").addEventListener("input", function (ev) {
       state.query = ev.target.value;
       applyFilters();
@@ -315,11 +366,13 @@
       state.dog = "any";
       state.month = new Date().getMonth() + 1;
       state.monitored = "any";
+      state.region = "any";
       state.query = "";
       document.getElementById("sandy-filter").value = "any";
       document.getElementById("dog-filter").value = "any";
       monthSelect.value = String(state.month);
       document.getElementById("monitored-filter").value = "any";
+      document.getElementById("region-filter").value = "any";
       document.getElementById("search-filter").value = "";
       document.getElementById("month-group").hidden = true;
       applyFilters();
@@ -343,9 +396,11 @@
     })
     .then(function (data) {
       beaches = data.beaches;
+      document.querySelector(".region-tag").textContent = data.meta.coverage;
       document.getElementById("data-generated").textContent =
         "Dataset generated " + data.meta.generated + " · " + data.meta.beachCount + " beaches";
       initMap();
+      initRegionOptions(beaches);
       initControls();
       applyFilters();
     })

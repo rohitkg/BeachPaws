@@ -154,42 +154,42 @@
       "status": "seasonal",
       "ban": { "from": "05-01", "to": "09-30" },
       "notes": "Dogs banned 1 May-30 Sep from Jacobs Bank to the sea-wall steps by the swimming pool; leads required on the promenade",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
+      "accessed": "2026-07-20"
     },
     "ukj4209-11975": {
       "status": "seasonal",
       "ban": { "from": "05-01", "to": "09-30" },
       "notes": "Dogs banned 1 May-30 Sep from the Playa pub east to the vehicle ramp at Sea Side Avenue; the grass expanse above the promenade is not restricted",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
+      "accessed": "2026-07-20"
     },
     "ukj4209-12000": {
       "status": "seasonal",
       "ban": { "from": "05-01", "to": "09-30" },
       "notes": "Dogs banned 1 May-30 Sep from Stokes Amusements to the beach steps at the Promenade Road roundabout",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
+      "accessed": "2026-07-20"
     },
     "ukj4204-13000": {
       "status": "friendly",
       "notes": "No seasonal beach ban at Sandwich Bay; dogs are excluded from the mudflats and salt marshes year round and must be on a lead on the golf course dunes path",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://www.dover.gov.uk/Environment/Coast--Rivers/Beaches.aspx",
+      "accessed": "2026-07-20"
     },
     "ukj4204-13100": {
       "status": "seasonal",
       "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
       "notes": "Dogs banned 9am-6pm 1 May-30 Sep between Deal Castle and Sandown Castle; allowed outside those hours, and on a lead on the pier and promenade year round",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://www.dover.gov.uk/Environment/Coast--Rivers/Beaches.aspx",
+      "accessed": "2026-07-20"
     },
     "ukj4204-13200": {
       "status": "seasonal",
       "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
       "notes": "Dogs banned 9am-6pm 1 May-30 Sep from the southwest end of the slipway to Ness Point; allowed outside those hours; leads required on the promenade and car park",
-      "source": "https://www.kentonline.co.uk/kent/news/the-kent-beaches-where-dogs-are-banned-this-summer-323574/",
-      "accessed": "2026-07-19"
+      "source": "https://www.dover.gov.uk/Environment/Coast--Rivers/Beaches.aspx",
+      "accessed": "2026-07-20"
     },
     "ukj4208-13300": {
       "status": "seasonal",

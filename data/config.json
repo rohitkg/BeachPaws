@@ -1,4 +1,4 @@
 {
-  "county": "Kent",
-  "districts": ["Thanet", "Canterbury", "Swale", "Dover", "Folkestone and Hythe"]
+  "coverage": "England",
+  "countryUri": "http://data.ordnancesurvey.co.uk/id/country/england"
 }

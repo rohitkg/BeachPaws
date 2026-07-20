@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BeachPaws — Kent</title>
+  <title>BeachPaws — England</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>BeachPaws <span class="region-tag">Kent</span></h1>
+    <h1>BeachPaws <span class="region-tag"></span></h1>
     <p class="tagline">Find your dog's perfect beach — sand type, dog rules and water quality, built on Environment Agency data and council PSPOs.</p>
   </header>
 
@@ -25,6 +25,12 @@
         <option value="any">Any</option>
         <option value="sand-only">Sand only</option>
         <option value="mixed">Mixed sand &amp; shingle/rock</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="region-filter">Region</label>
+      <select id="region-filter">
+        <option value="any">Any</option>
       </select>
     </div>
     <div class="filter-group">

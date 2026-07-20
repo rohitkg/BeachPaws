@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build data/beaches.json from the EA Bathing Water API + curated dog rules.
 
-- Reads data/config.json for the districts to fetch.
+- Reads data/config.json for the country to fetch (URI selector, e.g. England).
 - Reads data/dog_rules.json (curated, never written by this script).
 - Writes data/beaches.json only after every fetch succeeds.
 
@@ -65,25 +65,34 @@ def lang_value(x):
     return v.get("_value") if isinstance(v, dict) else v
 
 
-def fetch_district_beaches(district):
-    """Return list of beach IDs + names for a district, following pagination."""
-    beaches = []
+def fetch_all_beach_ids(country_uri):
+    """Return every bathing-water id for the given country, following pagination."""
+    ids = []
     page = 0
     while True:
         query = urllib.parse.urlencode(
-            {"district.name": district, "_pageSize": PAGE_SIZE, "_page": page}
+            {"country": country_uri, "_pageSize": PAGE_SIZE, "_page": page}
         )
         doc = get_json(f"{BASE}/bathing-water.json?{query}")
         items = doc["result"].get("items", [])
         for item in items:
-            beach_id = item["_about"].rsplit("/", 1)[-1]
-            beaches.append(beach_id)
+            ids.append(item["_about"].rsplit("/", 1)[-1])
         if len(items) < PAGE_SIZE:
-            return beaches
+            return ids
         page += 1
 
 
-def fetch_beach(beach_id, district):
+def geo_label(node):
+    """Extract a place name from a district/regionalOrganization-shaped node —
+    a bare {name: langString} object, or (district's case) a list containing
+    that object plus bare URI strings."""
+    for item in as_list(node):
+        if isinstance(item, dict) and "name" in item:
+            return lang_value(item["name"])
+    return None
+
+
+def fetch_beach(beach_id):
     """Fetch one beach record and flatten it."""
     doc = get_json(f"{BASE}/bathing-water/{beach_id}.json")
     topic = doc["result"]["primaryTopic"]
@@ -92,6 +101,14 @@ def fetch_beach(beach_id, district):
     if not name:
         warn(f"{beach_id}: no name in EA record")
         name = beach_id
+
+    district = geo_label(topic.get("district"))
+    if not district:
+        warn(f'{beach_id} "{name}": no district in EA record')
+
+    region = geo_label(topic.get("regionalOrganization"))
+    if not region:
+        warn(f'{beach_id} "{name}": no regionalOrganization in EA record')
 
     sediments = sorted(
         uri.rsplit("/", 1)[-1].replace("-sediment", "")
@@ -127,6 +144,7 @@ def fetch_beach(beach_id, district):
         "id": beach_id,
         "name": name,
         "district": district,
+        "region": region,
         "lat": lat,
         "lng": lng,
         "sandy": "sand" in sediments,
@@ -149,6 +167,7 @@ def load_extra_beaches():
             "id": e["id"],
             "name": e["name"],
             "district": e["district"],
+            "region": e.get("region"),
             "lat": e.get("lat"),
             "lng": e.get("lng"),
             "sandy": "sand" in sediments,
@@ -171,15 +190,14 @@ def main():
 
     beaches = []
     seen_ids = set()
-    for district in config["districts"]:
-        ids = fetch_district_beaches(district)
-        if not ids:
-            warn(f'district "{district}": no beaches returned')
-        for beach_id in ids:
-            time.sleep(DELAY)
-            beach = fetch_beach(beach_id, district)
-            beaches.append(beach)
-            seen_ids.add(beach_id)
+    ids = fetch_all_beach_ids(config["countryUri"])
+    if not ids:
+        warn("no beaches returned for configured country")
+    for beach_id in ids:
+        time.sleep(DELAY)
+        beach = fetch_beach(beach_id)
+        beaches.append(beach)
+        seen_ids.add(beach_id)
 
     for beach in load_extra_beaches():
         if beach["id"] in seen_ids:
@@ -205,7 +223,7 @@ def main():
     out = {
         "meta": {
             "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "county": config["county"],
+            "coverage": config["coverage"],
             "attribution": ATTRIBUTION,
             "beachCount": len(beaches),
         },

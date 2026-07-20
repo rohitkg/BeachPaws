@@ -1,36 +1,52 @@
 ---
 name: verify
-description: How to run and verify the Kent Beach Filter site end-to-end.
+description: How to run and verify the BeachPaws site end-to-end.
 ---
 
-# Verify Kent Beach Filter
+# Verify BeachPaws
 
 No build step. Surface = browser GUI.
 
 1. Serve: `python3 -m http.server 8741` from repo root (fetch of
    `data/beaches.json` fails on `file://`).
 2. Open `http://localhost:8741` in the browser (claude-in-chrome works).
-3. Drive the filters and check counts against the dataset (30 EA
-   bathing waters + 6 curated extras in `data/extra_beaches.json`,
-   which carry a grey "Not an EA bathing water" badge):
-   - Dogs "Friendly year round" → 13 of 36
-   - Sand "Sand only" → 5 (Viking, Joss, Louisa, Palm, Ramsgate Sands);
-     "Mixed sand & shingle/rock" → 27. Shingle-only and
-     sediment-unknown beaches appear only under "Any"
-   - Search "margaret's" → 1 (backtick in EA name normalized)
-   - Reset filters button → all controls to Any/empty, 36 shown
-   - Dogs "Friendly in month…": April/October → 36, May–Sep → 20
-     (13 friendly + 7 amber "restricted hours" beaches)
-   - Dogs "Not allowed" → 0, empty state, markers cleared
-   - Water monitoring "Not monitored" → 6 (the curated extras);
-     "EA-monitored" → 30. "?" button toggles the designation explainer
-     (works pre-data-load; listener bound outside initControls)
-   - Sand "Not sandy" → 3 (Sandgate excluded: no EA sediment data,
-     appears only under "Any" with grey "Sediment unknown" badge)
-4. Click a list card → map pans + popup opens with same badges.
-5. Data refresh: `python3 scripts/build_data.py` — ~35 EA API calls,
-   exits 0, must never modify `data/dog_rules.json`. Expected warnings:
-   Sandgate (ukj4208-13350) has no sediment/water-quality in EA data.
+3. Header tag reads "England"; footer "Dataset generated ... · N beaches"
+   line matches `data.meta.beachCount`.
+4. Drive the filters (counts below are approximate — the EA dataset can
+   drift a few beaches release to release; re-derive if `beachCount`
+   in `data/beaches.json`'s `meta` differs meaningfully from ~470):
+   - Total ≈ 464 EA-designated bathing waters + 6 curated extras ≈ 470.
+   - Region "Any" lists every distinct `region` value in the dataset
+     (EA regionalOrganization areas, e.g. South East, South West, North
+     West, North East, Anglian, Midlands). Selecting one filters both
+     the list and the map and updates the result count to only beaches
+     in that region.
+   - Search a Kent beach name (e.g. "margate" or "margaret's" — the
+     latter checks backtick-normalization against the EA's "St
+     Margaret`s Bay") → still finds the curated Kent entry with its
+     colored dog badge (green/amber/red) and a working source link.
+   - Search a non-Kent beach (e.g. "spittal" or "blackpool") → grey
+     "Dog rules unknown" badge — expected for the ~434 beaches outside
+     the currently-curated Kent set.
+   - Water monitoring "Not monitored" → 6 (the curated extras, all
+     Thanet); "EA-monitored" → the rest. "?" button toggles the
+     designation explainer (works pre-data-load; listener bound
+     outside initControls).
+   - Reset filters button → all controls (including Region) back to
+     Any/empty, full count shown.
+5. "Get directions" on a card: opens a new tab to
+   `google.com/maps/dir/?api=1&destination=<lat>,<lng>` for a beach
+   with coordinates, or the `google.com/maps/search/...` fallback for
+   a coords-null beach (e.g. Sandgate Granville Parade). Clicking it
+   must **not** pan the map (the card's click handler bails on
+   `ev.target.tagName === "A"`); clicking elsewhere on the card still
+   pans the map and opens the marker popup.
+6. Data refresh: `python3 scripts/build_data.py` — pages the whole EA
+   England dataset (~470 requests, a couple of minutes), exits 0, and
+   must never modify `data/dog_rules.json` or `data/extra_beaches.json`
+   (`git status` after the run should show only `data/beaches.json`
+   changed). Expect many `WARN: no dog data for ...` lines — correct,
+   most of England outside Kent has no curated dog-rule entry yet.
 
 Gotcha: `.filter-group { display:flex }` needs the `[hidden]` CSS
 override in styles.css — regressions show the Month select while

@@ -130,6 +130,12 @@ main {
 .beach-card .notes { font-size: 0.85rem; color: #3e4c59; margin: 0.4rem 0 0; }
 .beach-card .source { font-size: 0.75rem; color: #7b8794; margin: 0.3rem 0 0; }
 .beach-card .source a { color: inherit; }
+.beach-card .directions {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #1a5e8a;
+  margin: 0.3rem 0 0;
+}
 
 .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .badge {
