@@ -1285,6 +1285,597 @@
       "notes": "Dogs permitted all year round at Ness Cove.",
       "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
       "accessed": "2026-07-21"
+    },
+    "ukk1202-35700": {
+      "status": "friendly",
+      "notes": "Uphill Slipway falls in the 'Royal Sands to Uphill' zone: dogs permitted at all times without restrictions.",
+      "source": "https://n-somerset.gov.uk/my-services/libraries-leisure-open-spaces/beaches-coast/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk1202-35800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "09:00-19:00"
+      },
+      "notes": "Central Weston seafront falls in the 'Grand Pier to Royal Sands' zone: dogs banned 1 May-30 Sep, 9am-7pm only (i.e. allowed outside those hours even in season). Promenade requires lead year-round.",
+      "source": "https://n-somerset.gov.uk/my-services/libraries-leisure-open-spaces/beaches-coast/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk1202-35900": {
+      "status": "friendly",
+      "notes": "Sand Bay: dogs allowed at all times without restrictions per council page.",
+      "source": "https://n-somerset.gov.uk/my-services/libraries-leisure-open-spaces/beaches-coast/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk1202-36000": {
+      "status": "banned",
+      "notes": "'Clevedon Beach & Marine Lake: No dogs except guide or assistance dogs' per council page. Clevedon Promenade separately requires lead (not applicable to the beach itself).",
+      "source": "https://n-somerset.gov.uk/my-services/libraries-leisure-open-spaces/beaches-coast/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19000": {
+      "status": "friendly",
+      "notes": "Hengistbury Head: year-round dog access per BCP's official zone list; dedicated Hengistbury Head page states no seasonal ban, only a lead requirement off the beach itself (nature reserve).",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/what-you-need-to-know-before-visiting-one-of-our-beaches/where-and-when-you-can-bring-your-dog-to-the-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19020": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southbourne beach's own BCP page: 'dogs are not allowed on Southbourne beach' 1 May-30 Sep, lead required on prom/paths/zigzags at all times. (BCP's general zone list separately names a year-round strip 'Fisherman's Walk east side to Southbourne' between the two beaches, but Southbourne's own page states no exception for the beach itself, so classified seasonal.)",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/southbourne-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19030": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Fisherman's Walk beach's own BCP page explicitly states no designated off-season/year-round dog zone; banned 1 May-30 Sep, lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/fishermans-walk-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19050": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September, dogs are not allowed on Manor Steps beach'; lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/manor-steps-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19060": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Boscombe is a Seaside Award beach covered by BCP's blanket rule: 'dogs prohibited on all Blue Flag and Seaside Award beaches' 1 May-30 Sep; lead required on prom/paths/zigzags at all times. (Boscombe's own beach page returned unreadable/mismatched content on fetch, so classified via the council's general policy page instead.)",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/what-you-need-to-know-before-visiting-one-of-our-beaches/where-and-when-you-can-bring-your-dog-to-the-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September, dogs are not allowed on Bournemouth beach' (main Pier-area beach); lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/bournemouth-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19150": {
+      "status": "friendly",
+      "notes": "Durley Chine is the year-round dog-friendly boundary point ('Middle Chine to Durley Chine' zone per BCP's general list; corroborated by Branksome Chine's own page: 'Dogs are welcome all year at Durley Chine Beach between groyne 5 (Middle Chine) and groyne 7 (Durley Chine)'). The wider stretch of beach beyond this point is seasonally banned 1 May-30 Sep.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/branksome-chine-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2101-19160": {
+      "status": "friendly",
+      "notes": "Western side of Alum Chine (beach hut 2060 to Branksome Chine beach office) is year-round dog friendly per BCP's general zone list, corroborated by Branksome Chine's own page describing the same strip 'up to Alum Chine beach office'. Alum Chine's own page describes a seasonal ban on its 'main beach' (1 May-30 Sep) which likely refers to the eastern/central part rather than this western strip.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/what-you-need-to-know-before-visiting-one-of-our-beaches/where-and-when-you-can-bring-your-dog-to-the-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2102-19170": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September, dogs are not allowed on Branksome Chine's main beach'; lead required on prom/paths/zigzags at all times. The adjoining year-round zone begins at the beach office boundary, east toward Alum Chine.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/branksome-chine-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2102-19190": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Canford Cliffs beach's own page explicitly states no designated year-round dog zone exists at Canford Cliffs itself. Banned 1 May-30 Sep, lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/canford-cliffs-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2102-19200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September, dogs are not allowed on Shore Road beach'; lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/shore-road-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2102-19350": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September, dogs are not allowed on Sandbanks main beach'; lead required on prom/paths at all times. Own page also states a year-round exception: 'designated all year-round dog friendly beach area at the western end of Sandbanks promenade to Haven Point (near the chain ferry)'.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/sandbanks-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2102-19400": {
+      "status": "friendly",
+      "notes": "Matched to BCP's 'Lake Pier beach' page (Poole Park/Baiter lake area): 'Lake Pier is a designated dog beach and can be used all year round.' Name/location match to EA's 'Poole Harbour Lake' id, not an exact title match, flagged for confirmation.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/lake-pier-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2201-17300": {
+      "status": "friendly",
+      "notes": "Highcliffe Beach's own page: 'For the rest of the beach, dogs are allowed all year round' (the default/majority state). Exception: 'Dogs are not allowed on the beach between groynes H4 and H8 from 1 May until 30 September inclusive'; lead required on promenade at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/highcliffe-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2201-18750": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Friars Cliff beach's own page gives the standard Blue Flag/Seaside Award seasonal ban with no exception surfaced (1 May-30 Sep), lead required on prom/paths/zigzags at all times. BCP's general zone list separately names a year-round strip 'between the wave wall and Groyne H4' at Friars Cliff, but this is unconfirmed against the beach's own page, so classified seasonal.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/friars-cliff-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2201-18800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "'From 1 May to 30 September dogs are not allowed on any of our Blue Flag or Seaside Award beaches' (Avon Beach is a Blue Flag beach); lead required on prom/paths/zigzags at all times.",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/visit-a-beach/avon-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2201-18900": {
+      "status": "friendly",
+      "notes": "'Mudeford Sandbank: Unrestricted' per BCP's official year-round zone list (attached to/extends from Hengistbury Head, which is likewise unrestricted).",
+      "source": "https://www.bcpcouncil.gov.uk/beaches-and-seafront/what-you-need-to-know-before-visiting-one-of-our-beaches/where-and-when-you-can-bring-your-dog-to-the-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-19600": {
+      "status": "friendly",
+      "notes": "Matched to Dorset Council's 'Studland Beach' entry covering Shell/South/Middle/Knoll beaches: 'Dogs must be on a lead on Shell beach, South beach, Middle beach and the southern part of Knoll beach between 1 May and 30 September.' Off-lead allowed outside that window; always allowed, just lead-restricted in season.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-19700": {
+      "status": "friendly",
+      "notes": "Studland Knoll beach (southern part): lead required 1 May-30 Sep per Dorset Council's Studland Beach entry (see ukk2204-19600 notes); allowed year-round.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-19800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dorset Council table: Swanage Beach dogs allowed '1 October to 30 April' only, i.e. banned 1 May-30 Sep.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-19900": {
+      "status": "friendly",
+      "notes": "Kimmeridge Bay: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-20000": {
+      "status": "friendly",
+      "notes": "Lulworth Cove: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-20100": {
+      "status": "friendly",
+      "notes": "Durdle Door: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2204-20200": {
+      "status": "friendly",
+      "notes": "Durdle Door: 'All year round' per Dorset Council beach table (single table entry covers the whole cove/beach, east and west).",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-20970": {
+      "status": "friendly",
+      "notes": "EA's 'Hive' beach matched to Dorset Council's 'Burton Bradstock Beach' entry (Hive Beach Cafe is the well-known landmark there): 'There are no formal restrictions on this beach. However the National Trust request that beach users comply with their controls for dogs, which include not exercising them on the beach between 1 May and 30 September.' This is a voluntary NT request, not a legal PSPO ban, so classified friendly with the request noted.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dorset Council: West Bay Beach dogs allowed '1 October to 30 April' (banned 1 May-30 Sep) on the main beach; dogs allowed in the harbour port area on a lead 1 May-1 October as a separate exception.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21100": {
+      "status": "friendly",
+      "notes": "EA's 'Eypemouth' matched to Dorset Council's 'Eype Beach': 'All year round.'",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dorset Council: Seatown Beach dogs allowed '1 October to 30 April' only (banned 1 May-30 Sep).",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dorset Council: Charmouth 'West Beach from 1 October to 30 April' (banned 1 May-30 Sep); Charmouth East Beach (not in worklist) has no restrictions.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21400": {
+      "status": "friendly",
+      "notes": "Lyme Regis Church Cliff Beach: 'All year round' per Dorset Council beach table (distinct entry from Lyme Regis front beach).",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2205-21500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dorset Council: Lyme Regis front beach 'From 1 October to 30 April' only (banned 1 May-30 Sep), lead required in that window.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2206-20300": {
+      "status": "friendly",
+      "notes": "Ringstead Beach: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2206-20400": {
+      "status": "friendly",
+      "notes": "Bowleaze Cove: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2206-20500": {
+      "status": "friendly",
+      "notes": "Church Ope Cove, Portland: 'All year round' per Dorset Council beach table.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2206-20600": {
+      "status": "friendly",
+      "notes": "Weymouth Lodmoor sits north of Greenhill Groyne (by coordinates), matching Dorset Council's 'Weymouth Beach: Greenhill Groyne to Overcombe - all year round' zone rather than the seasonally-banned main sandy beach south of Greenhill Groyne. Zone assignment is a coordinate-based inference, not an explicit named match on the council page -- flagged for confirmation.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2206-20700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Weymouth Central sits south of Greenhill Groyne (by coordinates), matching Dorset Council's 'Weymouth Beach: Greenhill Groyne to dog exercise area (main sandy beach) from 1 October to 30 April' zone (banned 1 May-30 Sep). A separate small 'Dog exercise area (by Pavilion)' nearby is year-round. Zone assignment is a coordinate-based inference -- flagged for confirmation.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2207-20990": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "EA's 'East Beach at West Bay' treated as the same 'West Bay Beach' PSPO entry as ukk2205-21000 (Dorset Council's table does not separately list East/West West Bay beaches): banned 1 May-30 Sep on the main beach, with the harbour port area allowing leaded dogs 1 May-1 October.",
+      "source": "https://www.dorsetcouncil.gov.uk/w/walking-dogs-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk2304-35201": {
+      "status": "friendly",
+      "notes": "French Weir Park (Taunton Town Council, not Somerset Council, manages this park): 'We ask that Dogs are to be kept on a lead whilst in the Park.' No seasonal ban or river-specific exclusion mentioned.",
+      "source": "https://www.taunton-tc.gov.uk/french-weir-park/",
+      "accessed": "2026-07-21"
+    },
+    "uke1301-09000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-18",
+        "to": "09-30"
+      },
+      "notes": "Cleethorpes resort beach: dog ban 'between the Wonderland Rock Groyne and Cleethorpes Leisure Centre' from Good Friday through 30 Sep inclusive. Good Friday is a movable feast; official wording is 'As of Good Friday' not a fixed date — 04-18 here is the date used in the council's own example (Good Friday 2025) and will shift year to year (Good Friday 2026 = 3 Apr). Fine for breach: £100.",
+      "source": "https://www.nelincs.gov.uk/changes-to-dog-walking-comes-into-force-on-cleethorpes-beach/",
+      "accessed": "2026-07-21"
+    },
+    "uke1301-09020": {
+      "status": "friendly",
+      "notes": "Humberston Fitties: council states 'Dogs are welcome to visit the stretch of beach between Cleethorpes Leisure Centre and the Humberston Fitties all year round.'",
+      "source": "https://www.nelincs.gov.uk/changes-to-dog-walking-comes-into-force-on-cleethorpes-beach/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1304-09800": {
+      "status": "friendly",
+      "notes": "Heacham is not named or mapped in West Norfolk's Public Spaces Protection Order (Control of Dogs) 2024, which excludes dogs only from a specific, precisely-bounded stretch of Hunstanton beach/promenade. PSPO exclusion zones are legally exhaustive (only the named/mapped area is restricted), so Heacham falls outside it. General borough-wide dog-fouling rules still apply.",
+      "source": "https://www.west-norfolk.gov.uk/info/20094/animals_and_pests/750/dog_control",
+      "accessed": "2026-07-21"
+    },
+    "ukh1304-09850": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "10-31"
+      },
+      "notes": "Hunstanton Main Beach: PSPO (Control of Dogs) 2024 excludes dogs from 'Beach from the power boat ramp (TF667400) to northern extremity of the promenade (TF671414)', 1 Apr-31 Oct inclusive; dogs must be on leads on the same promenade stretch during that window. The promenade runs from 'The Hump' in the south to its junction with the cliffs in the north — i.e. the developed Hunstanton town beach, not Old Hunstanton beyond the cliffs.",
+      "source": "https://www.west-norfolk.gov.uk/info/20094/animals_and_pests/750/dog_control",
+      "accessed": "2026-07-21"
+    },
+    "ukh1304-09900": {
+      "status": "friendly",
+      "notes": "Old Hunstanton beach lies beyond the cliffs north of Hunstanton promenade, outside the PSPO-mapped exclusion zone (power boat ramp to the promenade's northern extremity at its junction with the cliffs). Not separately named/restricted in the current PSPO.",
+      "source": "https://www.west-norfolk.gov.uk/info/20094/animals_and_pests/750/dog_control",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10000": {
+      "status": "friendly",
+      "notes": "Wells is not named on North Norfolk District Council's dog-restrictions overview page, and no beach-specific PSPO document for Wells was found among NNDC's numbered dog-restriction orders (which individually cover Bacton, Overstrand, Walcott, Sea Palling, Cromer, Mundesley, Sheringham, East Runton, West Runton). Council page confirms restrictions apply only '1 May and 30 September inclusive' at named locations; Wells is absent from that list.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Sheringham beach and prom (PSPO NNDC007) is listed on NNDC's dog-restrictions page as under seasonal control 1 May-30 Sep inclusive. Council's own map PDF (dog-restrictions-for-sheringham-beach-and-prom.pdf) distinguishes full-exclusion (red) vs on-lead (blue) sub-zones but the PDF is a scanned/unreadable image map, so the exact exclusion-vs-lead boundary within the beach could not be confirmed — treat the season/dates as verified, sub-zone geometry as unconfirmed.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10125": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "West Runton slipway and beach (PSPO NNDC009) under seasonal dog control 1 May-30 Sep inclusive per NNDC's dog-restrictions page. Map PDF (dog-restrictions-for-west-runton-slipway-and-beach.pdf) showing exact exclusion-vs-lead sub-zones is a scanned image, unreadable — season/dates verified, exact zone geometry not.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10150": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "East Runton Blue Flag beach (PSPO NNDC054) under seasonal dog control 1 May-30 Sep inclusive per NNDC's dog-restrictions page. Map PDF (dog-restrictions-for-east-runton-beach-map.pdf) is a scanned image, unreadable for exact exclusion-vs-lead boundary — season/dates verified only.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Cromer beach and prom (PSPO NNDC003) under seasonal dog control 1 May-30 Sep inclusive per NNDC's dog-restrictions page. Map PDF is a scanned image, unreadable for exact exclusion-vs-lead boundary — season/dates verified only.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Mundesley beach and prom under seasonal dog control 1 May-30 Sep inclusive per NNDC's dog-restrictions page. Map PDF is a scanned image, unreadable for exact exclusion-vs-lead boundary — season/dates verified only.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh1305-10310": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Sea Palling beach (PSPO NNDC006) — order text (from search-indexed council PDF metadata) reads 'A person in control of a dog shall not at any time during the period 1st May to 30th September take a dog onto ... any land defined in the red hatched area'. Order originally made 1 May 2021 'for a period of three years'; NNDC's current dog-restrictions overview page (fetched 2026-07-21) still lists Sea Palling among beaches with active restrictions, implying renewal, but the renewal document itself could not be located/read (PDF is a scanned image) — flag as slightly lower confidence on exact current-order status than the other North Norfolk entries.",
+      "source": "https://www.north-norfolk.gov.uk/tasks/environmental-protection/where-you-can-and-cant-take-your-dog/",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11770": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO (renewed 12 Jul 2025 for a further 3 years): 'Dogs are allowed on our beaches between 1 October to 30 April' — i.e. banned 1 May-30 Sep on Southend beaches generally; guide dogs exempt at any time. Applies city-wide to all Southend beaches (page does not carve out per-beach exceptions).",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11780": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11830": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11850": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11902": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time. (Note: a separate 'PSPO 2025 - Old Leigh and Chalkwell' order also covers this area but addresses public drinking, not dogs, per council consultation summary — does not alter this entry.)",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3100-11904": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Southend Dog Control PSPO: dogs banned 1 May-30 Sep on Southend beaches generally; allowed 1 Oct-30 Apr. Guide dogs exempt at any time.",
+      "source": "https://www.southend.gov.uk/beaches/animals-beach",
+      "accessed": "2026-07-21"
+    },
+    "ukh3304-11906": {
+      "status": "friendly",
+      "notes": "Canvey Island Foreshore: not a ban — Castle Point PSPO requires dogs on leads (and under control) '10am to 6pm, between 1 April and 30 September each year' on the foreshore footpath and beaches between sea defence gate 17 (opposite Maurice Road) and Thorney Bay. Order took effect 1 Apr 2023 for an initial 3-year period. Assistance dogs exempt.",
+      "source": "https://www.castlepoint.gov.uk/dogs-on-leads",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11050": {
+      "status": "friendly",
+      "notes": "Manningtree Beach not among Tendring's 11 named seasonal dog-ban zones (Harwich, Dovercourt x2, Walton x2, Frinton, Holland-on-Sea x3, Clacton x2, Brightlingsea). Council page states: 'Dogs are allowed on all other beaches at all times but they must be kept under proper control and you must clear up after your dog.'",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dovercourt has two named seasonal ban zones: 'Dovercourt north east' (Mill Lane subway to Spa Cabins promenade end) and 'Dovercourt south west' (Swimming Pool slipway area to upper Lighthouse), both 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11250": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Walton-on-the-Naze has two named seasonal ban zones: 'north east' (Percival Road to Naze Park Road) and 'central' (Pier to end of The Parade opposite Suffolk Street), both 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Frinton: seasonal ban zone from Warden Station (Connaught Avenue) to conveniences (Cambridge Road), 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11350": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Holland-on-Sea has three named seasonal ban sections around Queensway breakwater/cafe area and Haven Avenue vicinity, 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Clacton has two named seasonal ban zones: 'north east' (St Albans Road to Gunfleet Sailing Club) and 'central' (Pier to West Road out-fall pipe on Martello Bay), both 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11600": {
+      "status": "friendly",
+      "notes": "Jaywick not among Tendring's 11 named seasonal dog-ban zones. Council page states: 'Dogs are allowed on all other beaches at all times but they must be kept under proper control and you must clear up after your dog.'",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
+    },
+    "ukh3311-11700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brightlingsea seasonal ban zone covers West Marsh Point, the paddling pool, and eastern beaches, 1 May-30 Sep. Dogs permitted on adjacent promenades/cliff paths on a lead.",
+      "source": "https://www.tendringdc.gov.uk/content/bye-laws-and-animals-on-beaches",
+      "accessed": "2026-07-21"
     }
   }
 }
