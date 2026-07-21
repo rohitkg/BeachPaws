@@ -3,21 +3,32 @@
   "entries": {
     "ukj4210-12300": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned from the main area of Minnis Bay 1 May-30 Sep; northern seawall stretch stays dog friendly year round",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12350": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
       "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12400": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
       "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
@@ -30,7 +41,10 @@
     },
     "ukj4210-12500": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Margate Main Sands: dogs completely banned 1 May-30 Sep",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
@@ -49,35 +63,53 @@
     },
     "ukj4210-12660": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
       "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12700": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
       "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12750": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "10:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
       "notes": "Dogs banned 10am-6pm 1 May-30 Sep; allowed outside those hours",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12800": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Viking Bay: dogs completely banned 1 May-30 Sep",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
     },
     "ukj4210-12850": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Ramsgate Main Sands (harbour end): dogs completely banned 1 May-30 Sep",
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/",
       "accessed": "2026-07-19"
@@ -132,14 +164,20 @@
     },
     "ukj4202-12120": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned 1 May-30 Sep on the stretch level with Pier Avenue west to The Street; slopes and beach east of the zone stay dog friendly",
       "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
       "accessed": "2026-07-19"
     },
     "ukj4202-12150": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned 1 May-30 Sep from Herne Bay pier west to Lane End; this bathing water sits inside that zone",
       "source": "https://www.canterbury.gov.uk/leisure-and-community/dogs-beach",
       "accessed": "2026-07-19"
@@ -152,21 +190,30 @@
     },
     "ukj4209-11950": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned 1 May-30 Sep from Jacobs Bank to the sea-wall steps by the swimming pool; leads required on the promenade",
       "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
       "accessed": "2026-07-20"
     },
     "ukj4209-11975": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned 1 May-30 Sep from the Playa pub east to the vehicle ramp at Sea Side Avenue; the grass expanse above the promenade is not restricted",
       "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
       "accessed": "2026-07-20"
     },
     "ukj4209-12000": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dogs banned 1 May-30 Sep from Stokes Amusements to the beach steps at the Promenade Road roundabout",
       "source": "https://swale.gov.uk/community-safety-and-emergencies/public-spaces-protection-orders/walking-your-dog",
       "accessed": "2026-07-20"
@@ -179,66 +226,1065 @@
     },
     "ukj4204-13100": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "09:00-18:00"
+      },
       "notes": "Dogs banned 9am-6pm 1 May-30 Sep between Deal Castle and Sandown Castle; allowed outside those hours, and on a lead on the pier and promenade year round",
       "source": "https://www.dover.gov.uk/Environment/Coast--Rivers/Beaches.aspx",
       "accessed": "2026-07-20"
     },
     "ukj4204-13200": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30", "daily": "09:00-18:00" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30",
+        "daily": "09:00-18:00"
+      },
       "notes": "Dogs banned 9am-6pm 1 May-30 Sep from the southwest end of the slipway to Ness Point; allowed outside those hours; leads required on the promenade and car park",
       "source": "https://www.dover.gov.uk/Environment/Coast--Rivers/Beaches.aspx",
       "accessed": "2026-07-20"
     },
     "ukj4208-13300": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Sunny Sands: whole beach is dog free 1 May-30 Sep under the district PSPO",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13350": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dog-free zone 1 May-30 Sep between Sandgate Castle and the BP service station; coastline outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13400": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Seabrook frontage falls in the Sandgate Castle to BP service station dog-free zone 1 May-30 Sep; coastline outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13500": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dog-free zone 1 May-30 Sep between Twiss Road and St Leonards Road; beach outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13600": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dog-free zone 1 May-30 Sep between Sycamore Gardens and the Martello car park; beach outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13700": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dog-free zone 1 May-30 Sep between The Fairway and the river outfall; beach outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
     },
     "ukj4208-13800": {
       "status": "seasonal",
-      "ban": { "from": "05-01", "to": "09-30" },
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
       "notes": "Dog-free zone 1 May-30 Sep between the water tower at Madeira Road and Clark Road; beach outside the zone stays available",
       "source": "https://www.folkestone-hythe.gov.uk/news/article/36/still-plenty-of-coastline-for-dogs-to-explore",
       "accessed": "2026-07-19"
+    },
+    "ukk3101-26530": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Cawsand Beach, Cawsand'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Hoodny, Portwrinkle' (Schedule 1); Portwrinkle Harbour has an identical separate restriction, confirmed also by Sheviock Parish Council's dogs page.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-28700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Swanpool Beach, Falmouth'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-28800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Maenporth Beach, Falmouth'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-31650": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Chapel Porth Beach, St Agnes'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Kennack Sands Beach, The Lizard'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Polurrian Cove Beach, Mullion'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Poldhu Beach, Mullion'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29501": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Church Cove, Gunwalloe'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthleven West' (Schedule 1) — only the western section near the harbour is restricted; exact boundary not specified in the legal order itself, so treat as covering the harbour-side part of this beach, not necessarily its full extent toward Loe Bar.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Praa Sands Beach, Praa Sands' covers the whole beach; EA splits it into East/West sections.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-30000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Praa Sands Beach, Praa Sands' covers the whole beach; EA splits it into East/West sections.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-31500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Portreath Beach incl. Harbour, Portreath'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Perranuthnoe beach, Perranuthnoe'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Penzance Harbour to Marazion' (Schedule 1), a continuous stretch ending at Marazion.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Penzance Harbour to Marazion' (Schedule 1); Long Rock sits within this stretch.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Sits at the seam between two Schedule 1 zones, 'Newlyn Beach to Battery Rocks' and 'Penzance Harbour to Marazion', which meet at Penzance Harbour/Battery Rocks; the EA point for 'Penzance' is essentially at that junction. Moderate confidence — flagged in caveats.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Newlyn Beach to Battery Rocks' (Schedule 1); Wherry Town lies between Newlyn and Battery Rocks.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthcurno Beach, Porthcurno'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-27100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Readymoney Cove, Fowey'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-27800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthpean Beach, St Austell'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-28100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Portmellon Cove, Mevagissey'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32340": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porth Beach, Newquay'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-28600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Gyllyngvase Beach, Falmouth' (Schedule 2, Blue Flag/Seaside Award).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-31600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthtowan Beach, Porthtowan' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Trevone Beach, Padstow' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Polzeath Beach, Polzeath' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33360": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Crackington Haven, Bude' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Widemouth Beach, Bude' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Crooklets Beach, Bude' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Sennen Beach, Sennen' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthmeor Beach, St Ives' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthminster Beach, St Ives' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-15",
+        "to": "09-30",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Carbis Bay Beach, Carbis Bay' (Schedule 2).",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Official entry 'Porthgwidden Beach, St Ives'.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31250": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Harveys Towans to Godrevy Point, Hayle' (Schedule 1). Harvey's Towans is confirmed (via place-name research) to be the southernmost section of the same continuous dune beach that runs north through Mexico/Hayle/Upton/Gwithian Towans to Godrevy Point — the council's own beach-map link for this entry is titled 'Hayle Towans to Godrevey Point', corroborating that the whole stretch is one zone.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Harveys Towans to Godrevy Point, Hayle' (Schedule 1). Harvey's Towans is confirmed (via place-name research) to be the southernmost section of the same continuous dune beach that runs north through Mexico/Hayle/Upton/Gwithian Towans to Godrevy Point — the council's own beach-map link for this entry is titled 'Hayle Towans to Godrevey Point', corroborating that the whole stretch is one zone.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31350": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Harveys Towans to Godrevy Point, Hayle' (Schedule 1). Harvey's Towans is confirmed (via place-name research) to be the southernmost section of the same continuous dune beach that runs north through Mexico/Hayle/Upton/Gwithian Towans to Godrevy Point — the council's own beach-map link for this entry is titled 'Hayle Towans to Godrevey Point', corroborating that the whole stretch is one zone.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Harveys Towans to Godrevy Point, Hayle' (Schedule 1). Harvey's Towans is confirmed (via place-name research) to be the southernmost section of the same continuous dune beach that runs north through Mexico/Hayle/Upton/Gwithian Towans to Godrevy Point — the council's own beach-map link for this entry is titled 'Hayle Towans to Godrevey Point', corroborating that the whole stretch is one zone.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31450": {
+      "status": "seasonal",
+      "ban": {
+        "from": "07-01",
+        "to": "08-31",
+        "daily": "10:00-18:00"
+      },
+      "notes": "Covered by official zone 'Harveys Towans to Godrevy Point, Hayle' (Schedule 1). Harvey's Towans is confirmed (via place-name research) to be the southernmost section of the same continuous dune beach that runs north through Mexico/Hayle/Upton/Gwithian Towans to Godrevy Point — the council's own beach-map link for this entry is titled 'Hayle Towans to Godrevey Point', corroborating that the whole stretch is one zone.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3008-27080": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order. Also a tidal river frontage well upstream, not a coastal 'beach' in the usual sense — likely outside the PSPO's intended scope entirely.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26520": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order. Distinct from neighbouring Cawsand (which has a seasonal ban) despite the two beaches adjoining — corroborated by Millbrook/Maker-with-Rame parish council material and multiple independent beach guides describing Kingsand as year-round dog-friendly.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26560": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26570": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26700": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3101-26800": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order. Consistent with reporting that Seaton/Downderry remained dog-friendly after Cornwall Council's 2025 PSPO review/consultation.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-28500": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-28550": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-31700": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-31800": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-31900": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3102-32000": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-28900": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29000": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3103-29100": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32550": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32600": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32700": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32750": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32800": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-32900": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33200": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33350": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33650": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33700": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-30750": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3105-31200": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order. Confirmed separately by St Ives Town Council's dogs-on-beaches page, which restates the county PSPO and does not mention Porthkidney.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-27300": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-27900": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-28000": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-28200": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-28300": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-28400": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32100": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32150": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32200": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32300": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32310": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32320": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32330": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32400": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3106-32500": {
+      "status": "friendly",
+      "notes": "Not named in Cornwall Council's sealed Dogs on Beaches PSPO 2026 (Schedules 1-3), which states it 'applies to the land specified... in Schedules 1 to 3'; beach carries no county-wide seasonal dog restriction under this order.",
+      "source": "https://www.cornwall.gov.uk/media/cr5p5n33/sealed-public-spaces-protection-dogs-on-beaches-order-10032026.pdf",
+      "accessed": "2026-07-21"
+    },
+    "ukk3104-33500": {
+      "status": "friendly",
+      "notes": "Not a ban: dogs must be kept on a lead 21 May - 30 September, 10:00-18:00 (Schedule 2, 'Dogs must be on Leads'). Outside that window, and off-lead generally, no restriction.",
+      "source": "https://www.cornwall.gov.uk/environment/animal-welfare-and-enforcement/dogs-on-beaches/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23100": {
+      "status": "friendly",
+      "notes": "Dogs allowed year-round on Maidencombe beach.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Oddicombe beach closed to dogs 1 May-30 Sep; dogs must be on a lead on the adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23400": {
+      "status": "friendly",
+      "notes": "Dogs allowed year-round on Babbacombe beach.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23501": {
+      "status": "friendly",
+      "notes": "Dogs allowed year-round on Anstey's Cove beach.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Meadfoot is split: the south-western part is closed to dogs 1 May-30 Sep, the north-eastern part allows dogs year-round. EA beach id covers the whole bay — check on-site signage for the exact zone boundary.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23700": {
+      "status": "friendly",
+      "notes": "Dogs allowed year-round on Beacon Cove.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Torre Abbey Sands closed to dogs 1 May-30 Sep; lead required on adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-23900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Hollicombe beach closed to dogs 1 May-30 Sep; lead required on adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Preston Sands closed to dogs 1 May-30 Sep; lead required on adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Paignton Sands closed to dogs 1 May-30 Sep; lead required on adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Goodrington is split: South Sands closed to dogs 1 May-30 Sep, North Sands allows dogs year-round. EA beach id covers both sections — check on-site signage for the exact boundary.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Broadsands beach closed to dogs 1 May-30 Sep; lead required on adjoining promenade during the ban.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Listed by the council as 'Breakwater Beach' (Shoalstone) and closed to dogs 1 May-30 Sep — distinct from the separately-listed, year-round-friendly 'Shoalstone Beach'; check signage for the exact boundary.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4200-24600": {
+      "status": "friendly",
+      "notes": "Dogs allowed year-round on St Marys Bay.",
+      "source": "https://www.torbay.gov.uk/dogsonthebeach",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-21600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dogs excluded from certain areas of Seaton town beach 1 May-30 Sep (exact zone not detailed on source page — check signage). The beach walkway between Castle Hill and Trevelyon Road requires dogs on a lead year-round.",
+      "source": "https://eastdevon.gov.uk/news/2024/03/east-devon-district-council-implements-updated-public-spaces-protection-orders-for-dog-controls/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-21700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Beer beach is split: western section (Sea Hill to the cliff edge) has a seasonal dog exclusion 1 May-30 Sep (café access excepted); eastern section allows dogs off-lead year-round.",
+      "source": "https://eastdevon.gov.uk/news/2024/03/east-devon-district-council-implements-updated-public-spaces-protection-orders-for-dog-controls/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-21800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dogs excluded from certain areas of Sidmouth town beach 1 May-30 Sep (exact zone not detailed on source page — check signage). On-lead required along the esplanade year-round.",
+      "source": "https://eastdevon.gov.uk/environmental-health-and-wellbeing/dogs/dogs-on-leads-and-dog-exclusion-areas/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-21900": {
+      "status": "friendly",
+      "notes": "Dogs permitted off-lead year-round at Jacobs Ladder since the March 2024 PSPO update. On-lead required in front of the beach huts and along the esplanade near the turning-circle access ramp; a small seasonal exclusion zone (1 May-30 Sep) applies between Jacobs Ladder and the Sailing Club access ramp.",
+      "source": "https://eastdevon.gov.uk/news/2024/03/east-devon-district-council-implements-updated-public-spaces-protection-orders-for-dog-controls/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-22100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dogs excluded from certain areas of Budleigh Salterton town beach 1 May-30 Sep (exact zone not detailed on source page — check signage). On-lead required along the esplanade year-round.",
+      "source": "https://eastdevon.gov.uk/environmental-health-and-wellbeing/dogs/dogs-on-leads-and-dog-exclusion-areas/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4301-22300": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dogs excluded from certain areas of Exmouth town beach 1 May-30 Sep (exact zone not detailed on source page — check signage). On-lead required along the esplanade year-round.",
+      "source": "https://eastdevon.gov.uk/environmental-health-and-wellbeing/dogs/dogs-on-leads-and-dog-exclusion-areas/",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34100": {
+      "status": "friendly",
+      "notes": "Dogs allowed all year; keep on lead in front of the beach huts. Privately managed (Christie Estates).",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dog access restricted 1 May-30 Sep (signage in place); dogs must be on a lead in the dunes. Privately managed (John Fowler Holiday Parks). Source text says '31 September' — corrected to the last day of the month, 30 Sep.",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34450": {
+      "status": "banned",
+      "notes": "Dogs allowed on a lead through the access tunnels but not permitted onto the beach itself. Privately managed (Tunnels Beaches).",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34600": {
+      "status": "friendly",
+      "notes": "North Devon Council-owned beach; only district-wide PSPO provisions apply (waste removal, lead on request) — no beach-specific ban.",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Dog access restricted 1 May-30 Sep (signage in place). Managed by Combe Martin Parish Council. Source text says '31 September' — corrected to the last day of the month, 30 Sep.",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4304-34800": {
+      "status": "friendly",
+      "notes": "Dogs allowed all year round. Managed by Lynton and Lynmouth Town Council.",
+      "source": "https://www.northdevon.gov.uk/leisure-and-lifestyle/beaches-in-north-devon",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-22400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Banned 1 Apr-30 Sep between the lifeguard tower and groyne 3, and on a 230m section west of Langstone Rock; banned year-round past groyne 9. Permitted year-round on the tidal beach and between groynes 3-9 (leads max 2m at the resort/nature reserve).",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-22500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Banned 1 Apr-30 Sep along the seashore between the slipway at Eastcliff and the Lighthouse. Dogs on a lead required in and around the Den and Promenade year-round.",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-22600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Banned 1 Apr-30 Sep along the seashore from the slipway to the cove; otherwise dogs permitted along the seashore from the railway station slipway to 150m before Langstone Rock.",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-22700": {
+      "status": "friendly",
+      "notes": "Dogs permitted all year round (East Cliff Slipway).",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-22900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Banned 1 Apr-30 Sep along the seashore between Clipper Quay and the steps to the beach.",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
+    },
+    "ukk4306-23000": {
+      "status": "friendly",
+      "notes": "Dogs permitted all year round at Ness Cove.",
+      "source": "https://www.teignbridge.gov.uk/dogsonbeaches",
+      "accessed": "2026-07-21"
     }
   }
 }

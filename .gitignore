@@ -1,1 +1,4 @@
 .DS_Store
+
+# research staging (subagent rule output, merged into dog_rules.json)
+_research/
