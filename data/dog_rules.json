@@ -2256,6 +2256,276 @@
       "notes": "Southport beach — dog exclusion zone from the Pier south towards Pleasureland (555m), to the tide line, 1 May-30 Sep only (signed in summer). Rest of beach unrestricted.",
       "source": "https://www.sefton.gov.uk/around-sefton/coast-and-countryside/visiting-our-beaches/southport-beach/",
       "accessed": "2026-07-22"
+    },
+    "ukj3100-16500": {
+      "status": "friendly",
+      "notes": "Eastney beach (east of the Coffee Cup) is one of two sections named by Portsmouth City Council as dog-friendly off-lead all year round; it sits outside the seasonal exclusion zone.",
+      "source": "https://www.portsmouth.gov.uk/services/leisure/beach-and-seafront/dogs-on-the-beach/",
+      "accessed": "2026-07-22"
+    },
+    "ukj3100-16600": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Portsmouth's official dog-restriction-zone map (June 2025) marks the main beach between The Pyramids and the Coffee Cup — which covers the Southsea Esplanade/South Parade Pier stretch — 'Dogs not allowed from 1 May-30 September (dog can be exercised off the lead from 1 October-30 April)'. Authorisation: Public Spaces Protection Order.",
+      "source": "https://www.portsmouth.gov.uk/wp-content/uploads/2025/06/beach-dog-restriction-zones-june-2025-aa-accessible.pdf",
+      "accessed": "2026-07-22"
+    },
+    "ukj3304-16850": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Fareham Borough Council Public Spaces Protection Order (Dog Control) 2023, Schedule 3 para 1: beach between westernmost of Salterns Road car park and the Borough boundary with Gosport is dog-excluded 1 May-30 Sep inclusive. NOTE: a separate, smaller sub-zone at Hill Head (Sailing Club slipway to the end of the beach huts on the promenade, Schedule 3 para 2) is ALSO dog-excluded 1 Oct-31 Mar inclusive (bird protection) — that strip is effectively excluded year-round while the rest of the beach is free Oct-Apr. Simplified here to the dominant summer amenity-beach ban.",
+      "source": "http://www.fareham.gov.uk/pdf/have_your_say/PSPO_2023.pdf",
+      "accessed": "2026-07-22"
+    },
+    "ukj3305-16700": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Gosport Borough Public Spaces Protection Dog Control Order 2023, Schedule 2 para 1(ii): beach area between the Sailing Club slipway and the GAFIRS slipway at Stokes Bay (the hatched zone on 'Map Number 2', the beach's central/main frontage) is dog-excluded 1 May-30 Sep inclusive; the east end toward Gilkicker is outside the mapped zone.",
+      "source": "https://www.gosport.gov.uk/media/4284/DOG-PSPO-2023/pdf/THE_BOROUGH_OF_GOSPORT_PUBLIC_SPACES_PROTECTION_DOG_CONTROL_ORDER_2023__PSPDCO_.pdf",
+      "accessed": "2026-07-22"
+    },
+    "ukj3305-16800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Gosport Borough Public Spaces Protection Dog Control Order 2023, Schedule 2 para 1(i): beach area between the easternmost part of Pirates Cove and the easternmost end of 'The Esplanade' at Lee-on-the-Solent (the hatched zone on 'Map Number 1', covering most of the town's built-up seafront) is dog-excluded 1 May-30 Sep inclusive.",
+      "source": "https://www.gosport.gov.uk/media/4284/DOG-PSPO-2023/pdf/THE_BOROUGH_OF_GOSPORT_PUBLIC_SPACES_PROTECTION_DOG_CONTROL_ORDER_2023__PSPDCO_.pdf",
+      "accessed": "2026-07-22"
+    },
+    "ukj3307-16300": {
+      "status": "friendly",
+      "notes": "Havant Borough Council Dog Control PSPO 2024 (in force 1 May 2024-30 Apr 2027), Schedule A lists only one seasonal beach-exclusion area on Hayling Island: Central Beachlands (the Fair) to The Inn on the Beach pub. Eastoke is outside that area and is not listed in any other schedule, so it is dog-friendly year-round (general fouling/lead-by-direction rules still apply borough-wide).",
+      "source": "https://www.havant.gov.uk/media/10251/download?inline",
+      "accessed": "2026-07-22"
+    },
+    "ukj3307-16350": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Havant Borough Council Dog Control PSPO 2024, Schedule A, Area 1: 'That part of Hayling Beach between the western boundary of the Beachlands Car Park at Central Beachlands (the Fair) and the eastern boundary of The Inn on the Beach, Public House' — dogs excluded 1 May-30 Sep inclusive. Matches this beach's name/location directly.",
+      "source": "https://www.havant.gov.uk/media/10251/download?inline",
+      "accessed": "2026-07-22"
+    },
+    "ukj3307-16400": {
+      "status": "friendly",
+      "notes": "Havant Borough Council Dog Control PSPO 2024, Schedule A lists only the Central Beachlands area as seasonally excluded on Hayling Island. Beachlands West is outside that area, so it is dog-friendly year-round (general fouling/lead-by-direction rules still apply borough-wide).",
+      "source": "https://www.havant.gov.uk/media/10251/download?inline",
+      "accessed": "2026-07-22"
+    },
+    "ukj2100-14800": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brighton & Hove Dogs Exclusion PSPO 2023: all beaches/foreshore excluded 1 May-30 Sep except council-signed 'dog friendly' beaches. One named exempt pocket is 'the beach between Longridge Avenue and the border' (eastern Saltdean, near the Lewes district boundary). Geocoding places Saltdean's EA point west of Longridge Avenue, i.e. outside that pocket, so the default seasonal ban is used here. Check on-beach signage near the district border.",
+      "source": "https://www.brighton-hove.gov.uk/travel-and-road-safety/roads-and-highways/dogs-exclusion-public-space-protection-order-pspo-2023",
+      "accessed": "2026-07-22"
+    },
+    "ukj2100-14850": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brighton & Hove Dogs Exclusion PSPO 2023: all beaches/foreshore excluded 1 May-30 Sep except signed 'dog friendly' beaches, including 'beaches between Chailey Avenue and Arundel Drive West, Rottingdean' and 'beaches between West Marina Wall to Rottingdean slope'. Geocoding of Chailey Avenue/Arundel Drive West places Rottingdean Beach's EA point just outside that specific pocket boundary; the second pocket's exact extent could not be confidently geolocated, so the default seasonal ban is used conservatively. Check on-beach signage.",
+      "source": "https://www.brighton-hove.gov.uk/travel-and-road-safety/roads-and-highways/dogs-exclusion-public-space-protection-order-pspo-2023",
+      "accessed": "2026-07-22"
+    },
+    "ukj2100-14900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brighton & Hove Dogs Exclusion PSPO 2023: all beaches/foreshore excluded 1 May-30 Sep except signed 'dog friendly' beaches, including 'beaches between the west wall of Brighton Marina and up to the Volk's railway station opposite New Steine' (Kemptown/east Brighton). This EA point sits within/near that stretch, but exact pocket edges weren't independently confirmed, so the default seasonal ban is recorded; a signed dog-friendly pocket may apply nearby.",
+      "source": "https://www.brighton-hove.gov.uk/travel-and-road-safety/roads-and-highways/dogs-exclusion-public-space-protection-order-pspo-2023",
+      "accessed": "2026-07-22"
+    },
+    "ukj2100-14950": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brighton & Hove Dogs Exclusion PSPO 2023: all beaches/foreshore excluded 1 May-30 Sep except signed 'dog friendly' beaches, including 'the beach in front and to the east of the Meeting Place Cafe, up to the large groyne with the life ring on'. Pocket location/extent not confidently pinned down against this EA point, so the default seasonal ban is recorded.",
+      "source": "https://www.brighton-hove.gov.uk/travel-and-road-safety/roads-and-highways/dogs-exclusion-public-space-protection-order-pspo-2023",
+      "accessed": "2026-07-22"
+    },
+    "ukj2100-15000": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Brighton & Hove Dogs Exclusion PSPO 2023: all beaches/foreshore excluded 1 May-30 Sep except signed 'dog friendly' beaches, several of which are in Hove: east of the Lawns Cafe (bottom of St John's Road), in front of King Alfred car park, and east of Hove Lagoon. This EA point covers a broad stretch of Hove seafront that likely includes one or more of these pockets, but exact edges weren't confirmed against the point, so the default seasonal ban is recorded; check signage along Hove promenade.",
+      "source": "https://www.brighton-hove.gov.uk/travel-and-road-safety/roads-and-highways/dogs-exclusion-public-space-protection-order-pspo-2023",
+      "accessed": "2026-07-22"
+    },
+    "ukj2201-14400": {
+      "status": "friendly",
+      "notes": "Wealden District Council's dog PSPO covers only fouling (beaches are listed solely as places you must clear up after your dog). No seasonal exclusion or lead-only order for any Wealden beach was found on the council's animal welfare/dog pages, and Pevensey Bay is not named in any restriction.",
+      "source": "https://www.wealden.gov.uk/environment-and-pollution/animal-welfare/cleaning-up-after-your-dog/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2201-14550": {
+      "status": "friendly",
+      "notes": "Wealden District Council's dog PSPO covers only fouling; no seasonal exclusion or lead-only order for any Wealden beach was found, and Birling Gap is not named in any restriction. General care near livestock/cliff edge advised but not a dog-control rule.",
+      "source": "https://www.wealden.gov.uk/environment-and-pollution/animal-welfare/cleaning-up-after-your-dog/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2202-14100": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Hastings dog control PSPO: exclusion zone 'from the west of the Harbour Arm to the east side of Hastings Pier', 1 April-30 September (note: season starts 1 April, not 1 May, per current official page). Pelham Beach sits between the Harbour Arm and the Pier, within this zone. Outside the season (1 Oct-31 Mar) dogs allowed on/off lead everywhere; promenade lead required, max 6 dogs per person year-round.",
+      "source": "https://www.hastings.gov.uk/environmentalhealth/dogs/dogonbeach/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2202-14150": {
+      "status": "seasonal",
+      "ban": {
+        "from": "04-01",
+        "to": "09-30"
+      },
+      "notes": "Hastings dog control PSPO: second exclusion zone 'from the west end of Bottle Alley to opposite the Royal Victoria Hotel', 1 April-30 September. Geocoding places this EA point for St Leonards just west of (i.e. right at/just past) the Royal Victoria Hotel boundary marker, which is the western edge of the exclusion zone - very close to the zone boundary, so treated as seasonal rather than asserting full year-round friendliness. Outside the season, or west of the Hotel, dogs allowed on/off lead.",
+      "source": "https://www.hastings.gov.uk/environmentalhealth/dogs/dogonbeach/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2204-13900": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Rother District Council: 'Dogs are not permitted in zoned areas [of Camber beach] between 1 May and 30 September' per the official Camber Sands page; the 2021 PSPO schedule described the zoned exclusion as bounded by imaginary lines from near 21 The Suttons (east) and the Western Car Park footpath (west). A small dog-permitted strip exists near the Western Car Park/Access C outside the main season-long zone.",
+      "source": "https://www.rother.gov.uk/leisure-and-events/beaches-and-coastline/camber-sands/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2204-14000": {
+      "status": "friendly",
+      "notes": "Rother District Council's official Winchelsea and Pett Level Beaches page confirms dog controls have been removed at Winchelsea Beach - no seasonal exclusion currently applies (dogs allowed at any time). This supersedes the 2021 PSPO, which had listed a 'Dogs Hill, Winchelsea Beach' exclusion zone. The seasonal restriction now applies only to nearby Pett Level beach, which is not in this worklist.",
+      "source": "https://www.rother.gov.uk/leisure-and-events/beaches-and-coastline/winchelsea-and-pett-level-beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2205-14200": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Rother District Council: 'Dogs are prohibited from 1 May to 30 September on Bexhill Beach from Brockley Road (Sovereign Light Cafe) to Sea Road (Sailing Club).' A separate, also-seasonal lead requirement applies on the promenade between groynes 34 and 78 (incl. the Jubilee/Metropole Lawns) per the PSPO schedule.",
+      "source": "https://www.rother.gov.uk/leisure-and-events/beaches-and-coastline/bexhill-beach/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2205-14300": {
+      "status": "friendly",
+      "notes": "Norman's Bay is not listed in Rother's dog exclusion or lead-control schedules (2021 PSPO Schedule One/Two, cross-checked against the current 2024 order), and the council's official Cooden and Normans Bay beach page has no dog restriction content at all.",
+      "source": "https://www.rother.gov.uk/leisure-and-events/beaches-and-coastline/cooden-and-normans-bay/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2401-15100": {
+      "status": "friendly",
+      "notes": "Adur & Worthing Councils: 'Dogs are allowed on all beaches in Adur throughout the year.' No seasonal restrictions apply to Southwick.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2401-15200": {
+      "status": "friendly",
+      "notes": "Adur & Worthing Councils: 'Dogs are allowed on all beaches in Adur throughout the year.' No seasonal restrictions apply to Shoreham Beach.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2401-15300": {
+      "status": "friendly",
+      "notes": "Adur & Worthing Councils: 'Dogs are allowed on all beaches in Adur throughout the year.' No seasonal restrictions apply to Lancing, Beach Green.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15500": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Arun District Council sealed dog PSPO (Schedule 3): beach exclusion 'East Pier to Norfolk Road (TQ 03530135), Littlehampton', 1 May-30 Sep. Confirmed by converting the order's OS grid reference to lat/lon; it lands almost exactly on this EA point. Lead required on adjoining promenade.",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15600": {
+      "status": "friendly",
+      "notes": "Middleton-on-Sea is not among the three named exclusion zones in Arun's sealed dog PSPO Schedule 3 (Littlehampton, Felpham, Bognor Regis). Council's own news release: 'Our four-legged friends are welcome on other stretches of our coastline all year round.'",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15650": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Arun District Council sealed dog PSPO (Schedule 3): beach exclusion 'Canning Road (SZ 94979930) to Felpham Sailing Club, Felpham', 1 May-30 Sep. Converting the Canning Road grid reference to lat/lon lands within ~50m of this EA point, confirming it is inside the zone. Lead required on adjoining promenade.",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15680": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Arun District Council sealed dog PSPO (Schedule 3): beach exclusion 'Bognor Regis Sailing Club Ramp (SZ 92869866) to Gloucester Road (SZ 94149900), Bognor Regis', 1 May-30 Sep. Converting both grid references to lat/lon brackets this EA point's longitude, confirming it falls inside the excluded stretch. Lead required on adjoining promenade.",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15700": {
+      "status": "friendly",
+      "notes": "Converting the PSPO's 'Bognor Regis Sailing Club Ramp' grid reference (the western edge of the Bognor exclusion zone) to lat/lon puts it east of this Aldwick EA point, i.e. Aldwick falls outside the named exclusion zone. Not otherwise listed in Schedule 3. Council: 'welcome on other stretches of our coastline all year round.'",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2402-15800": {
+      "status": "friendly",
+      "notes": "Pagham is not among the three named exclusion zones in Arun's sealed dog PSPO Schedule 3. Council's own news release: 'Our four-legged friends are welcome on other stretches of our coastline all year round.'",
+      "source": "https://www.arun.gov.uk/dogs/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2407-15350": {
+      "status": "friendly",
+      "notes": "Adur & Worthing's seasonal exclusion zone is 'the beach between Heene Road and Splash Point rocks'. Geocoding Splash Point places it about 220m west of this 'Worthing Beach House' EA point, i.e. outside (east of) the exclusion zone. Worthing's general year-round rules (control, lead on promenade, fouling) still apply. Given the closeness, double-check signage.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2407-15400": {
+      "status": "seasonal",
+      "ban": {
+        "from": "05-01",
+        "to": "09-30"
+      },
+      "notes": "Adur & Worthing Councils: dog exclusion zone 'the beach between Heene Road and Splash Point rocks' in Worthing, 1 May-30 Sep (all day). Geocoding places Heene Road almost exactly at this EA point's longitude, confirming it sits inside the excluded stretch.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
+    },
+    "ukj2407-15450": {
+      "status": "friendly",
+      "notes": "Adur & Worthing's Goring exclusion zone is 'between the launch ramp in line with Seafield Avenue and the launch ramp at Worthing Sailing Club'. Geocoding Seafield Avenue places it about 190m east of this Goring Beach EA point, i.e. outside (west of) the exclusion zone. Given the closeness, double-check signage; general year-round control/lead/fouling rules still apply.",
+      "source": "https://www.adur-worthing.gov.uk/beaches/",
+      "accessed": "2026-07-22"
     }
   }
 }
