@@ -6,12 +6,14 @@
     "July", "August", "September", "October", "November", "December"];
 
   var state = {
-    sandy: "any",              // any | sand-only | mixed
+    sand: [],                  // [] = any; else sand category keys (see SAND_CATEGORIES)
     dog: "any",                // any | yearround | month | banned | unknown
     month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
     monitored: "any",          // any | yes | no — EA-designated bathing water
     region: "any",             // any | one of the EA regionalOrganization labels
-    query: ""                  // beach-name substring search
+    counties: [],              // [] = any; else selected ceremonial counties
+    councils: [],              // [] = any; else selected districts (councils)
+    query: ""                  // name/district/county/region substring search
   };
 
   // Case-insensitive; treats backtick / curly quote / apostrophe alike
@@ -23,6 +25,7 @@
   var beaches = [];
   var map, markerLayer;
   var markersById = {};
+  var sandWidget, countyWidget, councilWidget;
 
   /* ---------- date helpers (MM-DD strings, zero-padded) ---------- */
 
@@ -49,6 +52,31 @@
 
   /* ---------- filter semantics ---------- */
 
+  var SAND_CATEGORIES = [
+    { value: "sand-only", label: "Sand only" },
+    { value: "sand-shingle", label: "Sand + shingle" },
+    { value: "sand-rock", label: "Sand + rock" },
+    { value: "sand-mud", label: "Sand + mud" }
+  ];
+
+  function sandCategoryMatch(beach, category) {
+    if (!beach.sandy) return false;
+    switch (category) {
+      case "sand-only": return beach.sediments.length === 1;
+      case "sand-shingle": return beach.sediments.indexOf("shingle") !== -1;
+      case "sand-rock": return beach.sediments.indexOf("rock") !== -1;
+      case "sand-mud": return beach.sediments.indexOf("mud") !== -1;
+    }
+    return false;
+  }
+
+  // sel empty -> no filter; else beach must match ANY selected category.
+  // Beaches with no/other sediment data only show when sel is empty (today's "Any").
+  function sandMatch(beach, sel) {
+    if (!sel.length) return true;
+    return sel.some(function (category) { return sandCategoryMatch(beach, category); });
+  }
+
   // Result: "yes" (include), "no" (exclude), "hours" (include, restricted hours)
   function dogMatch(beach) {
     var dogs = beach.dogs;
@@ -68,20 +96,27 @@
     return "yes";
   }
 
+  // Matches query against name, district, county or region — any hit counts.
+  function searchMatch(beach, query) {
+    if (!query) return true;
+    return normalize(beach.name).indexOf(query) !== -1 ||
+      (beach.district && normalize(beach.district).indexOf(query) !== -1) ||
+      (beach.county && normalize(beach.county).indexOf(query) !== -1) ||
+      (beach.region && normalize(beach.region).indexOf(query) !== -1);
+  }
+
   function applyFilters() {
     var visible = [];
     var hiddenUnknown = 0;
     var query = normalize(state.query.trim());
     beaches.forEach(function (beach) {
-      if (query && normalize(beach.name).indexOf(query) === -1) return;
-      // Beaches with no sediment data only appear under "Any".
-      if (state.sandy === "sand-only" &&
-          !(beach.sandy && beach.sediments.length === 1)) return;
-      if (state.sandy === "mixed" &&
-          !(beach.sandy && beach.sediments.length > 1)) return;
+      if (!searchMatch(beach, query)) return;
+      if (!sandMatch(beach, state.sand)) return;
       if (state.monitored === "yes" && beach.eaMonitored !== true) return;
       if (state.monitored === "no" && beach.eaMonitored !== false) return;
       if (state.region !== "any" && beach.region !== state.region) return;
+      if (state.counties.length && state.counties.indexOf(beach.county) === -1) return;
+      if (state.councils.length && state.councils.indexOf(beach.district) === -1) return;
       var dm = dogMatch(beach);
       if (dm === "no") {
         if (state.dog === "month" && beach.dogs.status === "unknown") hiddenUnknown++;
@@ -299,6 +334,146 @@
     }
   }
 
+  /* ---------- multi-select widget ---------- */
+
+  // Vanilla multi-select: a summary button ("All councils" / "Cornwall +2") plus a
+  // popup panel with an optional search input and a scrollable checkbox list.
+  // Empty selection means "no filter", same convention as the rest of the app.
+  function createMultiSelect(opts) {
+    var label = opts.label; // used for the default button text and search placeholder
+    var searchable = !!opts.searchable;
+    var onChange = opts.onChange || function () {};
+
+    var options = []; // [{value, label}]
+    var selected = [];
+
+    var wrap = document.createElement("div");
+    wrap.className = "multiselect";
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "multiselect-btn";
+    button.setAttribute("aria-haspopup", "true");
+    button.setAttribute("aria-expanded", "false");
+    if (opts.id) button.id = opts.id;
+    wrap.appendChild(button);
+
+    var panel = document.createElement("div");
+    panel.className = "multiselect-panel";
+    panel.hidden = true;
+    wrap.appendChild(panel);
+
+    var search = null;
+    if (searchable) {
+      search = document.createElement("input");
+      search.type = "search";
+      search.className = "multiselect-search";
+      search.placeholder = "Search " + label + "…";
+      panel.appendChild(search);
+    }
+
+    var list = document.createElement("div");
+    list.className = "multiselect-list";
+    panel.appendChild(list);
+
+    function optionLabel(value) {
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].value === value) return options[i].label;
+      }
+      return value;
+    }
+
+    function updateButton() {
+      if (!selected.length) {
+        button.textContent = "All " + label;
+      } else if (selected.length === 1) {
+        button.textContent = optionLabel(selected[0]);
+      } else {
+        button.textContent = optionLabel(selected[0]) + " +" + (selected.length - 1);
+      }
+    }
+
+    function renderList(filterText) {
+      list.textContent = "";
+      options.forEach(function (opt) {
+        if (filterText && opt.label.toLowerCase().indexOf(filterText) === -1) return;
+        var row = document.createElement("label");
+        row.className = "multiselect-option";
+        var box = document.createElement("input");
+        box.type = "checkbox";
+        box.value = opt.value;
+        box.checked = selected.indexOf(opt.value) !== -1;
+        box.addEventListener("change", function () {
+          toggle(opt.value, box.checked);
+        });
+        row.appendChild(box);
+        row.appendChild(document.createTextNode(opt.label));
+        list.appendChild(row);
+      });
+    }
+
+    function currentFilterText() {
+      return search ? search.value.trim().toLowerCase() : "";
+    }
+
+    function toggle(value, checked) {
+      var i = selected.indexOf(value);
+      if (checked && i === -1) selected.push(value);
+      if (!checked && i !== -1) selected.splice(i, 1);
+      updateButton();
+      onChange(selected.slice());
+    }
+
+    function open() {
+      panel.hidden = false;
+      button.setAttribute("aria-expanded", "true");
+    }
+    function close() {
+      panel.hidden = true;
+      button.setAttribute("aria-expanded", "false");
+    }
+
+    button.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      if (panel.hidden) open(); else close();
+    });
+    panel.addEventListener("click", function (ev) { ev.stopPropagation(); });
+    document.addEventListener("click", function () { close(); });
+
+    if (search) {
+      search.addEventListener("input", function () {
+        renderList(currentFilterText());
+      });
+    }
+
+    function setOptions(values) {
+      options = values.map(function (v) {
+        return typeof v === "string" ? { value: v, label: v } : v;
+      });
+      renderList(currentFilterText());
+      updateButton();
+    }
+
+    function getSelected() {
+      return selected.slice();
+    }
+
+    function setSelected(values) {
+      selected = values.slice();
+      renderList(currentFilterText());
+      updateButton();
+    }
+
+    updateButton();
+
+    return {
+      node: wrap,
+      setOptions: setOptions,
+      getSelected: getSelected,
+      setSelected: setSelected
+    };
+  }
+
   /* ---------- init ---------- */
 
   function initMap() {
@@ -326,6 +501,33 @@
     });
   }
 
+  // Distinct counties among beaches within a region ("any" = no region filter).
+  function countiesInRegion(region) {
+    var out = [];
+    beaches.forEach(function (b) {
+      if ((region === "any" || b.region === region) &&
+          b.county && out.indexOf(b.county) === -1) {
+        out.push(b.county);
+      }
+    });
+    out.sort();
+    return out;
+  }
+
+  // Distinct councils (districts) among beaches within a region + county selection.
+  function councilsInScope(region, counties) {
+    var out = [];
+    beaches.forEach(function (b) {
+      if ((region === "any" || b.region === region) &&
+          (!counties.length || counties.indexOf(b.county) !== -1) &&
+          b.district && out.indexOf(b.district) === -1) {
+        out.push(b.district);
+      }
+    });
+    out.sort();
+    return out;
+  }
+
   function initControls() {
     var monthSelect = document.getElementById("month-filter");
     MONTH_NAMES.forEach(function (name, i) {
@@ -336,10 +538,48 @@
     });
     monthSelect.value = String(state.month);
 
-    document.getElementById("sandy-filter").addEventListener("change", function (ev) {
-      state.sandy = ev.target.value;
-      applyFilters();
+    sandWidget = createMultiSelect({
+      id: "sand-filter-btn",
+      label: "sand types",
+      searchable: false,
+      onChange: function (selected) {
+        state.sand = selected;
+        applyFilters();
+      }
     });
+    sandWidget.setOptions(SAND_CATEGORIES);
+    document.getElementById("sand-filter").appendChild(sandWidget.node);
+
+    countyWidget = createMultiSelect({
+      id: "county-filter-btn",
+      label: "counties",
+      searchable: true,
+      onChange: function (selected) {
+        state.counties = selected;
+        var validCouncils = councilsInScope(state.region, state.counties);
+        state.councils = state.councils.filter(function (d) {
+          return validCouncils.indexOf(d) !== -1;
+        });
+        councilWidget.setOptions(validCouncils);
+        councilWidget.setSelected(state.councils);
+        applyFilters();
+      }
+    });
+    countyWidget.setOptions(countiesInRegion(state.region));
+    document.getElementById("county-filter").appendChild(countyWidget.node);
+
+    councilWidget = createMultiSelect({
+      id: "council-filter-btn",
+      label: "councils",
+      searchable: true,
+      onChange: function (selected) {
+        state.councils = selected;
+        applyFilters();
+      }
+    });
+    councilWidget.setOptions(councilsInScope(state.region, state.counties));
+    document.getElementById("council-filter").appendChild(councilWidget.node);
+
     document.getElementById("dog-filter").addEventListener("change", function (ev) {
       state.dog = ev.target.value;
       document.getElementById("month-group").hidden = state.dog !== "month";
@@ -355,6 +595,12 @@
     });
     document.getElementById("region-filter").addEventListener("change", function (ev) {
       state.region = ev.target.value;
+      state.counties = [];
+      state.councils = [];
+      countyWidget.setOptions(countiesInRegion(state.region));
+      countyWidget.setSelected([]);
+      councilWidget.setOptions(councilsInScope(state.region, state.counties));
+      councilWidget.setSelected([]);
       applyFilters();
     });
     document.getElementById("search-filter").addEventListener("input", function (ev) {
@@ -362,17 +608,23 @@
       applyFilters();
     });
     document.getElementById("reset-filters").addEventListener("click", function () {
-      state.sandy = "any";
+      state.sand = [];
       state.dog = "any";
       state.month = new Date().getMonth() + 1;
       state.monitored = "any";
       state.region = "any";
+      state.counties = [];
+      state.councils = [];
       state.query = "";
-      document.getElementById("sandy-filter").value = "any";
+      sandWidget.setSelected([]);
       document.getElementById("dog-filter").value = "any";
       monthSelect.value = String(state.month);
       document.getElementById("monitored-filter").value = "any";
       document.getElementById("region-filter").value = "any";
+      countyWidget.setOptions(countiesInRegion(state.region));
+      countyWidget.setSelected([]);
+      councilWidget.setOptions(councilsInScope(state.region, state.counties));
+      councilWidget.setSelected([]);
       document.getElementById("search-filter").value = "";
       document.getElementById("month-group").hidden = true;
       applyFilters();

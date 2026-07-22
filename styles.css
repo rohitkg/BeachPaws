@@ -52,6 +52,62 @@ h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
 }
 .filter-group input[type="search"] { width: 11rem; }
 
+.multiselect { position: relative; }
+.multiselect-btn {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background: #fff;
+  color: #1f2933;
+  min-width: 9rem;
+  text-align: left;
+  cursor: pointer;
+}
+.multiselect-btn:hover { border-color: #9aa5b1; }
+
+.multiselect-panel {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  z-index: 1001; /* above the sticky .filters bar */
+  min-width: 12rem;
+  max-width: 16rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.15);
+}
+
+.multiselect-search {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+}
+
+.multiselect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  max-height: 14rem;
+  overflow-y: auto;
+}
+
+.multiselect-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.multiselect-option:hover { background: #eceff1; }
+
 .result-count { margin-left: auto; color: #52606d; font-size: 0.9rem; }
 
 .reset-btn {
@@ -180,4 +236,6 @@ footer a { color: #1a5e8a; }
   #map { position: static; height: 55vh; order: -1; }
   #beach-list { max-height: none; overflow: visible; }
   .result-count { margin-left: 0; width: 100%; }
+  .multiselect-btn { width: 100%; }
+  .multiselect-panel { left: 0; right: 0; min-width: 0; max-width: none; }
 }

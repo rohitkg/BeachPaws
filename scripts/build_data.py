@@ -92,7 +92,7 @@ def geo_label(node):
     return None
 
 
-def fetch_beach(beach_id):
+def fetch_beach(beach_id, county_map):
     """Fetch one beach record and flatten it."""
     doc = get_json(f"{BASE}/bathing-water/{beach_id}.json")
     topic = doc["result"]["primaryTopic"]
@@ -105,6 +105,10 @@ def fetch_beach(beach_id):
     district = geo_label(topic.get("district"))
     if not district:
         warn(f'{beach_id} "{name}": no district in EA record')
+
+    county = county_map.get(district)
+    if district and not county:
+        warn(f'{beach_id} "{name}": no county mapping for district "{district}"')
 
     region = geo_label(topic.get("regionalOrganization"))
     if not region:
@@ -144,6 +148,7 @@ def fetch_beach(beach_id):
         "id": beach_id,
         "name": name,
         "district": district,
+        "county": county,
         "region": region,
         "lat": lat,
         "lng": lng,
@@ -154,7 +159,7 @@ def fetch_beach(beach_id):
     }
 
 
-def load_extra_beaches():
+def load_extra_beaches(county_map):
     """Curated beaches that are not EA-designated bathing waters."""
     path = DATA / "extra_beaches.json"
     if not path.exists():
@@ -163,10 +168,15 @@ def load_extra_beaches():
     out = []
     for e in extras:
         sediments = sorted(e.get("sediments", []))
+        district = e["district"]
+        county = county_map.get(district)
+        if district and not county:
+            warn(f'{e["id"]} "{e["name"]}": no county mapping for district "{district}"')
         out.append({
             "id": e["id"],
             "name": e["name"],
-            "district": e["district"],
+            "district": district,
+            "county": county,
             "region": e.get("region"),
             "lat": e.get("lat"),
             "lng": e.get("lng"),
@@ -188,6 +198,14 @@ def main():
     else:
         warn("data/dog_rules.json not found — all beaches marked unknown")
 
+    county_map = {}
+    counties_path = DATA / "counties.json"
+    if counties_path.exists():
+        raw_counties = json.loads(counties_path.read_text(encoding="utf-8"))
+        county_map = {k: v for k, v in raw_counties.items() if not k.startswith("_")}
+    else:
+        warn("data/counties.json not found — all beaches missing county")
+
     beaches = []
     seen_ids = set()
     ids = fetch_all_beach_ids(config["countryUri"])
@@ -195,11 +213,11 @@ def main():
         warn("no beaches returned for configured country")
     for beach_id in ids:
         time.sleep(DELAY)
-        beach = fetch_beach(beach_id)
+        beach = fetch_beach(beach_id, county_map)
         beaches.append(beach)
         seen_ids.add(beach_id)
 
-    for beach in load_extra_beaches():
+    for beach in load_extra_beaches(county_map):
         if beach["id"] in seen_ids:
             warn(f'extra beach {beach["id"]} duplicates an EA beach — skipped')
             continue
