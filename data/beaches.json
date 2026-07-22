@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-07-21T22:03:09Z",
+  "generated": "2026-07-22T13:44:52Z",
   "coverage": "England",
   "attribution": "Beach locations, sediment types and water quality from the Environment Agency Bathing Water Quality API (environment.data.gov.uk/bwq), Open Government Licence v3.0. Dog restrictions hand-curated from council PSPO pages; see per-beach source and accessed date.",
   "beachCount": 470
@@ -231,7 +231,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Bispham — north of Blackpool North, within the council's year-round dog-friendly zone (North Pier to Anchorsholme). PSPO: Blackpool Borough Council (Dog Control and Dog Fouling) PSPO 2024.",
+    "source": "https://www.blackpool.gov.uk/Residents/Planning-environment-and-community/Dogs/Dogs-on-the-beach.aspx",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -251,7 +254,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Blackpool Central — dogs not allowed on the beach 1 May-30 Sep between North Pier and the Mirror Ball opposite the Solaris Centre (this segment corresponds to the 'Central' stretch; areas north of North Pier and south of the Solaris/Mirror Ball are dog-friendly year-round). No specific hours given (all-day). Guide/assistance dogs exempt. PSPO: Blackpool Borough Council (Dog Control and Dog Fouling) PSPO 2024.",
+    "source": "https://www.blackpool.gov.uk/Residents/Planning-environment-and-community/Dogs/Dogs-on-the-beach.aspx",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -271,7 +281,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Blackpool North (North Pier to Anchorsholme) — dogs welcome year-round per Blackpool Council's explicit year-round zone. Guide/assistance dogs exempt from all restrictions elsewhere. PSPO: Blackpool Borough Council (Dog Control and Dog Fouling) PSPO 2024.",
+    "source": "https://www.blackpool.gov.uk/Residents/Planning-environment-and-community/Dogs/Dogs-on-the-beach.aspx",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -291,7 +304,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Blackpool South (Solaris/Mirror Ball to Squires Gate) — dogs welcome year-round per Blackpool Council. On the promenade between North and South Piers dogs must be on a lead at all times. Guide/assistance dogs exempt from all restrictions. PSPO: Blackpool Borough Council (Dog Control and Dog Fouling) PSPO 2024, in force 10 Dec 2024, 3 years.",
+    "source": "https://www.blackpool.gov.uk/Residents/Planning-environment-and-community/Dogs/Dogs-on-the-beach.aspx",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4706,7 +4722,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Bridlington North Beach — PSPO exclusion zone between the northern end of North Marine Promenade and the north-eastern face of the North Pier. £75 FPN.",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4726,7 +4749,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Bridlington South Beach — PSPO exclusion zone between the southern face of the South Pier and the eastern face of Princess Mary Promenade Sea Wall. £75 FPN.",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4746,7 +4776,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Danes Dyke, Flamborough — not one of East Riding's 4 PSPO beach exclusion zones (Bridlington North/South, Hornsea, Withernsea only).",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4767,7 +4800,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Flamborough South Landing — not one of East Riding's 4 PSPO beach exclusion zones (Bridlington North/South, Hornsea, Withernsea only). Official leaflet: 'all other beaches not listed... have no restrictions on dogs being walked, including all the Flamborough beaches'.",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4787,7 +4823,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Fraisthorpe — not one of East Riding's 4 PSPO beach exclusion zones (Bridlington North/South, Hornsea, Withernsea only).",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4808,7 +4847,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Hornsea — PSPO exclusion zone between the concrete ramp at Headland View and the steps south of Sands Lane. £75 FPN.",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4829,7 +4875,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Skipsea — not one of East Riding's 4 PSPO beach exclusion zones (Bridlington North/South, Hornsea, Withernsea only).",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4849,7 +4898,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Wilsthorpe — not one of East Riding's 4 PSPO beach exclusion zones (Bridlington North/South, Hornsea, Withernsea only).",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -4869,7 +4921,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Withernsea — PSPO exclusion zone between the first groyne north of the access ramp opposite Seaside Road and the beach access steps at Pier Tower. £75 FPN.",
+    "source": "https://downloads.eastriding.org.uk/corporate/pages/events-and-activities/PSPO%20-%20Dog%20Leaflet.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -5277,7 +5336,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "03-20",
+     "to": "09-30"
+    },
+    "notes": "St Annes amenity beach dog exclusion zone (between St Annes Lifeboat Station slipway and the northern end of North Promenade Car Park, by the Danfo toilets, seaward to mean low water). Official rule text: 'starts Good Friday until 30th September (inclusive)' — Good Friday is a movable feast (ranges 20 Mar-23 Apr); ban.from='03-20' is a conservative fixed-date approximation of the earliest possible start, NOT the exact rule — verify against the current year's Good Friday date. Beach outside the zone (toward Squires Gate and Lytham Quays) is unrestricted year-round. £100 FPN in zone during exclusion.",
+    "source": "https://new.fylde.gov.uk/resident/dogs/dog-exclusion-zone/",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -5479,7 +5545,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Seaton Carew Centre — within Hartlepool's 'Seaton Beach' PSPO dog exclusion zone (Schedule 6, map C1), covering the main seafront including the Coronation Centre stretch. No specific hours (all-day). £80 FPN (reduced) / £100 standard.",
+    "source": "https://www.hartlepool.gov.uk/downloads/file/174/part-c-exclusion-schedule-6",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -5499,7 +5572,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Seaton Carew North — within Hartlepool's 'Seaton Beach' PSPO dog exclusion zone (Schedule 6, map C1), which covers the main Seaton Carew seafront from near the War Memorial/Seaton Sands (north) south past the Coronation Centre. No specific hours given (all-day for the season). £80 FPN (reduced) / £100 standard.",
+    "source": "https://www.hartlepool.gov.uk/downloads/file/174/part-c-exclusion-schedule-6",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6039,7 +6119,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Morecambe North beach — dogs excluded from the whole beach every year 1 May-30 Sep 'to comply with the Seaside Award' and protect bathing water quality. Dogs must be on leads on the promenade/adjacent gardens/Sunny Slopes year-round. FPN £100 (£65 if paid within 7 days).",
+    "source": "https://www.lancaster.gov.uk/environmental-health/dog-warden-service/dogs-on-morecambe-s-beaches",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6059,7 +6146,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Morecambe South beach — dogs excluded from the whole beach every year 1 May-30 Sep 'to comply with the Seaside Award' and protect bathing water quality. Dogs must be on leads on the promenade/adjacent gardens/Sunny Slopes year-round. FPN £100 (£65 if paid within 7 days).",
+    "source": "https://www.lancaster.gov.uk/environmental-health/dog-warden-service/dogs-on-morecambe-s-beaches",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6810,7 +6904,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Tynemouth Long Sands North — not among North Tyneside's 4 PSPO beach dog-exclusion zones (King Edward's Bay, Tynemouth Longsands South, Cullercoats Bay, Whitley Bay South). Council press material also states dogs can be walked at 'the northern end of Tynemouth Longsands, towards Cullercoats'.",
+    "source": "https://legacy.northtyneside.gov.uk/sites/default/files/web-page-related-files/Schedule%202%20-%20Beaches.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6873,7 +6970,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Cayton Bay — not among the 5 explicit seasonal exclusion zones (Filey, Scarborough North Bay, Scarborough South Bay, Whitby, Sandsend) in North Yorkshire Council's Dog Control PSPO 2025, Part 3, despite Cayton being a ward within the PSPO's administrative area.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6893,7 +6993,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Filey — North Yorkshire Council PSPO Part 3(a): beach from the southernmost point of the sea wall at Royal Parade to the northernmost side of the beach slipway separating Coble Landing from the Promenade. £100 FPN.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6931,7 +7038,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Reighton — not among the 5 explicit seasonal exclusion zones (Filey, Scarborough North Bay, Scarborough South Bay, Whitby, Sandsend) in North Yorkshire Council's Dog Control PSPO 2025, Part 3.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6952,7 +7062,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Robin Hoods Bay — not among the 5 explicit seasonal exclusion zones (Filey, Scarborough North Bay, Scarborough South Bay, Whitby, Sandsend) in North Yorkshire Council's Dog Control PSPO 2025, Part 3.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6973,7 +7086,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Runswick Bay — not among the 5 explicit seasonal exclusion zones (Filey, Scarborough North Bay, Scarborough South Bay, Whitby, Sandsend) in North Yorkshire Council's Dog Control PSPO 2025, Part 3 (an exhaustive schedule of restricted land for the former Scarborough Borough area).",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -6993,7 +7109,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Sandsend — North Yorkshire Council PSPO Part 3(e): beach from the steps below the public conveniences below Sandhills to the slipway at the southern end of Bank Bottom Car Park. £100 FPN.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7014,7 +7137,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Scarborough North Bay — North Yorkshire Council PSPO Part 3(b): beach from the top of the northernmost beach slipway at the Sands (former Corner Café) to the northernmost beach slipway at the end of the run of chalets. £100 FPN.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7034,7 +7164,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Scarborough South Bay — North Yorkshire Council PSPO Part 3(c): beach from the West Pier to the top of the southernmost flight of steps at the roundabout adjacent to the underground car park. £100 FPN.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7069,7 +7206,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Whitby — North Yorkshire Council PSPO Part 3(d): West Beach from the West Pier to a line at the beach steps roughly halfway along the run of beach chalets. £100 FPN.",
+    "source": "https://edemocracy.northyorks.gov.uk/documents/s51955/New%20Dog%20Control%20Order%20May%202025%20consultation%20results%20and%20proposed%20order.pdf",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7089,7 +7233,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Amble Links — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7104,7 +7251,10 @@
    "waterQuality": null,
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Amble Little Shore — not one of Northumberland County Council's two PSPO beach exclusion zones (only Newbiggin-by-the-Sea and Blyth are seasonally excluded). General countywide rules apply: pick up fouling, max 6 dogs/person, lead on A/B roads and in cemeteries, lead-by-direction where an officer judges it necessary.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7124,7 +7274,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Bamburgh Castle — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7144,7 +7297,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Beadnell — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7164,7 +7320,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Blyth South Beach — PSPO exclusion zone from the beach access at Beachway to the beach access at the southern end of the Links Road car park. £100 FPN (£80 if paid within 7 days).",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7184,7 +7347,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Druridge Bay North — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7204,7 +7370,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Druridge Bay South — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7224,7 +7393,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Low Newton — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply (fouling, leads, max 6 dogs).",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7244,7 +7416,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Newbiggin North — PSPO exclusion zone from the breakwater at Church Point to the beach access from the promenade at Sidney Crescent. £100 FPN (£80 if paid within 7 days).",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7264,7 +7443,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Newbiggin South — same 'Newbiggin-by-the-Sea' PSPO exclusion zone (breakwater at Church Point to promenade access at Sidney Crescent). £100 FPN (£80 if paid within 7 days).",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7284,7 +7470,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Seahouses North — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7304,7 +7493,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Seaton Sluice — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7324,7 +7516,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Spittal — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7344,7 +7539,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Warkworth — not one of Northumberland's two PSPO beach exclusion zones (Newbiggin-by-the-Sea and Blyth only). General countywide dog-control rules apply.",
+    "source": "https://www.northumberland.gov.uk/public-protection/animal-welfare-and-dog-control",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7499,7 +7697,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Saltburn — Redcar & Cleveland PSPO exclusion zone from the Hazelgrove beach access point to the eastern side of Saltburn Pier. Outside 1 May-30 Sep dogs are welcome across the whole beach. £100 FPN.",
+    "source": "https://www.redcar-cleveland.gov.uk/things-to-see-and-do/visitors-information",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7656,7 +7861,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Ainsdale beach — dog exclusion zone 200m either side of the main beach entrance, to the tide line, 1 May-30 Sep only (signed in summer). Rest of beach unrestricted (lead required near grazing enclosures in winter when animals present).",
+    "source": "https://www.sefton.gov.uk/around-sefton/coast-and-countryside/information-for-dog-owners/how-to-keep-others-safe/",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7676,7 +7888,10 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "friendly",
+    "notes": "Formby beach — Sefton's official dedicated Formby Beach page carries no dog exclusion zone or seasonal ban (unlike the parallel Southport/Ainsdale beach pages, which explicitly state their zones). Sefton's Coastal & Visitor Areas PSPO exclusion zones apply only at Southport and Ainsdale. Borough-wide rules still apply (max 6 dogs per person, lead on request, pick up after your dog).",
+    "source": "https://www.sefton.gov.uk/around-sefton/coast-and-countryside/visiting-our-beaches/formby-beach/",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -7696,7 +7911,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Southport beach — dog exclusion zone from the Pier south towards Pleasureland (555m), to the tide line, 1 May-30 Sep only (signed in summer). Rest of beach unrestricted.",
+    "source": "https://www.sefton.gov.uk/around-sefton/coast-and-countryside/visiting-our-beaches/southport-beach/",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -10634,7 +10856,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Cleveleys — seasonal dog ban 1 May-30 Sep applies to the stretch between FBKafe (Naimos) and the Wyre/Blackpool boundary; rest of the beach and the promenade (lead required) unaffected. FPN £100.",
+    "source": "https://www.wyre.gov.uk/news/article/447/seasonal-dog-ban",
+    "accessed": "2026-07-22"
    }
   },
   {
@@ -10655,7 +10884,14 @@
    },
    "eaMonitored": true,
    "dogs": {
-    "status": "unknown"
+    "status": "seasonal",
+    "ban": {
+     "from": "05-01",
+     "to": "09-30"
+    },
+    "notes": "Fleetwood (Marine Beach) — seasonal dog ban 1 May-30 Sep applies opposite the beach huts near the slipway and Central car park; rest of beach and promenade (lead required) unaffected. FPN £100.",
+    "source": "https://www.wyre.gov.uk/news/article/447/seasonal-dog-ban",
+    "accessed": "2026-07-22"
    }
   }
  ]
