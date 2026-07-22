@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+# Leaflet is not managed here — it is a CDN <script> pinned with an SRI hash in
+# index.html, bumped by hand (and vendored locally in Phase 2).

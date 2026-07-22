@@ -2,3 +2,6 @@
 
 # research staging (subagent rule output, merged into dog_rules.json)
 _research/
+
+# npm carries only the lint/format toolchain; the site itself has no build step.
+node_modules/

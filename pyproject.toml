@@ -1,0 +1,13 @@
+# Ruff config only — this project has no Python package, no install step.
+# scripts/*.py are stdlib-only and run directly with python3.
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+include = ["scripts/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.ruff.format]
+quote-style = "double"

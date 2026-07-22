@@ -7,6 +7,7 @@
 
 Stdlib only; Python 3.9+.
 """
+
 import json
 import re
 import sys
@@ -51,7 +52,7 @@ def get_json(url):
                 return json.load(resp)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             if attempt == 2:
-                raise SystemExit(f"ERROR: failed to fetch {url}: {e}")
+                raise SystemExit(f"ERROR: failed to fetch {url}: {e}") from e
             warn(f"retrying {url}: {e}")
             time.sleep(1)
 
@@ -172,19 +173,21 @@ def load_extra_beaches(county_map):
         county = county_map.get(district)
         if district and not county:
             warn(f'{e["id"]} "{e["name"]}": no county mapping for district "{district}"')
-        out.append({
-            "id": e["id"],
-            "name": e["name"],
-            "district": district,
-            "county": county,
-            "region": e.get("region"),
-            "lat": e.get("lat"),
-            "lng": e.get("lng"),
-            "sandy": "sand" in sediments,
-            "sediments": sediments,
-            "waterQuality": None,
-            "eaMonitored": False,
-        })
+        out.append(
+            {
+                "id": e["id"],
+                "name": e["name"],
+                "district": district,
+                "county": county,
+                "region": e.get("region"),
+                "lat": e.get("lat"),
+                "lng": e.get("lng"),
+                "sandy": "sand" in sediments,
+                "sediments": sediments,
+                "waterQuality": None,
+                "eaMonitored": False,
+            }
+        )
     return out
 
 
@@ -219,7 +222,7 @@ def main():
 
     for beach in load_extra_beaches(county_map):
         if beach["id"] in seen_ids:
-            warn(f'extra beach {beach["id"]} duplicates an EA beach — skipped')
+            warn(f"extra beach {beach['id']} duplicates an EA beach — skipped")
             continue
         beaches.append(beach)
         seen_ids.add(beach["id"])
@@ -248,9 +251,7 @@ def main():
         "beaches": beaches,
     }
     out_path = DATA / "beaches.json"
-    out_path.write_text(
-        json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
-    )
+    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Wrote {out_path} ({len(beaches)} beaches)")
 
 

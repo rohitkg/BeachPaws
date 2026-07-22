@@ -17,7 +17,7 @@
       "district": "Thanet",
       "region": "South East",
       "lat": 51.3834,
-      "lng": 1.3080,
+      "lng": 1.308,
       "sediments": ["rock", "sand"],
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
     },
@@ -27,7 +27,7 @@
       "district": "Thanet",
       "region": "South East",
       "lat": 51.3936,
-      "lng": 1.4090,
+      "lng": 1.409,
       "sediments": ["sand"],
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
     },
@@ -37,7 +37,7 @@
       "district": "Thanet",
       "region": "South East",
       "lat": 51.3856,
-      "lng": 1.4410,
+      "lng": 1.441,
       "sediments": ["rock", "sand"],
       "source": "https://www.thanet.gov.uk/info-pages/dogs-and-our-beaches/"
     },

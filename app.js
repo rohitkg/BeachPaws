@@ -2,18 +2,30 @@
 (function () {
   "use strict";
 
-  var MONTH_NAMES = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"];
+  var MONTH_NAMES = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   var state = {
-    sand: [],                  // [] = any; else sand category keys (see SAND_CATEGORIES)
-    dog: "any",                // any | yearround | month | banned | unknown
-    month: new Date().getMonth() + 1,  // 1-12, used when dog === "month"
-    monitored: "any",          // any | yes | no — EA-designated bathing water
-    region: "any",             // any | one of the EA regionalOrganization labels
-    counties: [],              // [] = any; else selected ceremonial counties
-    councils: [],              // [] = any; else selected districts (councils)
-    query: ""                  // name/district/county/region substring search
+    sand: [], // [] = any; else sand category keys (see SAND_CATEGORIES)
+    dog: "any", // any | yearround | month | banned | unknown
+    month: new Date().getMonth() + 1, // 1-12, used when dog === "month"
+    monitored: "any", // any | yes | no — EA-designated bathing water
+    region: "any", // any | one of the EA regionalOrganization labels
+    counties: [], // [] = any; else selected ceremonial counties
+    councils: [], // [] = any; else selected districts (councils)
+    query: "", // name/district/county/region substring search
   };
 
   // Case-insensitive; treats backtick / curly quote / apostrophe alike
@@ -29,7 +41,9 @@
 
   /* ---------- date helpers (MM-DD strings, zero-padded) ---------- */
 
-  function pad2(n) { return (n < 10 ? "0" : "") + n; }
+  function pad2(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
 
   // "05-01" -> "1 May"
   function fmtDate(mmdd) {
@@ -42,9 +56,13 @@
   function monthOverlapsBan(m, ban) {
     var monthStart = pad2(m) + "-01";
     var monthEnd = pad2(m) + "-31";
-    var windows = ban.from <= ban.to
-      ? [[ban.from, ban.to]]
-      : [[ban.from, "12-31"], ["01-01", ban.to]]; // defensive: year-wrapping window
+    var windows =
+      ban.from <= ban.to
+        ? [[ban.from, ban.to]]
+        : [
+            [ban.from, "12-31"],
+            ["01-01", ban.to],
+          ]; // defensive: year-wrapping window
     return windows.some(function (w) {
       return !(monthEnd < w[0] || monthStart > w[1]);
     });
@@ -56,16 +74,20 @@
     { value: "sand-only", label: "Sand only" },
     { value: "sand-shingle", label: "Sand + shingle" },
     { value: "sand-rock", label: "Sand + rock" },
-    { value: "sand-mud", label: "Sand + mud" }
+    { value: "sand-mud", label: "Sand + mud" },
   ];
 
   function sandCategoryMatch(beach, category) {
     if (!beach.sandy) return false;
     switch (category) {
-      case "sand-only": return beach.sediments.length === 1;
-      case "sand-shingle": return beach.sediments.indexOf("shingle") !== -1;
-      case "sand-rock": return beach.sediments.indexOf("rock") !== -1;
-      case "sand-mud": return beach.sediments.indexOf("mud") !== -1;
+      case "sand-only":
+        return beach.sediments.length === 1;
+      case "sand-shingle":
+        return beach.sediments.indexOf("shingle") !== -1;
+      case "sand-rock":
+        return beach.sediments.indexOf("rock") !== -1;
+      case "sand-mud":
+        return beach.sediments.indexOf("mud") !== -1;
     }
     return false;
   }
@@ -74,17 +96,23 @@
   // Beaches with no/other sediment data only show when sel is empty (today's "Any").
   function sandMatch(beach, sel) {
     if (!sel.length) return true;
-    return sel.some(function (category) { return sandCategoryMatch(beach, category); });
+    return sel.some(function (category) {
+      return sandCategoryMatch(beach, category);
+    });
   }
 
   // Result: "yes" (include), "no" (exclude), "hours" (include, restricted hours)
   function dogMatch(beach) {
     var dogs = beach.dogs;
     switch (state.dog) {
-      case "any": return "yes";
-      case "yearround": return dogs.status === "friendly" ? "yes" : "no";
-      case "banned": return dogs.status === "banned" ? "yes" : "no";
-      case "unknown": return dogs.status === "unknown" ? "yes" : "no";
+      case "any":
+        return "yes";
+      case "yearround":
+        return dogs.status === "friendly" ? "yes" : "no";
+      case "banned":
+        return dogs.status === "banned" ? "yes" : "no";
+      case "unknown":
+        return dogs.status === "unknown" ? "yes" : "no";
       case "month":
         if (dogs.status === "friendly") return "yes";
         if (dogs.status === "seasonal") {
@@ -99,10 +127,12 @@
   // Matches query against name, district, county or region — any hit counts.
   function searchMatch(beach, query) {
     if (!query) return true;
-    return normalize(beach.name).indexOf(query) !== -1 ||
+    return (
+      normalize(beach.name).indexOf(query) !== -1 ||
       (beach.district && normalize(beach.district).indexOf(query) !== -1) ||
       (beach.county && normalize(beach.county).indexOf(query) !== -1) ||
-      (beach.region && normalize(beach.region).indexOf(query) !== -1);
+      (beach.region && normalize(beach.region).indexOf(query) !== -1)
+    );
   }
 
   function applyFilters() {
@@ -171,9 +201,12 @@
     }
     wrap.appendChild(dogBadge(beach, restrictedHours));
     if (beach.waterQuality) {
-      wrap.appendChild(makeBadge(
-        "Water: " + beach.waterQuality.class + " (" + beach.waterQuality.year + ")",
-        "badge-wq-" + beach.waterQuality.class));
+      wrap.appendChild(
+        makeBadge(
+          "Water: " + beach.waterQuality.class + " (" + beach.waterQuality.year + ")",
+          "badge-wq-" + beach.waterQuality.class,
+        ),
+      );
     }
     if (beach.eaMonitored === false) {
       wrap.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
@@ -187,8 +220,10 @@
     if (beach.lat !== null && beach.lng !== null) {
       return "https://www.google.com/maps/dir/?api=1&destination=" + beach.lat + "," + beach.lng;
     }
-    return "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent(beach.name + ", " + beach.district);
+    return (
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent(beach.name + ", " + beach.district)
+    );
   }
 
   /* ---------- list rendering ---------- */
@@ -215,8 +250,7 @@
 
       var district = document.createElement("p");
       district.className = "district";
-      district.textContent = beach.district +
-        (beach.lat === null ? " · location unavailable" : "");
+      district.textContent = beach.district + (beach.lat === null ? " · location unavailable" : "");
       card.appendChild(district);
 
       card.appendChild(badgesFor(beach, item.restrictedHours));
@@ -237,8 +271,7 @@
         a.target = "_blank";
         a.textContent = "Dog rules source";
         source.appendChild(a);
-        source.appendChild(document.createTextNode(
-          " · checked " + beach.dogs.accessed));
+        source.appendChild(document.createTextNode(" · checked " + beach.dogs.accessed));
         card.appendChild(source);
       }
 
@@ -277,7 +310,8 @@
     if (hiddenUnknown > 0) {
       var note = document.createElement("p");
       note.className = "hidden-note";
-      note.textContent = hiddenUnknown +
+      note.textContent =
+        hiddenUnknown +
         " beach(es) with unknown dog rules hidden — select “Unknown rules” to see them.";
       list.appendChild(note);
     }
@@ -289,7 +323,7 @@
     friendly: "#1d6f42",
     seasonal: "#c96a10",
     banned: "#a1261f",
-    unknown: "#52606d"
+    unknown: "#52606d",
   };
 
   function renderMarkers(visible) {
@@ -306,7 +340,7 @@
         color: STATUS_COLORS[beach.dogs.status] || STATUS_COLORS.unknown,
         weight: 2,
         fillColor: STATUS_COLORS[beach.dogs.status] || STATUS_COLORS.unknown,
-        fillOpacity: 0.5
+        fillOpacity: 0.5,
       });
 
       var popup = document.createElement("div");
@@ -435,10 +469,15 @@
 
     button.addEventListener("click", function (ev) {
       ev.stopPropagation();
-      if (panel.hidden) open(); else close();
+      if (panel.hidden) open();
+      else close();
     });
-    panel.addEventListener("click", function (ev) { ev.stopPropagation(); });
-    document.addEventListener("click", function () { close(); });
+    panel.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+    });
+    document.addEventListener("click", function () {
+      close();
+    });
 
     if (search) {
       search.addEventListener("input", function () {
@@ -470,7 +509,7 @@
       node: wrap,
       setOptions: setOptions,
       getSelected: getSelected,
-      setSelected: setSelected
+      setSelected: setSelected,
     };
   }
 
@@ -480,7 +519,8 @@
     map = L.map("map");
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
-      attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors"
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
     markerLayer = L.layerGroup().addTo(map);
     map.setView([52.8, -1.5], 6); // England fallback before first fitBounds
@@ -505,8 +545,7 @@
   function countiesInRegion(region) {
     var out = [];
     beaches.forEach(function (b) {
-      if ((region === "any" || b.region === region) &&
-          b.county && out.indexOf(b.county) === -1) {
+      if ((region === "any" || b.region === region) && b.county && out.indexOf(b.county) === -1) {
         out.push(b.county);
       }
     });
@@ -518,9 +557,12 @@
   function councilsInScope(region, counties) {
     var out = [];
     beaches.forEach(function (b) {
-      if ((region === "any" || b.region === region) &&
-          (!counties.length || counties.indexOf(b.county) !== -1) &&
-          b.district && out.indexOf(b.district) === -1) {
+      if (
+        (region === "any" || b.region === region) &&
+        (!counties.length || counties.indexOf(b.county) !== -1) &&
+        b.district &&
+        out.indexOf(b.district) === -1
+      ) {
         out.push(b.district);
       }
     });
@@ -545,7 +587,7 @@
       onChange: function (selected) {
         state.sand = selected;
         applyFilters();
-      }
+      },
     });
     sandWidget.setOptions(SAND_CATEGORIES);
     document.getElementById("sand-filter").appendChild(sandWidget.node);
@@ -563,7 +605,7 @@
         councilWidget.setOptions(validCouncils);
         councilWidget.setSelected(state.councils);
         applyFilters();
-      }
+      },
     });
     countyWidget.setOptions(countiesInRegion(state.region));
     document.getElementById("county-filter").appendChild(countyWidget.node);
@@ -575,7 +617,7 @@
       onChange: function (selected) {
         state.councils = selected;
         applyFilters();
-      }
+      },
     });
     councilWidget.setOptions(councilsInScope(state.region, state.counties));
     document.getElementById("council-filter").appendChild(councilWidget.node);
@@ -658,7 +700,9 @@
     })
     .catch(function (err) {
       var list = document.getElementById("beach-list");
-      list.textContent = "Could not load beach data (" + err.message +
+      list.textContent =
+        "Could not load beach data (" +
+        err.message +
         "). Serve this directory over HTTP: python3 -m http.server";
     });
 })();
