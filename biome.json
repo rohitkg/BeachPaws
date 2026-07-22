@@ -15,6 +15,11 @@
       "semicolons": "always"
     }
   },
+  "css": {
+    "formatter": {
+      "enabled": false
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -24,7 +29,8 @@
         "useTemplate": "off"
       },
       "complexity": {
-        "useArrowFunction": "off"
+        "useArrowFunction": "off",
+        "useOptionalChain": "off"
       },
       "correctness": {
         "noInnerDeclarations": "off"

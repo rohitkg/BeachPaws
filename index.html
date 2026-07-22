@@ -2,8 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Kept as early as possible in <head> so it governs every resource load that follows;
+       GitHub Pages can't set a CSP response header, so a meta tag is the only option here. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' https://tile.openstreetmap.org data:; script-src 'self' https://unpkg.com; style-src 'self' https://unpkg.com 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BeachPaws — England</title>
+  <meta name="description"
+        content="Find your dog's perfect beach in England — filter by sand type, dog rules and water quality, built on Environment Agency data and council PSPOs.">
+
+  <!-- og:url uses a placeholder domain — no domain has been bought yet.
+       Update this to the real domain at launch (see README "Before launch"). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BeachPaws — dog-friendly beaches in England">
+  <meta property="og:description"
+        content="Find your dog's perfect beach — sand type, dog rules and water quality, built on Environment Agency data and council PSPOs.">
+  <meta property="og:url" content="https://beachpaws.co.uk/">
+  <!-- TODO: add an og:image once a real screenshot of the site is captured, before launch. -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BeachPaws — dog-friendly beaches in England">
+  <meta name="twitter:description"
+        content="Find your dog's perfect beach — sand type, dog rules and water quality, built on Environment Agency data and council PSPOs.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -94,6 +115,13 @@
     <p>Dog rules hand-curated from council PSPO pages (source and date on every beach card).
       Restrictions change — <strong>check the council page before travelling</strong>.</p>
     <p id="data-generated"></p>
+    <p id="dog-rules-verified"></p>
+    <p class="feedback">
+      <!-- Placeholder repo URL — no public repo exists yet. Update once BeachPaws is pushed
+           to its real GitHub location (see README "Before launch"). -->
+      <a href="https://github.com/rohitgupta/BeachPaws/issues/new?template=dog-rules-correction.yml"
+         target="_blank" rel="noopener external">Dog rules wrong? Report it</a>
+    </p>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

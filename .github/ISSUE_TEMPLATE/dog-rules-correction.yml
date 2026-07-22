@@ -1,0 +1,45 @@
+name: Dog rules correction
+description: Report a dog rule that's wrong or out of date for a specific beach.
+title: "[Dog rules] "
+labels: ["dog-rules"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep BeachPaws accurate. Dog rules on this site are hand-curated from
+        council PSPO (Public Spaces Protection Order) pages, and councils change them without much
+        notice — corrections from people who've checked the current rule are the main way this
+        dataset stays trustworthy.
+  - type: input
+    id: beach-name
+    attributes:
+      label: Beach name
+      description: The exact beach name as it appears on the site.
+      placeholder: "e.g. Margate Main Sands"
+    validations:
+      required: true
+  - type: textarea
+    id: current-rule
+    attributes:
+      label: What the site currently says
+      description: Copy the dog-rule badge (and any notes) shown on the beach card.
+      placeholder: "e.g. \"No dogs 1 May – 30 Sep\""
+    validations:
+      required: true
+  - type: textarea
+    id: correct-rule
+    attributes:
+      label: What the correct rule is
+      description: Describe the actual current rule, including any seasonal date range or daily time restriction.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: >-
+        A link to the council page (PSPO notice, byelaw, council website) that proves the correct
+        rule. Required — a correction with no source can't be verified or curated.
+      placeholder: "https://www.council.gov.uk/..."
+    validations:
+      required: true

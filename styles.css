@@ -1,10 +1,8 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 [hidden] {
-  /* biome-ignore lint/complexity/noImportantStyles: .filter-group is display:flex, which
-     beats the [hidden] attribute's default styling — the month filter would stay visible. */
+  /* biome-ignore lint/complexity/noImportantStyles: .filter-group is display:flex, which beats
+     the [hidden] attribute's own styling — the month filter would otherwise stay visible. */
   display: none !important;
 }
 
@@ -20,10 +18,7 @@ header {
   padding: 1.25rem 1.5rem 0.5rem;
 }
 
-h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.6rem;
-}
+h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
 .region-tag {
   font-size: 0.75rem;
   font-weight: 600;
@@ -34,10 +29,7 @@ h1 {
   vertical-align: middle;
   margin-left: 0.4rem;
 }
-.tagline {
-  margin: 0;
-  color: #52606d;
-}
+.tagline { margin: 0; color: #52606d; }
 
 .visually-hidden {
   position: absolute;
@@ -51,13 +43,16 @@ h1 {
   border: 0;
 }
 
+/* A <fieldset>, so the filters are a labelled group for screen readers. The margin,
+   border and min-inline-size resets undo fieldset's defaults — without the last one it
+   sizes to min-content and the flex wrap collapses. */
 .filters {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 1rem;
   margin: 0;
-  min-inline-size: 0; /* fieldset defaults to min-content width, which breaks the flex wrap */
+  min-inline-size: 0;
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;
@@ -67,20 +62,9 @@ h1 {
   z-index: 1000; /* above Leaflet panes */
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-.filter-group label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #52606d;
-}
-.label-row {
-  display: flex;
-  align-items: center;
-}
+.filter-group { display: flex; flex-direction: column; gap: 0.2rem; }
+.filter-group label { font-size: 0.8rem; font-weight: 600; color: #52606d; }
+.label-row { display: flex; align-items: center; }
 .filter-group select,
 .filter-group input[type="search"] {
   font-size: 0.95rem;
@@ -89,13 +73,9 @@ h1 {
   border-radius: 6px;
   background: #fff;
 }
-.filter-group input[type="search"] {
-  width: 11rem;
-}
+.filter-group input[type="search"] { width: 11rem; }
 
-.multiselect {
-  position: relative;
-}
+.multiselect { position: relative; }
 .multiselect-btn {
   font-size: 0.95rem;
   padding: 0.35rem 0.5rem;
@@ -107,9 +87,7 @@ h1 {
   text-align: left;
   cursor: pointer;
 }
-.multiselect-btn:hover {
-  border-color: #9aa5b1;
-}
+.multiselect-btn:hover { border-color: #9aa5b1; }
 
 .multiselect-panel {
   position: absolute;
@@ -151,15 +129,9 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
 }
-.multiselect-option:hover {
-  background: #eceff1;
-}
+.multiselect-option:hover { background: #eceff1; }
 
-.result-count {
-  margin-left: auto;
-  color: #52606d;
-  font-size: 0.9rem;
-}
+.result-count { margin-left: auto; color: #52606d; font-size: 0.9rem; }
 
 .reset-btn {
   font-size: 0.85rem;
@@ -170,9 +142,7 @@ h1 {
   color: #3e4c59;
   cursor: pointer;
 }
-.reset-btn:hover {
-  background: #e4e7eb;
-}
+.reset-btn:hover { background: #e4e7eb; }
 
 .info-btn {
   width: 1.1rem;
@@ -188,9 +158,7 @@ h1 {
   cursor: pointer;
   vertical-align: text-bottom;
 }
-.info-btn:hover {
-  background: #e4e7eb;
-}
+.info-btn:hover { background: #e4e7eb; }
 
 .explainer {
   margin: 0;
@@ -235,31 +203,12 @@ main {
   padding: 0.85rem 1rem;
   cursor: pointer;
 }
-.beach-card:hover {
-  border-color: #9aa5b1;
-}
-.beach-card h2 {
-  margin: 0;
-  font-size: 1.05rem;
-}
-.beach-card .district {
-  color: #52606d;
-  font-size: 0.85rem;
-  margin: 0 0 0.4rem;
-}
-.beach-card .notes {
-  font-size: 0.85rem;
-  color: #3e4c59;
-  margin: 0.4rem 0 0;
-}
-.beach-card .source {
-  font-size: 0.75rem;
-  color: #7b8794;
-  margin: 0.3rem 0 0;
-}
-.beach-card .source a {
-  color: inherit;
-}
+.beach-card:hover { border-color: #9aa5b1; }
+.beach-card h2 { margin: 0; font-size: 1.05rem; }
+.beach-card .district { color: #52606d; font-size: 0.85rem; margin: 0 0 0.4rem; }
+.beach-card .notes { font-size: 0.85rem; color: #3e4c59; margin: 0.4rem 0 0; }
+.beach-card .source { font-size: 0.75rem; color: #7b8794; margin: 0.3rem 0 0; }
+.beach-card .source a { color: inherit; }
 .beach-card .directions {
   display: inline-block;
   font-size: 0.75rem;
@@ -267,11 +216,7 @@ main {
   margin: 0.3rem 0 0;
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
+.badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .badge {
   display: inline-block;
   font-size: 0.75rem;
@@ -280,53 +225,28 @@ main {
   border-radius: 999px;
   white-space: nowrap;
 }
-.badge-sand {
-  background: #fdf3d7;
-  color: #8a6d1a;
-}
-.badge-neutral {
-  background: #eceff1;
-  color: #52606d;
-}
-.badge-green {
-  background: #dcf2e3;
-  color: #1d6f42;
-}
-.badge-amber {
-  background: #fde8cd;
-  color: #9c5511;
-}
-.badge-red {
-  background: #fadcd9;
-  color: #a1261f;
-}
-.badge-grey {
-  background: #e4e7eb;
-  color: #52606d;
-}
-.badge-wq-Excellent {
-  background: #dcf2e3;
-  color: #1d6f42;
-}
-.badge-wq-Good {
-  background: #d9ecf7;
-  color: #1a5e8a;
-}
-.badge-wq-Sufficient {
-  background: #fde8cd;
-  color: #9c5511;
-}
-.badge-wq-Poor {
-  background: #fadcd9;
-  color: #a1261f;
-}
+.badge-sand    { background: #fdf3d7; color: #8a6d1a; }
+.badge-neutral { background: #eceff1; color: #52606d; }
+.badge-green   { background: #dcf2e3; color: #1d6f42; }
+.badge-amber   { background: #fde8cd; color: #9c5511; }
+.badge-red     { background: #fadcd9; color: #a1261f; }
+.badge-grey    { background: #e4e7eb; color: #52606d; }
+.badge-wq-Excellent  { background: #dcf2e3; color: #1d6f42; }
+.badge-wq-Good       { background: #d9ecf7; color: #1a5e8a; }
+.badge-wq-Sufficient { background: #fde8cd; color: #9c5511; }
+.badge-wq-Poor       { background: #fadcd9; color: #a1261f; }
 
-.empty-state,
-.hidden-note {
+.empty-state, .hidden-note {
   color: #52606d;
   font-size: 0.9rem;
   padding: 0.75rem 0.25rem;
 }
+
+/* 404.html shares this stylesheet but is not the list+map layout, so it opts out of the grid. */
+.not-found { display: block; max-width: 40rem; padding: 1rem 1.5rem 2rem; }
+.not-found h2 { margin-top: 0; }
+/* biome-ignore lint/style/noDescendingSpecificity: never overlaps — 404 page vs beach cards */
+.not-found a { color: #1a5e8a; }
 
 footer {
   padding: 1rem 1.5rem 2rem;
@@ -335,46 +255,17 @@ footer {
   border-top: 1px solid #e0e5e9;
 }
 /* biome-ignore lint/style/noDescendingSpecificity: never overlaps — footer links vs card links */
-footer a {
-  color: #1a5e8a;
-}
+footer a { color: #1a5e8a; }
 
-.leaflet-popup-content .badges {
-  margin-top: 0.3rem;
-}
-.leaflet-popup-content h2 {
-  font-size: 1rem;
-  margin: 0 0 0.1rem;
-}
-.leaflet-popup-content p {
-  margin: 0.25rem 0 0;
-  font-size: 0.85rem;
-}
+.leaflet-popup-content .badges { margin-top: 0.3rem; }
+.leaflet-popup-content h2 { font-size: 1rem; margin: 0 0 0.1rem; }
+.leaflet-popup-content p { margin: 0.25rem 0 0; font-size: 0.85rem; }
 
 @media (max-width: 820px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  #map {
-    position: static;
-    height: 55vh;
-    order: -1;
-  }
-  #beach-list {
-    max-height: none;
-    overflow: visible;
-  }
-  .result-count {
-    margin-left: 0;
-    width: 100%;
-  }
-  .multiselect-btn {
-    width: 100%;
-  }
-  .multiselect-panel {
-    left: 0;
-    right: 0;
-    min-width: 0;
-    max-width: none;
-  }
+  main { grid-template-columns: 1fr; }
+  #map { position: static; height: 55vh; order: -1; }
+  #beach-list { max-height: none; overflow: visible; }
+  .result-count { margin-left: 0; width: 100%; }
+  .multiselect-btn { width: 100%; }
+  .multiselect-panel { left: 0; right: 0; min-width: 0; max-width: none; }
 }

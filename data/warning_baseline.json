@@ -1,0 +1,8 @@
+{
+  "_comment": "Expected WARN-message classes from a full scripts/build_data.py run, derived from _research/build_stderr.log (a real captured run, 470 beaches). Checked by `python3 scripts/validate.py <log>`. A class present in a new log but absent here fails validation — either update this file if it's expected (e.g. a new kind of EA data gap), or investigate if it's a regression. Count drift within an already-listed class does NOT fail — it's printed for visibility (e.g. `dog_unknown` is expected to fall as Phase 3 curation continues; `no_sediment`/`no_water_quality` can drift a little release to release as the EA dataset changes). See WARNING_CLASSES in scripts/validate.py for how a log line maps to a class.",
+  "classes": {
+    "no_sediment": 45,
+    "no_water_quality": 13,
+    "dog_unknown": 167
+  }
+}

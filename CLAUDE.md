@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-BeachPaws — a static webpage for finding dog-friendly beaches, covering all of England. No framework, no build step, no bundler. Data comes from the Environment Agency Bathing Water Quality API plus hand-curated dog-rule/extra-beach files, merged offline into a single JSON file the page fetches at load time. Dog-rule curation is still Kent-only; the rest of England shows honestly as "unknown" until researched.
+BeachPaws — a static webpage for finding dog-friendly beaches, covering all of England. No framework, no build step, no bundler. Data comes from the Environment Agency Bathing Water Quality API plus hand-curated dog-rule/extra-beach files, merged offline into a single JSON file the page fetches at load time. Dog-rule curation currently covers 303 of 470 beaches across 8 regions (136 friendly, 165 seasonal, 2 banned); the remaining 167 show honestly as "unknown" until researched, concentrated in Devon, Cumbria, Isle of Wight, Suffolk and Tyne and Wear.
 
 ## Commands
 
@@ -23,7 +23,7 @@ python3 scripts/build_data.py
 
 Makes ~470 requests to the EA API (pages the England beach-id list, then fetches each beach's detail) and only overwrites `data/beaches.json` if every fetch succeeds, so a failed run never corrupts the committed dataset. Warnings (curated ids matching no beach, beaches with no dog entry, missing sediment/coordinates/district/region) print to stderr — read them, don't just check the exit code.
 
-There is no automated test suite. Verification is manual/browser-driven — see `.claude/skills/verify/SKILL.md` for the full click-through script, including approximate expected counts (e.g. ~470 total, 36 curated Kent beaches) against the current England-wide dataset. Re-derive those counts if the dataset changes materially.
+There is no automated test suite. Verification is manual/browser-driven — see `.claude/skills/verify/SKILL.md` for the full click-through script, including approximate expected counts (e.g. ~470 total, 303 curated beaches across 8 regions) against the current England-wide dataset. Re-derive those counts if the dataset changes materially.
 
 ## Architecture
 
@@ -33,10 +33,10 @@ This is the one invariant that matters most in this repo: **`data/beaches.json` 
 
 1. **EA API data** (fetched live) — `data/config.json` holds a country selector (`coverage` label + `countryUri`); the pipeline pages the Bathing Water API for every English beach id, then fetches each one's name, district, region, coordinates, sediment types, and the latest annual water-quality classification.
 2. **`data/extra_beaches.json`** (curated, hand-edited) — beaches not in the EA's designated-bathing-water list (e.g. Kingsgate Bay), tagged `eaMonitored: false` since they have no official sediment/quality record.
-3. **`data/dog_rules.json`** (curated, hand-edited) — dog restrictions per beach id, sourced from council PSPO pages. Every entry carries `source` + `accessed`. Beaches with no matching entry are marked `status: "unknown"` rather than assumed — currently that's most of England outside Kent.
+3. **`data/dog_rules.json`** (curated, hand-edited) — dog restrictions per beach id, sourced from council PSPO pages. Every entry carries `source` + `accessed`. Beaches with no matching entry are marked `status: "unknown"` rather than assumed — currently 167 of 470, concentrated in Devon, Cumbria, Isle of Wight, Suffolk and Tyne and Wear.
 4. **`data/counties.json`** (curated, hand-edited) — flat `district → ceremonial county` map (e.g. `"Thanet": "Kent"`), keyed by the EA's district name. Used to stamp the `county` field so the front end can offer a county filter one level up from council. `warn()`s if a beach's district has no entry.
 
-To change dog rules or add a beach, edit `dog_rules.json` / `extra_beaches.json` and rerun the pipeline — never edit `beaches.json` directly, and never make the pipeline write to the curated files. Further dog-rule curation for non-Kent beaches is just adding entries to `dog_rules.json` and rerunning. Wales/Scotland/Northern Ireland use separate agencies (NRW/SEPA/DAERA) with different data formats — not yet implemented; would need a new fetch function per agency in `build_data.py` feeding the same flatten/output shape.
+To change dog rules or add a beach, edit `dog_rules.json` / `extra_beaches.json` and rerun the pipeline — never edit `beaches.json` directly, and never make the pipeline write to the curated files. Further dog-rule curation for the remaining 167 unknown beaches is just adding entries to `dog_rules.json` and rerunning. Wales/Scotland/Northern Ireland use separate agencies (NRW/SEPA/DAERA) with different data formats — not yet implemented; would need a new fetch function per agency in `build_data.py` feeding the same flatten/output shape.
 
 ### Beach record shape
 
@@ -56,4 +56,4 @@ Date-window logic (`monthOverlapsBan`) does lexical `MM-DD` string comparison, n
 
 ## Licensing / attribution constraints
 
-EA-derived fields (location, sediment, water quality) are under OGL v3.0 — attribution text lives in `ATTRIBUTION` in `build_data.py` and is written into `beaches.json`'s `meta`. Dog-rule and extra-beach data is hand-curated per-council and is the project's differentiator (see `PRODUCTION_PLAN.md` for the intended licensing split) — don't strip or overwrite the `source`/`accessed` fields when touching that data.
+Three-way split, see `LICENSE`, `data/LICENSE` and README's Licensing section for the full detail. Code (`app.js`, `index.html`, `styles.css`, `scripts/`) is MIT. EA-derived fields (location, sediment, water quality) are under OGL v3.0 — attribution text lives in `ATTRIBUTION` in `build_data.py` and is written into `beaches.json`'s `meta`. Dog-rule and extra-beach data (`data/dog_rules.json`, `data/extra_beaches.json`) is hand-curated per-council, the project's differentiator, and is licensed CC BY-NC 4.0 rather than MIT — don't strip or overwrite the `source`/`accessed` fields when touching that data, and don't fold those two files into the MIT grant.

@@ -1,0 +1,54 @@
+Licensing notice for the data/ directory
+=========================================
+
+The files in this directory are NOT all covered by the MIT license at the
+repository root. Three different licenses apply, depending on where a given
+field originated:
+
+1. data/dog_rules.json and data/extra_beaches.json — CC BY-NC 4.0
+   -----------------------------------------------------------------
+   These two files are BeachPaws' hand-curated dataset: dog-access rules
+   sourced from council Public Spaces Protection Order (PSPO) pages, and a
+   handful of beaches not in the Environment Agency's designated-bathing-water
+   list. Curating and keeping this accurate is manual, ongoing work and is
+   this project's commercial differentiator.
+
+   These two files are licensed under
+   Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0):
+   https://creativecommons.org/licenses/by-nc/4.0/
+
+   In short: you may share and adapt this data with attribution, for
+   non-commercial purposes. Commercial use (including bulk redistribution,
+   resale, or feeding it into a commercial product or service) requires a
+   separate license from the copyright holder. This notice is a summary, not
+   a substitute for the full license text at the link above.
+
+2. data/beaches.json — mixed, generated
+   -----------------------------------------------------------------
+   This file is pipeline output (see scripts/build_data.py) and combines
+   fields from both of the following sources on a per-beach basis:
+
+   - Location, sediment type, and water-quality fields are sourced from the
+     Environment Agency's Bathing Water Quality API and remain licensed under
+     the Open Government Licence v3.0 (OGL v3):
+     https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+     These fields are NOT subject to the CC BY-NC non-commercial restriction —
+     OGL v3 already permits commercial use, and nothing here narrows that.
+
+   - The `dogs` field on each beach entry is joined in from data/dog_rules.json
+     (or absent, for beaches with no curated entry) and is covered by the
+     CC BY-NC 4.0 terms described above.
+
+   Because beaches.json interleaves both, treat each field according to its
+   source rather than the file as a whole: EA-derived fields stay OGL v3,
+   `dogs` stays CC BY-NC 4.0.
+
+3. data/config.json and data/counties.json — MIT
+   -----------------------------------------------------------------
+   These are small structural/config files (an API country selector, and a
+   district-to-county lookup) with no independent creative or curated content.
+   They fall under the repository's root MIT license, same as the code.
+
+Every entry in data/dog_rules.json carries its own `source` (the council page
+it was checked against) and `accessed` (the date it was checked) — please
+preserve both when reusing this data, per the CC BY-NC attribution requirement.

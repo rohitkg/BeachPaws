@@ -1,4 +1,4 @@
-/* Kent Beach Filter — filter logic, list rendering, Leaflet map sync. */
+/* BeachPaws — filter logic, list rendering, Leaflet map sync. */
 (function () {
   "use strict";
 
@@ -50,6 +50,28 @@
     var m = parseInt(mmdd.slice(0, 2), 10);
     var d = parseInt(mmdd.slice(3, 5), 10);
     return d + " " + MONTH_NAMES[m - 1].slice(0, 3);
+  }
+
+  // Formats an ISO date (with or without a time component, e.g. "2026-07-22T14:36:15Z"
+  // or "2026-07-19") as "22 July 2026". Uses UTC getters throughout — a date-only ISO
+  // string parses as UTC midnight per spec, so this avoids the value shifting a day
+  // depending on the visitor's local timezone.
+  function formatIsoDate(iso) {
+    var d = new Date(iso);
+    return d.getUTCDate() + " " + MONTH_NAMES[d.getUTCMonth()] + " " + d.getUTCFullYear();
+  }
+
+  // Oldest dogs.accessed date across all beaches that have one — a lower bound on how
+  // stale the curated dog-rule dataset might be. Most beaches have no dogs.accessed
+  // (they're outside the curated set) and are ignored, not treated as stale.
+  function oldestAccessed(beachList) {
+    var oldest = null;
+    beachList.forEach(function (b) {
+      var accessed = b.dogs && b.dogs.accessed;
+      if (!accessed) return;
+      if (oldest === null || accessed < oldest) oldest = accessed;
+    });
+    return oldest;
   }
 
   // Does month m (1-12) overlap the ban window? Lexical compare on MM-DD.
@@ -267,7 +289,7 @@
         source.className = "source";
         var a = document.createElement("a");
         a.href = beach.dogs.source;
-        a.rel = "external";
+        a.rel = "noopener external";
         a.target = "_blank";
         a.textContent = "Dog rules source";
         source.appendChild(a);
@@ -280,7 +302,7 @@
         dataSource.className = "source";
         var dataLink = document.createElement("a");
         dataLink.href = "https://environment.data.gov.uk/doc/bathing-water/" + beach.id;
-        dataLink.rel = "external";
+        dataLink.rel = "noopener external";
         dataLink.target = "_blank";
         dataLink.textContent = "Beach data source (Environment Agency)";
         dataSource.appendChild(dataLink);
@@ -692,17 +714,29 @@
       beaches = data.beaches;
       document.querySelector(".region-tag").textContent = data.meta.coverage;
       document.getElementById("data-generated").textContent =
-        "Dataset generated " + data.meta.generated + " · " + data.meta.beachCount + " beaches";
+        "Dataset generated " +
+        formatIsoDate(data.meta.generated) +
+        " · " +
+        data.meta.beachCount +
+        " beaches";
+      var oldest = oldestAccessed(beaches);
+      document.getElementById("dog-rules-verified").textContent = oldest
+        ? "Dog rules last verified " + formatIsoDate(oldest)
+        : "";
       initMap();
       initRegionOptions(beaches);
       initControls();
       applyFilters();
     })
     .catch(function (err) {
+      console.error("BeachPaws: failed to load data/beaches.json", err);
       var list = document.getElementById("beach-list");
-      list.textContent =
-        "Could not load beach data (" +
-        err.message +
-        "). Serve this directory over HTTP: python3 -m http.server";
+      var isLocalDev = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
+      var message = "Beach data could not be loaded. Please try again shortly.";
+      if (isLocalDev) {
+        message +=
+          " (dev: serve this directory over HTTP — python3 -m http.server — " + err.message + ")";
+      }
+      list.textContent = message;
     });
 })();

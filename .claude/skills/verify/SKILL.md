@@ -36,9 +36,13 @@ No build step. Surface = browser GUI.
      latter checks backtick-normalization against the EA's "St
      Margaret`s Bay") → still finds the curated Kent entry with its
      colored dog badge (green/amber/red) and a working source link.
-   - Search a non-Kent beach (e.g. "spittal" or "blackpool") → grey
-     "Dog rules unknown" badge — expected for the ~434 beaches outside
-     the currently-curated Kent set.
+   - Search a beach that's still uncurated (e.g. "west wittering" or
+     "firestone bay") → grey "Dog rules unknown" badge — expected for
+     167 of the 470 beaches. 303 beaches are curated (136 friendly,
+     165 seasonal, 2 banned); "spittal" and "blackpool" are curated
+     now too (North East/North West were swept), so don't use them as
+     unknown-badge examples — re-check `data/beaches.json` for a
+     current `status: "unknown"` example if these drift.
    - Search matches `name`, `district`, `county` and `region` (not
      just the name): "kent" → 36 beaches whose county is Kent, incl.
      ones with no "kent" in the name (e.g. "Herne Bay", "Tankerton").
@@ -60,8 +64,27 @@ No build step. Surface = browser GUI.
    England dataset (~470 requests, a couple of minutes), exits 0, and
    must never modify `data/dog_rules.json`, `data/extra_beaches.json`
    or `data/counties.json` (`git status` after the run should show only
-   `data/beaches.json` changed). Expect many `WARN: no dog data for ...` lines — correct,
-   most of England outside Kent has no curated dog-rule entry yet.
+   `data/beaches.json` changed). Expect ~167 `WARN: no dog data for ...`
+   lines — correct, those beaches have no curated dog-rule entry yet
+   (see PRODUCTION_PLAN.md's Expand coverage list for which counties).
+7. Launch-hygiene checks (Phase 0):
+   - Favicon: browser tab shows the paw-print icon (`favicon.svg`).
+   - Open the devtools console before and after loading the page —
+     zero errors, and specifically zero Content-Security-Policy
+     violation messages (map tiles, Leaflet CSS/JS from unpkg, and the
+     app's own script/style must all load clean under the CSP meta tag
+     in `index.html`).
+   - Footer shows two human-readable dates ("Dataset generated 22 July
+     2026 · 470 beaches" and "Dog rules last verified <oldest
+     `accessed` date>"), not raw ISO strings, plus a working "Dog
+     rules wrong? Report it" link.
+   - `http://localhost:8741/404.html` renders the same header/footer
+     visual language as the main page and a link back home.
+   - Kill the server (or rename `data/beaches.json` temporarily) and
+     reload: the list shows a plain, non-technical error message, with
+     the `python3 -m http.server` dev hint appearing only because
+     `localhost` is the hostname — check `err` details land in the
+     console instead of the visible message.
 
 Gotcha: `.filter-group { display:flex }` needs the `[hidden]` CSS
 override in styles.css — regressions show the Month select while

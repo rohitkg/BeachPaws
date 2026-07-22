@@ -9,8 +9,10 @@ Stdlib only; Python 3.9+.
 """
 
 import json
+import os
 import re
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.parse
@@ -24,6 +26,7 @@ DATA = ROOT / "data"
 TIMEOUT = 15
 DELAY = 0.2
 PAGE_SIZE = 50
+USER_AGENT = "BeachPaws-data-pipeline/1.0 (scripts/build_data.py; dog-friendly-beach-finder)"
 
 ATTRIBUTION = (
     "Beach locations, sediment types and water quality from the Environment Agency "
@@ -46,9 +49,10 @@ def as_list(x):
 
 def get_json(url):
     """GET url with one retry."""
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in (1, 2):
         try:
-            with urllib.request.urlopen(url, timeout=TIMEOUT) as resp:
+            with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
                 return json.load(resp)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             if attempt == 2:
@@ -125,8 +129,13 @@ def fetch_beach(beach_id, county_map):
     sampling = topic.get("samplingPoint") or {}
     lat = sampling.get("lat")
     lng = sampling.get("long")
-    if isinstance(lat, list):  # defensive: multiple sampling points
-        lat, lng = lat[0], lng[0]
+    # Defensive: either field can independently arrive as a multi-item list
+    # (multiple sampling points) — normalise each on its own, don't assume
+    # they're both lists or both scalars in lockstep.
+    if isinstance(lat, list):
+        lat = lat[0] if lat else None
+    if isinstance(lng, list):
+        lng = lng[0] if lng else None
     if lat is None or lng is None:
         warn(f'{beach_id} "{name}": missing coordinates')
         lat = lng = None
@@ -239,7 +248,7 @@ def main():
             warn(f'no dog data for {beach["id"]} "{beach["name"]}" — marked unknown')
             beach["dogs"] = {"status": "unknown"}
 
-    beaches.sort(key=lambda b: (b["district"], b["name"]))
+    beaches.sort(key=lambda b: (b["district"] or "", b["name"]))
 
     out = {
         "meta": {
@@ -251,7 +260,24 @@ def main():
         "beaches": beaches,
     }
     out_path = DATA / "beaches.json"
-    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    payload = json.dumps(out, ensure_ascii=False, indent=1) + "\n"
+    # Write to a temp file in the same directory, then atomically replace the
+    # target — a Ctrl-C or crash mid-write can never leave a truncated/corrupt
+    # beaches.json, since os.replace() is a single filesystem rename.
+    fd, tmp_name = tempfile.mkstemp(dir=DATA, prefix="beaches.", suffix=".json.tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(payload)
+        # mkstemp() creates the temp file 0600, and os.replace() preserves
+        # the temp file's mode — without this, every run would silently
+        # narrow beaches.json from 0644 to 0600. Harmless on GitHub Pages,
+        # but a surprising local permission change for anyone serving the
+        # repo through a webserver running as a different user.
+        os.chmod(tmp_name, 0o644)
+        os.replace(tmp_name, out_path)
+    except BaseException:
+        Path(tmp_name).unlink(missing_ok=True)
+        raise
     print(f"Wrote {out_path} ({len(beaches)} beaches)")
 
 
