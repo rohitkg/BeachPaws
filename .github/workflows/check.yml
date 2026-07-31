@@ -1,6 +1,6 @@
 name: check
 
-# Validates only — deploys are a manual `git push` to Pages (see PRODUCTION_PLAN.md).
+# Validates only — deploys are a manual `git push` to Pages.
 on:
   push:
     branches: [main]

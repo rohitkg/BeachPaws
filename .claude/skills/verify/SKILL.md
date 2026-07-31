@@ -66,7 +66,8 @@ No build step. Surface = browser GUI.
    or `data/counties.json` (`git status` after the run should show only
    `data/beaches.json` changed). Expect ~167 `WARN: no dog data for ...`
    lines — correct, those beaches have no curated dog-rule entry yet
-   (see PRODUCTION_PLAN.md's Expand coverage list for which counties).
+   (Devon, Cumbria, Isle of Wight, Suffolk and Tyne and Wear lead the
+   remainder — see CLAUDE.md's coverage summary).
 7. Launch-hygiene checks (Phase 0):
    - Favicon: browser tab shows the paw-print icon (`favicon.svg`).
    - Open the devtools console before and after loading the page —
