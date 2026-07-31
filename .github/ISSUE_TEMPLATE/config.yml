@@ -1,0 +1,4 @@
+# Blank issues are off on purpose: a dog-rule correction without a source URL
+# can't be verified against a council page, so it can't be curated. The form
+# makes the source a required field; a blank issue would route around that.
+blank_issues_enabled: false
