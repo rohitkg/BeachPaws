@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://beachpaws.co.uk/sitemap.xml
+Sitemap: https://rohitkg.github.io/BeachPaws/sitemap.xml

@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found — BeachPaws</title>
   <meta name="description" content="This page doesn't exist on BeachPaws.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Absolute paths on purpose: Pages serves this file for any missing path under
+       /BeachPaws/, including nested ones, where relative hrefs would resolve wrong. -->
+  <link rel="icon" type="image/svg+xml" href="/BeachPaws/favicon.svg">
+  <link rel="stylesheet" href="/BeachPaws/styles.css">
 </head>
 <body>
   <header>
@@ -19,7 +21,7 @@
   <main class="not-found">
     <h2>404 — beach not found</h2>
     <p>That page washed away with the tide. The one you're looking for doesn't exist here.</p>
-    <p><a href="/">Back to the beach list</a></p>
+    <p><a href="/BeachPaws/">Back to the beach list</a></p>
   </main>
 </body>
 </html>
