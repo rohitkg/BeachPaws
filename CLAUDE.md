@@ -50,9 +50,11 @@ Sand, County and Council are all the same reusable widget: `createMultiSelect({ 
 
 Date-window logic (`monthOverlapsBan`) does lexical `MM-DD` string comparison, not real date parsing, and defensively handles a ban window that wraps year-end (`from > to`). Name search (`normalize()`) folds backtick/curly-quote/apostrophe together because the EA source data has inconsistent apostrophes (e.g. "St Margaret`s Bay").
 
-### CSS gotcha
+### Design system / CSS gotchas
 
-`.filter-group` is `display: flex`, so the month-filter group's `[hidden]` attribute needs an explicit override in `styles.css` — without it, the month select stays visible while the Dogs filter isn't set to "Friendly in month…".
+`styles.css` opens with a design-token layer (`:root` custom properties — colors, type, spacing, radii); component rules consume tokens, so restyle by changing tokens, not scattering new hexes. Full reference including breakpoints (≥900px two-column, ≤700px collapsed filters) lives in `docs/DESIGN.md`. The four dog-status colors are duplicated in `app.js`'s `STATUS_COLORS` (Leaflet markers) — change both together.
+
+Gotchas: `.filter-group` is `display: flex`, so the month-filter group's `[hidden]` attribute needs an explicit override in `styles.css` — without it, the month select stays visible while the Dogs filter isn't set to "Friendly in month…". Leaflet inlines `position: relative` on a `position: static` map container, so the stacked breakpoint must reset `top: auto` on `#map` or the base sticky `top: 90px` re-applies as a relative offset. The sticky filter bar needs `z-index` above 1000 because Leaflet's controls compete globally once `#map` is static on small screens.
 
 ## Licensing / attribution constraints
 

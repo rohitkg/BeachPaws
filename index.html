@@ -31,16 +31,20 @@
 </head>
 <body>
   <header>
-    <h1>BeachPaws <span class="region-tag"></span></h1>
+    <h1>Beach<span class="brand-accent">Paws</span> <span class="region-tag"></span></h1>
     <p class="tagline">Find your dog's perfect beach — sand type, dog rules and water quality, built on Environment Agency data and council PSPOs.</p>
   </header>
 
   <fieldset class="filters">
     <legend class="visually-hidden">Beach filters</legend>
-    <div class="filter-group">
+    <div class="filter-group filter-group-search">
       <label for="search-filter">Search</label>
       <input type="search" id="search-filter" placeholder="Beach name&hellip;" autocomplete="off">
     </div>
+    <!-- Phone only (CSS hides it wider): collapses the filter panel below. -->
+    <button type="button" id="filters-toggle" class="filters-toggle"
+            aria-expanded="false" aria-controls="filter-controls">Filters</button>
+    <div id="filter-controls" class="filter-controls">
     <div class="filter-group">
       <label for="sand-filter-btn">Sand</label>
       <div id="sand-filter"></div>
@@ -87,6 +91,7 @@
       </select>
     </div>
     <button type="button" id="reset-filters" class="reset-btn">Reset filters</button>
+    </div>
     <div class="result-count" id="result-count" aria-live="polite"></div>
   </fieldset>
 

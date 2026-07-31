@@ -157,6 +157,20 @@
     );
   }
 
+  // How many filter groups are active — shown on the phone Filters toggle so
+  // a collapsed panel can't silently hide an applied filter. Search is excluded:
+  // its input stays visible even when the panel is collapsed.
+  function activeFilterCount() {
+    var n = 0;
+    if (state.sand.length) n++;
+    if (state.dog !== "any") n++;
+    if (state.monitored !== "any") n++;
+    if (state.region !== "any") n++;
+    if (state.counties.length) n++;
+    if (state.councils.length) n++;
+    return n;
+  }
+
   function applyFilters() {
     var visible = [];
     var hiddenUnknown = 0;
@@ -180,6 +194,9 @@
     renderMarkers(visible);
     var count = document.getElementById("result-count");
     count.textContent = "Showing " + visible.length + " of " + beaches.length + " beaches";
+    var active = activeFilterCount();
+    document.getElementById("filters-toggle").textContent =
+      active > 0 ? "Filters · " + active : "Filters";
   }
 
   /* ---------- badges ---------- */
@@ -264,7 +281,8 @@
     visible.forEach(function (item) {
       var beach = item.beach;
       var card = document.createElement("article");
-      card.className = "beach-card";
+      // dog-<status> drives the card's status-spine color (see styles.css)
+      card.className = "beach-card dog-" + beach.dogs.status;
 
       var h2 = document.createElement("h2");
       h2.textContent = beach.name;
@@ -341,11 +359,13 @@
 
   /* ---------- map ---------- */
 
+  // Kept in sync with the --c-friendly/--c-seasonal/--c-banned/--c-unknown
+  // tokens in styles.css — markers and card spines must read as one system.
   var STATUS_COLORS = {
-    friendly: "#1d6f42",
-    seasonal: "#c96a10",
-    banned: "#a1261f",
-    unknown: "#52606d",
+    friendly: "#1e7a46",
+    seasonal: "#b25e0b",
+    banned: "#b02a21",
+    unknown: "#5c6b76",
   };
 
   function renderMarkers(visible) {
@@ -694,6 +714,16 @@
       applyFilters();
     });
   }
+
+  // Bound immediately (not in initControls) so the phone filter panel opens
+  // before data loads. The panel itself is CSS-collapsed only below 700px.
+  (function () {
+    var toggle = document.getElementById("filters-toggle");
+    toggle.addEventListener("click", function () {
+      var open = document.body.classList.toggle("filters-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  })();
 
   // Bound immediately (not in initControls) so the explainer works before data loads.
   (function () {

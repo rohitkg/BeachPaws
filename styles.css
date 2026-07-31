@@ -1,3 +1,60 @@
+/* BeachPaws design system.
+   Tokens first, components after. Full reference: docs/DESIGN.md.
+   Breakpoints: >=900px list+map two-column; 701-899px stacked; <=700px phone
+   (filters collapse behind the Filters toggle, inputs go to 16px so iOS
+   doesn't zoom on focus). */
+
+/* ---------- design tokens ---------- */
+
+:root {
+  /* color: ground + ink */
+  --c-mist: #edf3f5; /* page background — sea mist */
+  --c-foam: #ffffff; /* raised surfaces */
+  --c-ink: #16303c; /* primary text — deep water */
+  --c-slate: #4a626f; /* secondary text */
+  --c-faint: #7d8f99; /* tertiary text (sources, fine print) */
+  --c-line: #d5e0e4; /* hairline borders */
+  --c-line-strong: #a9bcc4; /* hover borders */
+
+  /* color: brand */
+  --c-sea: #0f6e8c; /* links, focus, accents */
+  --c-sea-deep: #0b516b;
+  --c-sand: #c9a24b; /* tide-line accent */
+
+  /* color: dog status — card spines and map markers (app.js STATUS_COLORS
+     must stay in sync with these four) */
+  --c-friendly: #1e7a46;
+  --c-seasonal: #b25e0b;
+  --c-banned: #b02a21;
+  --c-unknown: #5c6b76;
+
+  /* type */
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-data: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  --text-display: 1.7rem;
+  --text-title: 1.05rem;
+  --text-body: 0.95rem;
+  --text-small: 0.85rem;
+  --text-micro: 0.75rem;
+
+  /* space (4px scale) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+
+  /* shape + elevation */
+  --r-control: 8px;
+  --r-card: 12px;
+  --r-pill: 999px;
+  --shadow-pop: 0 6px 20px rgba(22, 48, 60, 0.18);
+  --shadow-card: 0 1px 2px rgba(22, 48, 60, 0.06);
+}
+
+/* ---------- base ---------- */
+
 * { box-sizing: border-box; }
 
 [hidden] {
@@ -8,28 +65,51 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #1f2933;
-  background: #f7f9fa;
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  color: var(--c-ink);
+  background: var(--c-mist);
   line-height: 1.5;
 }
 
-header {
-  padding: 1.25rem 1.5rem 0.5rem;
+:focus-visible {
+  outline: 2px solid var(--c-sea);
+  outline-offset: 2px;
 }
 
-h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
-.region-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #52606d;
-  background: #eceff1;
-  padding: 0.15rem 0.5rem;
-  border-radius: 999px;
-  vertical-align: middle;
-  margin-left: 0.4rem;
+/* ---------- header ---------- */
+
+header {
+  padding: var(--s-4) var(--s-5) var(--s-3);
+  /* the tide line: sea meeting sand, the one decorative flourish */
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, var(--c-sea) 0%, #4fa3bc 45%, #e2cd9b 58%, var(--c-sand) 100%) 1;
 }
-.tagline { margin: 0; color: #52606d; }
+
+h1 {
+  margin: 0 0 var(--s-1);
+  font-size: var(--text-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.brand-accent { color: var(--c-sea); }
+.region-tag {
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--c-slate);
+  background: var(--c-foam);
+  border: 1px solid var(--c-line);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--r-pill);
+  vertical-align: 0.35em;
+  margin-left: var(--s-2);
+}
+.tagline {
+  margin: 0;
+  color: var(--c-slate);
+  max-width: 46rem;
+}
 
 .visually-hidden {
   position: absolute;
@@ -43,6 +123,8 @@ h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
   border: 0;
 }
 
+/* ---------- filters ---------- */
+
 /* A <fieldset>, so the filters are a labelled group for screen readers. The margin,
    border and min-inline-size resets undo fieldset's defaults — without the last one it
    sizes to min-content and the flex wrap collapses. */
@@ -50,65 +132,85 @@ h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 1rem;
+  gap: var(--s-4);
   margin: 0;
   min-inline-size: 0;
-  padding: 1rem 1.5rem;
+  padding: var(--s-3) var(--s-5);
   position: sticky;
   top: 0;
-  background: #f7f9fa;
+  background: var(--c-mist);
   border: 0;
-  border-bottom: 1px solid #e0e5e9;
-  z-index: 1000; /* above Leaflet panes */
+  border-bottom: 1px solid var(--c-line);
+  z-index: 1100; /* above Leaflet's controls (z-index 1000), which ignore #map's bounds in the stacking order once the map is position:static on small screens */
 }
 
+/* Desktop/tablet: the wrapper dissolves so every group joins the fieldset's
+   flex-wrap; the phone breakpoint turns it into a collapsible panel. */
+.filter-controls { display: contents; }
+.filters-toggle { display: none; }
+
 .filter-group { display: flex; flex-direction: column; gap: 0.2rem; }
-.filter-group label { font-size: 0.8rem; font-weight: 600; color: #52606d; }
+/* Direct children only — .multiselect-option rows are also <label>s and must
+   not inherit the uppercase eyebrow treatment. */
+.filter-group > label,
+.filter-group > .label-row > label {
+  font-size: var(--text-micro);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-slate);
+}
 .label-row { display: flex; align-items: center; }
 .filter-group select,
 .filter-group input[type="search"] {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
-  background: #fff;
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  color: var(--c-ink);
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
+  background: var(--c-foam);
 }
+.filter-group select:hover,
+.filter-group input[type="search"]:hover { border-color: var(--c-line-strong); }
 .filter-group input[type="search"] { width: 11rem; }
 
 .multiselect { position: relative; }
 .multiselect-btn {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
-  background: #fff;
-  color: #1f2933;
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
+  background: var(--c-foam);
+  color: var(--c-ink);
   min-width: 9rem;
   text-align: left;
   cursor: pointer;
 }
-.multiselect-btn:hover { border-color: #9aa5b1; }
+.multiselect-btn:hover { border-color: var(--c-line-strong); }
 
 .multiselect-panel {
   position: absolute;
-  top: calc(100% + 0.25rem);
+  top: calc(100% + var(--s-1));
   left: 0;
-  z-index: 1001; /* above the sticky .filters bar */
+  z-index: 1101; /* above the sticky .filters bar */
   min-width: 12rem;
   max-width: 16rem;
-  padding: 0.5rem;
-  background: #fff;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(31, 41, 51, 0.15);
+  padding: var(--s-2);
+  background: var(--c-foam);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
+  box-shadow: var(--shadow-pop);
 }
 
 .multiselect-search {
   width: 100%;
-  font-size: 0.9rem;
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
   padding: 0.3rem 0.45rem;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
   margin-bottom: 0.4rem;
 }
 
@@ -124,148 +226,262 @@ h1 { margin: 0 0 0.25rem; font-size: 1.6rem; }
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
-  padding: 0.2rem 0.3rem;
+  font-size: var(--text-small);
+  padding: 0.25rem 0.3rem;
   border-radius: 4px;
   cursor: pointer;
 }
-.multiselect-option:hover { background: #eceff1; }
+.multiselect-option:hover { background: var(--c-mist); }
+.multiselect-option input { accent-color: var(--c-sea); }
 
-.result-count { margin-left: auto; color: #52606d; font-size: 0.9rem; }
+.result-count {
+  margin-left: auto;
+  color: var(--c-slate);
+  font-family: var(--font-data);
+  font-size: var(--text-micro);
+}
 
 .reset-btn {
-  font-size: 0.85rem;
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
-  background: #fff;
-  color: #3e4c59;
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
+  background: var(--c-foam);
+  color: var(--c-slate);
   cursor: pointer;
 }
-.reset-btn:hover { background: #e4e7eb; }
+.reset-btn:hover { border-color: var(--c-line-strong); color: var(--c-ink); }
 
 .info-btn {
   width: 1.1rem;
   height: 1.1rem;
   padding: 0;
-  margin-left: 0.25rem;
-  border: 1px solid #9aa5b1;
+  margin-left: var(--s-1);
+  border: 1px solid var(--c-line-strong);
   border-radius: 50%;
-  background: #fff;
-  color: #52606d;
+  background: var(--c-foam);
+  color: var(--c-slate);
   font-size: 0.7rem;
   font-weight: 700;
   cursor: pointer;
   vertical-align: text-bottom;
 }
-.info-btn:hover { background: #e4e7eb; }
+.info-btn:hover { border-color: var(--c-sea); color: var(--c-sea); }
 
 .explainer {
   margin: 0;
-  padding: 0.75rem 1.5rem;
-  background: #eef4f8;
-  border-bottom: 1px solid #d9ecf7;
-  color: #3e4c59;
-  font-size: 0.9rem;
+  padding: var(--s-3) var(--s-5);
+  background: #e2edf3;
+  border-bottom: 1px solid var(--c-line);
+  color: var(--c-slate);
+  font-size: var(--text-small);
   max-width: none;
 }
+
+/* ---------- layout ---------- */
 
 main {
   display: grid;
   grid-template-columns: minmax(340px, 5fr) 7fr;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
+  gap: var(--s-4);
+  padding: var(--s-4) var(--s-5);
   align-items: start;
 }
 
 #beach-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--s-3);
   max-height: calc(100vh - 160px);
   overflow-y: auto;
-  padding-right: 0.25rem;
+  padding-right: var(--s-1);
 }
 
 #map {
   height: calc(100vh - 160px);
   min-height: 420px;
-  border-radius: 10px;
-  border: 1px solid #e0e5e9;
+  border-radius: var(--r-card);
+  border: 1px solid var(--c-line);
   position: sticky;
   top: 90px;
 }
 
+/* ---------- beach cards ---------- */
+
+/* The status spine: the card's left edge carries the dog-status color, the same
+   hue as the beach's map marker, so list and map read as one system. */
 .beach-card {
-  background: #fff;
-  border: 1px solid #e0e5e9;
-  border-radius: 10px;
+  background: var(--c-foam);
+  border: 1px solid var(--c-line);
+  border-left: 4px solid var(--c-unknown);
+  border-radius: var(--r-card);
   padding: 0.85rem 1rem;
   cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-.beach-card:hover { border-color: #9aa5b1; }
-.beach-card h2 { margin: 0; font-size: 1.05rem; }
-.beach-card .district { color: #52606d; font-size: 0.85rem; margin: 0 0 0.4rem; }
-.beach-card .notes { font-size: 0.85rem; color: #3e4c59; margin: 0.4rem 0 0; }
-.beach-card .source { font-size: 0.75rem; color: #7b8794; margin: 0.3rem 0 0; }
+.beach-card:hover {
+  border-color: var(--c-line-strong);
+  box-shadow: var(--shadow-pop);
+}
+.beach-card.dog-friendly { border-left-color: var(--c-friendly); }
+.beach-card.dog-seasonal { border-left-color: var(--c-seasonal); }
+.beach-card.dog-banned { border-left-color: var(--c-banned); }
+.beach-card.dog-unknown { border-left-color: var(--c-unknown); }
+
+.beach-card h2 {
+  margin: 0;
+  font-size: var(--text-title);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.beach-card .district { color: var(--c-slate); font-size: var(--text-small); margin: 0 0 0.4rem; }
+.beach-card .notes { font-size: var(--text-small); color: var(--c-slate); margin: 0.4rem 0 0; }
+.beach-card .source {
+  font-family: var(--font-data);
+  font-size: var(--text-micro);
+  color: var(--c-faint);
+  margin: 0.3rem 0 0;
+}
 .beach-card .source a { color: inherit; }
 .beach-card .directions {
   display: inline-block;
-  font-size: 0.75rem;
-  color: #1a5e8a;
-  margin: 0.3rem 0 0;
+  font-size: var(--text-micro);
+  font-weight: 600;
+  color: var(--c-sea);
+  margin: 0.35rem 0 0;
 }
+
+/* ---------- badges ---------- */
 
 .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 .badge {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: var(--text-micro);
   font-weight: 600;
   padding: 0.15rem 0.5rem;
-  border-radius: 999px;
+  border-radius: var(--r-pill);
   white-space: nowrap;
 }
-.badge-sand    { background: #fdf3d7; color: #8a6d1a; }
-.badge-neutral { background: #eceff1; color: #52606d; }
-.badge-green   { background: #dcf2e3; color: #1d6f42; }
-.badge-amber   { background: #fde8cd; color: #9c5511; }
-.badge-red     { background: #fadcd9; color: #a1261f; }
-.badge-grey    { background: #e4e7eb; color: #52606d; }
-.badge-wq-Excellent  { background: #dcf2e3; color: #1d6f42; }
-.badge-wq-Good       { background: #d9ecf7; color: #1a5e8a; }
-.badge-wq-Sufficient { background: #fde8cd; color: #9c5511; }
-.badge-wq-Poor       { background: #fadcd9; color: #a1261f; }
+.badge-sand    { background: #f5ead2; color: #7c5e14; }
+.badge-neutral { background: #e7eef1; color: var(--c-slate); }
+.badge-green   { background: #ddf1e4; color: var(--c-friendly); }
+.badge-amber   { background: #fbead3; color: #8f5310; }
+.badge-red     { background: #f9dedb; color: var(--c-banned); }
+.badge-grey    { background: #e7ebed; color: var(--c-slate); }
+.badge-wq-Excellent  { background: #ddf1e4; color: var(--c-friendly); }
+.badge-wq-Good       { background: #dbecf6; color: var(--c-sea-deep); }
+.badge-wq-Sufficient { background: #fbead3; color: #8f5310; }
+.badge-wq-Poor       { background: #f9dedb; color: var(--c-banned); }
 
 .empty-state, .hidden-note {
-  color: #52606d;
-  font-size: 0.9rem;
-  padding: 0.75rem 0.25rem;
+  color: var(--c-slate);
+  font-size: var(--text-small);
+  padding: var(--s-3) var(--s-1);
 }
 
 /* 404.html shares this stylesheet but is not the list+map layout, so it opts out of the grid. */
-.not-found { display: block; max-width: 40rem; padding: 1rem 1.5rem 2rem; }
+.not-found { display: block; max-width: 40rem; padding: var(--s-4) var(--s-5) var(--s-6); }
 .not-found h2 { margin-top: 0; }
 /* biome-ignore lint/style/noDescendingSpecificity: never overlaps — 404 page vs beach cards */
-.not-found a { color: #1a5e8a; }
+.not-found a { color: var(--c-sea); }
+
+/* ---------- footer ---------- */
 
 footer {
-  padding: 1rem 1.5rem 2rem;
-  color: #52606d;
-  font-size: 0.85rem;
-  border-top: 1px solid #e0e5e9;
+  padding: var(--s-4) var(--s-5) var(--s-6);
+  color: var(--c-slate);
+  font-size: var(--text-small);
+  border-top: 1px solid var(--c-line);
 }
 /* biome-ignore lint/style/noDescendingSpecificity: never overlaps — footer links vs card links */
-footer a { color: #1a5e8a; }
+footer a { color: var(--c-sea); }
+#data-generated, #dog-rules-verified {
+  font-family: var(--font-data);
+  font-size: var(--text-micro);
+  color: var(--c-faint);
+}
 
+/* ---------- leaflet popups ---------- */
+
+.leaflet-popup-content { font-family: var(--font-ui); }
 .leaflet-popup-content .badges { margin-top: 0.3rem; }
 .leaflet-popup-content h2 { font-size: 1rem; margin: 0 0 0.1rem; }
-.leaflet-popup-content p { margin: 0.25rem 0 0; font-size: 0.85rem; }
+.leaflet-popup-content p { margin: 0.25rem 0 0; font-size: var(--text-small); }
 
-@media (max-width: 820px) {
+/* ---------- tablet: stacked list under map ---------- */
+
+@media (max-width: 899px) {
   main { grid-template-columns: 1fr; }
-  #map { position: static; height: 55vh; order: -1; }
-  #beach-list { max-height: none; overflow: visible; }
+  /* top: auto matters — Leaflet inlines position:relative on a static container,
+     which would otherwise re-activate the base rule's sticky top offset. */
+  #map { position: static; top: auto; height: 50vh; min-height: 320px; order: -1; }
+  #beach-list { max-height: none; overflow: visible; padding-right: 0; }
   .result-count { margin-left: 0; width: 100%; }
-  .multiselect-btn { width: 100%; }
+}
+
+/* ---------- phone: collapsible filters, bigger touch targets ---------- */
+
+@media (max-width: 700px) {
+  header { padding-inline: var(--s-4); }
+  h1 { font-size: 1.45rem; }
+  .filters { padding: var(--s-2) var(--s-4); gap: var(--s-2); align-items: stretch; }
+  .explainer, main, footer { padding-inline: var(--s-4); }
+
+  /* the always-visible row: search grows, Filters toggle beside it */
+  .filter-group-search { flex: 1; }
+  .filter-group input[type="search"] { width: 100%; }
+  .filters-toggle {
+    display: block;
+    align-self: flex-end;
+    min-height: 44px;
+    padding: 0.4rem 0.9rem;
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    font-weight: 600;
+    color: var(--c-sea-deep);
+    background: var(--c-foam);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    cursor: pointer;
+  }
+  .filters-toggle[aria-expanded="true"] {
+    color: var(--c-foam);
+    background: var(--c-sea);
+    border-color: var(--c-sea);
+  }
+
+  /* collapsed by default; the toggle opens a single-column panel */
+  .filter-controls { display: none; }
+  body.filters-open .filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    width: 100%;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-top: var(--s-2);
+    border-top: 1px solid var(--c-line);
+  }
+
+  /* full-width controls = comfortable touch targets, 16px = no iOS focus zoom */
+  .filter-group select,
+  .filter-group input[type="search"],
+  .multiselect-btn,
+  .multiselect-search,
+  .reset-btn {
+    font-size: 1rem;
+    min-height: 44px;
+    width: 100%;
+  }
   .multiselect-panel { left: 0; right: 0; min-width: 0; max-width: none; }
+  .multiselect-option { min-height: 40px; padding-inline: var(--s-2); }
+  .multiselect-option input { width: 1.15rem; height: 1.15rem; }
+
+  #map { height: 42vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beach-card { transition: none; }
 }
