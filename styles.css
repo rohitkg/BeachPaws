@@ -12,7 +12,7 @@
   --c-foam: #ffffff; /* raised surfaces */
   --c-ink: #16303c; /* primary text — deep water */
   --c-slate: #4a626f; /* secondary text */
-  --c-faint: #7d8f99; /* tertiary text (sources, fine print) */
+  --c-faint: #5c707e; /* tertiary text (sources, fine print) — keep >=4.5:1 on both foam and mist, it sets 0.75rem text */
   --c-line: #d5e0e4; /* hairline borders */
   --c-line-strong: #a9bcc4; /* hover borders */
 
@@ -402,6 +402,35 @@ footer a { color: var(--c-sea); }
   font-size: var(--text-micro);
   color: var(--c-faint);
 }
+
+/* ---------- map legend ---------- */
+
+/* Leaflet control (see initMap) decoding the marker colors in place; pairs
+   each color with words so the coding isn't color-only on the map either. */
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.75rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-control);
+  font-family: var(--font-ui);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  color: var(--c-ink);
+}
+.map-legend span { display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+.legend-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  flex: none;
+}
+.legend-dot.dog-friendly { background: var(--c-friendly); }
+.legend-dot.dog-seasonal { background: var(--c-seasonal); }
+.legend-dot.dog-banned { background: var(--c-banned); }
+.legend-dot.dog-unknown { background: var(--c-unknown); }
 
 /* ---------- leaflet popups ---------- */
 

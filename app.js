@@ -566,6 +566,29 @@
     }).addTo(map);
     markerLayer = L.layerGroup().addTo(map);
     map.setView([52.8, -1.5], 6); // England fallback before first fitBounds
+
+    // Legend decoding the marker colors — labels match dogs.status values;
+    // colors come from the .legend-dot.dog-<status> rules (styles.css tokens).
+    var legend = L.control({ position: "bottomleft" });
+    legend.onAdd = function () {
+      var div = document.createElement("div");
+      div.className = "map-legend";
+      [
+        ["friendly", "Dogs welcome"],
+        ["seasonal", "Seasonal rules"],
+        ["banned", "No dogs"],
+        ["unknown", "Unknown"],
+      ].forEach(function (entry) {
+        var item = document.createElement("span");
+        var dot = document.createElement("span");
+        dot.className = "legend-dot dog-" + entry[0];
+        item.appendChild(dot);
+        item.appendChild(document.createTextNode(entry[1]));
+        div.appendChild(item);
+      });
+      return div;
+    };
+    legend.addTo(map);
   }
 
   function initRegionOptions(beaches) {

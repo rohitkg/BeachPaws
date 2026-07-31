@@ -32,7 +32,7 @@ header. Everything else stays quiet.
 | `--c-foam` | `#ffffff` | Cards, controls, popups |
 | `--c-ink` | `#16303c` | Primary text |
 | `--c-slate` | `#4a626f` | Secondary text, labels |
-| `--c-faint` | `#7d8f99` | Provenance / fine print |
+| `--c-faint` | `#5c707e` | Provenance / fine print (must stay ≥4.5:1 on foam and mist — it sets 0.75rem text) |
 | `--c-line` | `#d5e0e4` | Borders |
 | `--c-line-strong` | `#a9bcc4` | Hover borders |
 | `--c-sea` | `#0f6e8c` | Links, focus rings, accents |
@@ -88,6 +88,13 @@ Hover: stronger border + `--shadow-pop` lift. The whole card is clickable
 Summary button + absolute popup panel (search input optional, scrollable
 checkbox list). Panel z-index 1101 — above the sticky filter bar. On phones
 the button goes full width and the panel pins `left:0; right:0`.
+
+### Map legend
+`.map-legend`, a Leaflet `bottomleft` control built in `initMap` (`app.js`).
+Decodes the four marker colors with a labeled dot each ("Dogs welcome" /
+"Seasonal rules" / "No dogs" / "Unknown"), so the map's color coding is
+explained in place and never color-only. Labels must track `dogs.status`
+values; dot colors come from `.legend-dot.dog-<status>` rules.
 
 ### Filter bar
 Sticky `fieldset.filters`, z-index 1100 — must beat Leaflet's controls
