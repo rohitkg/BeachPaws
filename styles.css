@@ -8,11 +8,11 @@
 
 :root {
   /* color: ground + ink */
-  --c-mist: #edf3f5; /* page background — sea mist */
+  --c-mist: #edf3f5; /* page background: sea mist */
   --c-foam: #ffffff; /* raised surfaces */
-  --c-ink: #16303c; /* primary text — deep water */
+  --c-ink: #16303c; /* primary text: deep water */
   --c-slate: #4a626f; /* secondary text */
-  --c-faint: #5c707e; /* tertiary text (sources, fine print) — keep >=4.5:1 on both foam and mist, it sets 0.75rem text */
+  --c-faint: #5c707e; /* tertiary text (sources, fine print): keep >=4.5:1 on both foam and mist, it sets 0.75rem text */
   --c-line: #d5e0e4; /* hairline borders */
   --c-line-strong: #a9bcc4; /* hover borders */
 
@@ -21,7 +21,7 @@
   --c-sea-deep: #0b516b;
   --c-sand: #c9a24b; /* tide-line accent */
 
-  /* color: dog status — card spines and map markers (app.js STATUS_COLORS
+  /* color: dog status, card spines and map markers (app.js STATUS_COLORS
      must stay in sync with these four) */
   --c-friendly: #1e7a46;
   --c-seasonal: #b25e0b;
@@ -59,7 +59,7 @@
 
 [hidden] {
   /* biome-ignore lint/complexity/noImportantStyles: .filter-group is display:flex, which beats
-     the [hidden] attribute's own styling — the month filter would otherwise stay visible. */
+     the [hidden] attribute's own styling; the month filter would otherwise stay visible. */
   display: none !important;
 }
 
@@ -126,7 +126,7 @@ h1 {
 /* ---------- filters ---------- */
 
 /* A <fieldset>, so the filters are a labelled group for screen readers. The margin,
-   border and min-inline-size resets undo fieldset's defaults — without the last one it
+   border and min-inline-size resets undo fieldset's defaults. Without the last one it
    sizes to min-content and the flex wrap collapses. */
 .filters {
   display: flex;
@@ -150,7 +150,7 @@ h1 {
 .filters-toggle { display: none; }
 
 .filter-group { display: flex; flex-direction: column; gap: 0.2rem; }
-/* Direct children only — .multiselect-option rows are also <label>s and must
+/* Direct children only: .multiselect-option rows are also <label>s and must
    not inherit the uppercase eyebrow treatment. */
 .filter-group > label,
 .filter-group > .label-row > label {
@@ -384,7 +384,7 @@ main {
 /* 404.html shares this stylesheet but is not the list+map layout, so it opts out of the grid. */
 .not-found { display: block; max-width: 40rem; padding: var(--s-4) var(--s-5) var(--s-6); }
 .not-found h2 { margin-top: 0; }
-/* biome-ignore lint/style/noDescendingSpecificity: never overlaps — 404 page vs beach cards */
+/* biome-ignore lint/style/noDescendingSpecificity: never overlaps: 404 page vs beach cards */
 .not-found a { color: var(--c-sea); }
 
 /* ---------- footer ---------- */
@@ -395,7 +395,7 @@ footer {
   font-size: var(--text-small);
   border-top: 1px solid var(--c-line);
 }
-/* biome-ignore lint/style/noDescendingSpecificity: never overlaps — footer links vs card links */
+/* biome-ignore lint/style/noDescendingSpecificity: never overlaps: footer links vs card links */
 footer a { color: var(--c-sea); }
 #data-generated, #dog-rules-verified {
   font-family: var(--font-data);
@@ -443,7 +443,7 @@ footer a { color: var(--c-sea); }
 
 @media (max-width: 899px) {
   main { grid-template-columns: 1fr; }
-  /* top: auto matters — Leaflet inlines position:relative on a static container,
+  /* top: auto matters. Leaflet inlines position:relative on a static container,
      which would otherwise re-activate the base rule's sticky top offset. */
   #map { position: static; top: auto; height: 50vh; min-height: 320px; order: -1; }
   #beach-list { max-height: none; overflow: visible; padding-right: 0; }

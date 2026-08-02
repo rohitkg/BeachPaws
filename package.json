@@ -2,7 +2,7 @@
   "name": "beachpaws",
   "version": "1.0.0",
   "private": true,
-  "description": "Static site for finding dog-friendly beaches in England. No build step — npm is only here to carry the lint/format toolchain.",
+  "description": "Static site for planning better beach days with dog access and water-quality information. Covers every EA-designated bathing water in England plus curated non-designated beaches. No build step; npm is only here to carry the lint/format toolchain.",
   "scripts": {
     "check": "./scripts/check.sh",
     "fix": "biome check --write . && ruff check --fix scripts && ruff format scripts",

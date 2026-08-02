@@ -21,7 +21,7 @@ run() {
 
 require() {
   command -v "$1" >/dev/null 2>&1 && return 0
-  printf '\n\033[31mMissing tool: %s\033[0m — %s\n' "$1" "$2"
+  printf '\n\033[31mMissing tool: %s\033[0m: %s\n' "$1" "$2"
   FAILED+=("$1 not installed")
   return 1
 }
@@ -35,7 +35,7 @@ if [ -d node_modules ]; then
   run "biome (js/css/json)" npx --no-install biome ci .
   run "html-validate" npx --no-install html-validate ./*.html
 else
-  printf '\n\033[31mmissing node_modules\033[0m — run: npm install\n'
+  printf '\n\033[31mmissing node_modules\033[0m: run npm install\n'
   FAILED+=("npm install not run")
 fi
 

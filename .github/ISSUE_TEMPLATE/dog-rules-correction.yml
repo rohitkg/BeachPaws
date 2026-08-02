@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for helping keep BeachPaws accurate. Dog rules on this site are hand-curated from
         council PSPO (Public Spaces Protection Order) pages, and councils change them without much
-        notice — corrections from people who've checked the current rule are the main way this
+        notice. Corrections from people who've checked the current rule are the main way this
         dataset stays trustworthy.
   - type: input
     id: beach-name
@@ -39,7 +39,7 @@ body:
       label: Source
       description: >-
         A link to the council page (PSPO notice, byelaw, council website) that proves the correct
-        rule. Required — a correction with no source can't be verified or curated.
+        rule. Required: a correction with no source can't be verified or curated.
       placeholder: "https://www.council.gov.uk/..."
     validations:
       required: true

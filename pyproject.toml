@@ -1,4 +1,4 @@
-# Ruff config only — this project has no Python package, no install step.
+# Ruff config only. This project has no Python package or install step.
 # scripts/*.py are stdlib-only and run directly with python3.
 
 [tool.ruff]

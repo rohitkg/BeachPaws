@@ -24,5 +24,5 @@ SOFTWARE.
 
 This license covers the code in this repository: index.html, styles.css,
 app.js, and everything under scripts/. It does NOT cover the contents of the
-data/ directory — see data/LICENSE for the licensing terms that apply to the
+data/ directory. See data/LICENSE for the licensing terms that apply to the
 hand-curated dog-rules dataset and the Environment-Agency-derived beach data.

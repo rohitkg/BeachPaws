@@ -1,4 +1,4 @@
-/* BeachPaws — filter logic, list rendering, Leaflet map sync. */
+/* BeachPaws: filter logic, list rendering, Leaflet map sync. */
 (function () {
   "use strict";
 
@@ -21,7 +21,7 @@
     sand: [], // [] = any; else sand category keys (see SAND_CATEGORIES)
     dog: "any", // any | yearround | month | banned | unknown
     month: new Date().getMonth() + 1, // 1-12, used when dog === "month"
-    monitored: "any", // any | yes | no — EA-designated bathing water
+    monitored: "any", // any | yes | no: EA-designated bathing water
     region: "any", // any | one of the EA regionalOrganization labels
     counties: [], // [] = any; else selected ceremonial counties
     councils: [], // [] = any; else selected districts (councils)
@@ -53,7 +53,7 @@
   }
 
   // Formats an ISO date (with or without a time component, e.g. "2026-07-22T14:36:15Z"
-  // or "2026-07-19") as "22 July 2026". Uses UTC getters throughout — a date-only ISO
+  // or "2026-07-19") as "22 July 2026". Uses UTC getters throughout; a date-only ISO
   // string parses as UTC midnight per spec, so this avoids the value shifting a day
   // depending on the visitor's local timezone.
   function formatIsoDate(iso) {
@@ -61,7 +61,7 @@
     return d.getUTCDate() + " " + MONTH_NAMES[d.getUTCMonth()] + " " + d.getUTCFullYear();
   }
 
-  // Oldest dogs.accessed date across all beaches that have one — a lower bound on how
+  // Oldest dogs.accessed date across all beaches that have one: a lower bound on how
   // stale the curated dog-rule dataset might be. Most beaches have no dogs.accessed
   // (they're outside the curated set) and are ignored, not treated as stale.
   function oldestAccessed(beachList) {
@@ -146,7 +146,7 @@
     return "yes";
   }
 
-  // Matches query against name, district, county or region — any hit counts.
+  // Matches query against name, district, county or region. Any hit counts.
   function searchMatch(beach, query) {
     if (!query) return true;
     return (
@@ -157,7 +157,7 @@
     );
   }
 
-  // How many filter groups are active — shown on the phone Filters toggle so
+  // How many filter groups are active. Shown on the phone Filters toggle so
   // a collapsed panel can't silently hide an applied filter. Search is excluded:
   // its input stays visible even when the panel is collapsed.
   function activeFilterCount() {
@@ -352,7 +352,7 @@
       note.className = "hidden-note";
       note.textContent =
         hiddenUnknown +
-        " beach(es) with unknown dog rules hidden — select “Unknown rules” to see them.";
+        " beach(es) with unknown dog rules hidden. Select “Unknown rules” to see them.";
       list.appendChild(note);
     }
   }
@@ -360,7 +360,7 @@
   /* ---------- map ---------- */
 
   // Kept in sync with the --c-friendly/--c-seasonal/--c-banned/--c-unknown
-  // tokens in styles.css — markers and card spines must read as one system.
+  // tokens in styles.css. Markers and card spines must read as one system.
   var STATUS_COLORS = {
     friendly: "#1e7a46",
     seasonal: "#b25e0b",
@@ -567,7 +567,7 @@
     markerLayer = L.layerGroup().addTo(map);
     map.setView([52.8, -1.5], 6); // England fallback before first fitBounds
 
-    // Legend decoding the marker colors — labels match dogs.status values;
+    // Legend decoding the marker colors. Labels match dogs.status values;
     // colors come from the .legend-dot.dog-<status> rules (styles.css tokens).
     var legend = L.control({ position: "bottomleft" });
     legend.onAdd = function () {
@@ -788,7 +788,7 @@
       var message = "Beach data could not be loaded. Please try again shortly.";
       if (isLocalDev) {
         message +=
-          " (dev: serve this directory over HTTP — python3 -m http.server — " + err.message + ")";
+          " (dev: serve this directory over HTTP; python3 -m http.server; " + err.message + ")";
       }
       list.textContent = message;
     });

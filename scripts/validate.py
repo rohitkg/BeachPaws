@@ -13,7 +13,7 @@ baseline (data/warning_baseline.json):
 
 Exits non-zero with one "FAIL: ..." line per problem on stderr. Prints a
 short summary on success. This is the single source of truth for data
-correctness — scripts/check.sh and CI both just run this script.
+correctness. scripts/check.sh and CI both just run this script.
 """
 
 import json
@@ -30,7 +30,7 @@ MMDD_RE = re.compile(r"^\d{2}-\d{2}$")
 HHMM_RANGE_RE = re.compile(r"^(\d{2}):(\d{2})-(\d{2}):(\d{2})$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
-# Roughly England's bounding box (generous — this is a sanity check, not a
+# Roughly England's bounding box (generous: this is a sanity check, not a
 # precise polygon test). Longitude is negative west of Greenwich.
 LAT_MIN, LAT_MAX = 49.0, 56.0
 LNG_MIN, LNG_MAX = -7.0, 2.5
@@ -41,7 +41,7 @@ MIN_BEACH_COUNT = 400
 
 
 def is_number(x):
-    """int/float but not bool — bool is a subclass of int in Python, and a
+    """int/float but not bool: bool is a subclass of int in Python, and a
     JSON `true`/`false` slipping into a numeric field should fail the type
     check, not silently pass a `0 <= True <= 56`-style comparison."""
     return isinstance(x, (int, float)) and not isinstance(x, bool)
@@ -117,7 +117,7 @@ def check_source(entry_id, source, problems):
     # SECURITY CHECK: dogs.source is rendered straight into an <a href> by
     # app.js with no scheme check. A "javascript:" (or other non-https)
     # source merged in from a future community PR would be stored XSS.
-    # This validator is the gate — don't weaken this to accommodate a
+    # This validator is the gate. Don't weaken this to accommodate a
     # non-https source; re-source the entry instead.
     if not isinstance(source, str) or not source.startswith("https://"):
         problems.append(f'{entry_id}: source = {source!r} must start with "https://"')
@@ -141,9 +141,9 @@ def validate_dog_rules(dog_rules_doc, problems):
         status = dogs.get("status")
         if status not in VALID_STATUSES:
             problems.append(f"{entry_id}: status = {status!r} not one of {sorted(VALID_STATUSES)}")
-        # dog_rules.json only ever curates real statuses — "unknown" is
+        # dog_rules.json only ever curates real statuses. "unknown" is
         # assigned automatically by build_data.py for beaches with no entry
-        # here — so every curated entry must carry its provenance.
+        # here, so every curated entry must carry its provenance.
         if "source" not in dogs:
             problems.append(f'{entry_id}: missing required "source" field')
         else:
@@ -171,7 +171,7 @@ def validate_beaches(beaches_doc, problems):
     if len(beaches) < MIN_BEACH_COUNT:
         problems.append(
             f"data/beaches.json: only {len(beaches)} beaches, expected at least "
-            f"{MIN_BEACH_COUNT} — looks like a truncated/partial pipeline run"
+            f"{MIN_BEACH_COUNT}: looks like a truncated/partial pipeline run"
         )
 
     seen_ids = set()
@@ -219,7 +219,7 @@ def cross_check_ids(dog_rule_ids, beach_ids, problems):
     for rule_id in dog_rule_ids:
         if rule_id not in beach_ids:
             problems.append(
-                f"{rule_id}: in dog_rules.json but not in data/beaches.json — "
+                f"{rule_id}: in dog_rules.json but not in data/beaches.json: "
                 f"either a typo'd beach id, or you added/edited this entry and "
                 f"haven't rerun `python3 scripts/build_data.py` yet"
             )
@@ -230,7 +230,7 @@ def cross_check_ids(dog_rule_ids, beach_ids, problems):
 # Each (substring, class name) pair below corresponds 1:1 to a warn() call
 # site in build_data.py. A log line is classified by the first pair whose
 # substring it contains. A WARN line matching none of these is a warning
-# *shape* the validator has never seen — always a hard failure, regardless
+# *shape* the validator has never seen: always a hard failure, regardless
 # of the baseline file, since it means build_data.py grew a new warn() call
 # that nobody's looked at yet.
 WARNING_CLASSES = [
@@ -243,7 +243,7 @@ WARNING_CLASSES = [
     (": no water quality classification", "no_water_quality"),
     ("no dog data for ", "dog_unknown"),
     ("dog_rules entry ", "dog_rule_unmatched"),
-    ("duplicates an EA beach — skipped", "extra_beach_duplicate"),
+    ("duplicates an EA beach: skipped", "extra_beach_duplicate"),
     ("data/dog_rules.json not found", "no_dog_rules_file"),
     ("data/counties.json not found", "no_counties_file"),
     ("no beaches returned for configured country", "no_beaches_returned"),
@@ -286,7 +286,7 @@ def check_warning_baseline(log_path, problems):
     for line in unrecognized:
         problems.append(
             f"unrecognized warning shape in {log_path} (matches no known "
-            f"WARNING_CLASSES entry in validate.py — build_data.py may have "
+            f"WARNING_CLASSES entry in validate.py: build_data.py may have "
             f"grown a new warn() call site): {line!r}"
         )
 
@@ -294,7 +294,7 @@ def check_warning_baseline(log_path, problems):
     for cls in new_classes:
         problems.append(
             f'warning class "{cls}" (n={counts[cls]}) appears in {log_path} but is '
-            f"not in {baseline_path} — if this is expected, add it to the "
+            f"not in {baseline_path}: if this is expected, add it to the "
             f"baseline; if not, it's new pipeline behaviour worth a look"
         )
 

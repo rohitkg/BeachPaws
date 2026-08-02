@@ -6,5 +6,5 @@ _research/
 # npm carries only the lint/format toolchain; the site itself has no build step.
 node_modules/
 
-# private planning notes — kept out of the public repo on purpose
+# private planning notes, kept out of the public repo on purpose
 PRODUCTION_PLAN.md

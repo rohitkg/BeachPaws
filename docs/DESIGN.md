@@ -1,7 +1,7 @@
 # BeachPaws design system
 
 The visual language for the BeachPaws front end. Every value here exists as a
-CSS custom property in `styles.css` (`:root` block) — change tokens there, not
+CSS custom property in `styles.css` (`:root` block). Change tokens there, not
 in component rules. `app.js` duplicates the four dog-status colors in
 `STATUS_COLORS` (Leaflet markers can't read CSS variables per-marker cheaply);
 if you change a status token, change both places.
@@ -15,7 +15,7 @@ travelling. The design serves two ideas:
    "status spine" in its dog-status color, the same hue as its map marker, so
    the list and map read as one system at a glance.
 2. **Provenance is the differentiator.** Hand-curated, dated, sourced dog
-   rules are what makes the site trustworthy — so all provenance metadata
+   rules are what makes the site trustworthy, so all provenance metadata
    (checked dates, dataset line, result count) is set in monospace, styled as
    a record rather than prose.
 
@@ -32,7 +32,7 @@ header. Everything else stays quiet.
 | `--c-foam` | `#ffffff` | Cards, controls, popups |
 | `--c-ink` | `#16303c` | Primary text |
 | `--c-slate` | `#4a626f` | Secondary text, labels |
-| `--c-faint` | `#5c707e` | Provenance / fine print (must stay ≥4.5:1 on foam and mist — it sets 0.75rem text) |
+| `--c-faint` | `#5c707e` | Provenance / fine print (must stay ≥4.5:1 on foam and mist; it sets 0.75rem text) |
 | `--c-line` | `#d5e0e4` | Borders |
 | `--c-line-strong` | `#a9bcc4` | Hover borders |
 | `--c-sea` | `#0f6e8c` | Links, focus rings, accents |
@@ -55,11 +55,11 @@ text; all pairs clear WCAG AA at badge sizes.
 | `--font-data` | `ui-monospace` stack | Checked dates, dataset meta, result count |
 | `--text-display` | 1.7rem / 800 / -0.02em | `h1` (1.45rem on phone) |
 | `--text-title` | 1.05rem / 700 | Beach card names |
-| `--text-body` | 0.95rem | Body, controls (1rem on phone — stops iOS focus zoom) |
+| `--text-body` | 0.95rem | Body, controls (1rem on phone, stops iOS focus zoom) |
 | `--text-small` | 0.85rem | Notes, footer |
 | `--text-micro` | 0.75rem | Badges, labels, provenance |
 
-Filter labels are micro-size, 700 weight, uppercase, +0.05em — the "eyebrow"
+Filter labels are micro-size, 700 weight, uppercase, +0.05em: the "eyebrow"
 treatment. Scoped to `.filter-group > label` only: multiselect option rows are
 also `<label>`s and must stay normal case.
 
@@ -76,7 +76,7 @@ also `<label>`s and must stay normal case.
 ## Components
 
 ### Beach card
-`article.beach-card.dog-<status>` — the status class drives the spine color.
+`article.beach-card.dog-<status>`: the status class drives the spine color.
 Hover: stronger border + `--shadow-pop` lift. The whole card is clickable
 (pans the map); inner links keep their own behavior.
 
@@ -86,7 +86,7 @@ Hover: stronger border + `--shadow-pop` lift. The whole card is clickable
 
 ### Multiselect (Sand / County / Council)
 Summary button + absolute popup panel (search input optional, scrollable
-checkbox list). Panel z-index 1101 — above the sticky filter bar. On phones
+checkbox list). Panel z-index 1101, above the sticky filter bar. On phones
 the button goes full width and the panel pins `left:0; right:0`.
 
 ### Map legend
@@ -97,14 +97,14 @@ explained in place and never color-only. Labels must track `dogs.status`
 values; dot colors come from `.legend-dot.dog-<status>` rules.
 
 ### Filter bar
-Sticky `fieldset.filters`, z-index 1100 — must beat Leaflet's controls
+Sticky `fieldset.filters`, z-index 1100, must beat Leaflet's controls
 (z-index 1000), which compete globally once `#map` is `position: static` on
 small screens. Desktop/tablet: label-over-control groups in a flex wrap
 (`.filter-controls` is `display: contents`). Phone (≤700px): only Search and
 the Filters button stay visible; the button toggles `body.filters-open`,
 showing a single-column panel (own scroll at `max-height: calc(100vh - 140px)`).
 The button reads "Filters · n" when n filter groups are active, so a collapsed
-panel can't silently hide an applied filter (search excluded — it stays
+panel can't silently hide an applied filter (search excluded; it stays
 visible).
 
 ## Layout / breakpoints

@@ -88,7 +88,7 @@ def fetch_all_beach_ids(country_uri):
 
 
 def geo_label(node):
-    """Extract a place name from a district/regionalOrganization-shaped node —
+    """Extract a place name from a district/regionalOrganization-shaped node:
     a bare {name: langString} object, or (district's case) a list containing
     that object plus bare URI strings."""
     for item in as_list(node):
@@ -130,7 +130,7 @@ def fetch_beach(beach_id, county_map):
     lat = sampling.get("lat")
     lng = sampling.get("long")
     # Defensive: either field can independently arrive as a multi-item list
-    # (multiple sampling points) — normalise each on its own, don't assume
+    # (multiple sampling points): normalise each on its own, don't assume
     # they're both lists or both scalars in lockstep.
     if isinstance(lat, list):
         lat = lat[0] if lat else None
@@ -208,7 +208,7 @@ def main():
     if rules_path.exists():
         dog_rules = json.loads(rules_path.read_text(encoding="utf-8"))["entries"]
     else:
-        warn("data/dog_rules.json not found — all beaches marked unknown")
+        warn("data/dog_rules.json not found: all beaches marked unknown")
 
     county_map = {}
     counties_path = DATA / "counties.json"
@@ -216,7 +216,7 @@ def main():
         raw_counties = json.loads(counties_path.read_text(encoding="utf-8"))
         county_map = {k: v for k, v in raw_counties.items() if not k.startswith("_")}
     else:
-        warn("data/counties.json not found — all beaches missing county")
+        warn("data/counties.json not found: all beaches missing county")
 
     beaches = []
     seen_ids = set()
@@ -231,7 +231,7 @@ def main():
 
     for beach in load_extra_beaches(county_map):
         if beach["id"] in seen_ids:
-            warn(f"extra beach {beach['id']} duplicates an EA beach — skipped")
+            warn(f"extra beach {beach['id']} duplicates an EA beach: skipped")
             continue
         beaches.append(beach)
         seen_ids.add(beach["id"])
@@ -245,7 +245,7 @@ def main():
         if rule:
             beach["dogs"] = rule
         else:
-            warn(f'no dog data for {beach["id"]} "{beach["name"]}" — marked unknown')
+            warn(f'no dog data for {beach["id"]} "{beach["name"]}": marked unknown')
             beach["dogs"] = {"status": "unknown"}
 
     beaches.sort(key=lambda b: (b["district"] or "", b["name"]))
@@ -262,14 +262,14 @@ def main():
     out_path = DATA / "beaches.json"
     payload = json.dumps(out, ensure_ascii=False, indent=1) + "\n"
     # Write to a temp file in the same directory, then atomically replace the
-    # target — a Ctrl-C or crash mid-write can never leave a truncated/corrupt
+    # target. A Ctrl-C or crash mid-write can never leave a truncated/corrupt
     # beaches.json, since os.replace() is a single filesystem rename.
     fd, tmp_name = tempfile.mkstemp(dir=DATA, prefix="beaches.", suffix=".json.tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             f.write(payload)
         # mkstemp() creates the temp file 0600, and os.replace() preserves
-        # the temp file's mode — without this, every run would silently
+        # the temp file's mode. Without this, every run would silently
         # narrow beaches.json from 0644 to 0600. Harmless on GitHub Pages,
         # but a surprising local permission change for anyone serving the
         # repo through a webserver running as a different user.
