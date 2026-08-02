@@ -41,9 +41,7 @@ fi
 
 run "validate data" python3 scripts/validate.py
 
-if compgen -G "tests/*.test.js" >/dev/null; then
-  run "node tests" node --test tests/
-fi
+run "node tests" node --test
 
 printf '\n'
 if [ ${#FAILED[@]} -eq 0 ]; then

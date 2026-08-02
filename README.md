@@ -16,7 +16,7 @@ Filter by beach name, EA region, sediment (sand only / mixed), dog rules (year-r
 
 | File | Role |
 |---|---|
-| `index.html`, `styles.css`, `app.js` | The site (no build step, no framework) |
+| `index.html`, `styles.css`, `core.js`, `app.js` | The site (no build step, no framework); pure filter predicates live in `core.js` for browser and Node use |
 | `data/config.json` | Country selector the pipeline fetches from the EA API (`coverage` label + `countryUri`) |
 | `data/dog_rules.json` | **Curated** dog rules, hand-edited and never written by the pipeline |
 | `data/extra_beaches.json` | **Curated** non-EA beaches, hand-edited and never written by the pipeline |
@@ -25,6 +25,7 @@ Filter by beach name, EA region, sediment (sand only / mixed), dog rules (year-r
 | `data/warning_baseline.json` | Expected pipeline-warning classes used by data validation |
 | `scripts/build_data.py` | Pipeline: EA API + curated files → `beaches.json` |
 | `scripts/validate.py`, `scripts/check.sh` | Data validation and the repository's combined check command |
+| `tests/core.test.js` | Node tests for date-window, dog, sand, normalization and search predicates |
 | `.github/workflows/check.yml` | Runs `scripts/check.sh` for GitHub changes |
 | `.claude/skills/verify/SKILL.md` | Manual browser verification guide |
 | `LICENSE` | MIT, covers the code |
@@ -38,6 +39,14 @@ Filter by beach name, EA region, sediment (sand only / mixed), dog rules (year-r
 python3 -m http.server
 # open http://localhost:8000
 ```
+
+## Run the checks
+
+```sh
+./scripts/check.sh
+```
+
+The combined command runs formatting and lint checks, data validation, and the Node predicate tests used by CI. To run only the tests, use `node --test`.
 
 ## Refresh the data
 
@@ -67,6 +76,6 @@ The pipeline **never modifies the curated files**. To update dog rules or add be
 
 This repository is split three ways. Check which one applies before reusing anything:
 
-- **Code** (`index.html`, `styles.css`, `app.js`, `scripts/`): MIT. See `LICENSE`.
+- **Code** (`index.html`, `styles.css`, `core.js`, `app.js`, `scripts/`, `tests/`): MIT. See `LICENSE`.
 - **Curated dog-rules dataset** (`data/dog_rules.json`, `data/extra_beaches.json`): Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). This hand-researched, source-cited dataset is the project's differentiator, so it isn't released under the permissive code license. See `data/LICENSE`.
 - **EA-derived fields** in `data/beaches.json` (location, sediment, water quality): Open Government Licence v3.0, same as upstream. These fields are unaffected by the NC restriction above; only the joined-in `dogs` field on each beach is CC BY-NC. See `data/LICENSE` for the full breakdown of that file.

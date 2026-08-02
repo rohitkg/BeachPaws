@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  var Core = window.BeachPawsCore;
+
   var MONTH_NAMES = [
     "January",
     "February",
@@ -28,22 +30,12 @@
     query: "", // name/district/county/region substring search
   };
 
-  // Case-insensitive; treats backtick / curly quote / apostrophe alike
-  // (EA data has "St Margaret`s Bay").
-  function normalize(s) {
-    return s.toLowerCase().replace(/[`’']/g, "'");
-  }
-
   var beaches = [];
   var map, markerLayer;
   var markersById = {};
   var sandWidget, countyWidget, councilWidget;
 
   /* ---------- date helpers (MM-DD strings, zero-padded) ---------- */
-
-  function pad2(n) {
-    return (n < 10 ? "0" : "") + n;
-  }
 
   // "05-01" -> "1 May"
   function fmtDate(mmdd) {
@@ -74,22 +66,6 @@
     return oldest;
   }
 
-  // Does month m (1-12) overlap the ban window? Lexical compare on MM-DD.
-  function monthOverlapsBan(m, ban) {
-    var monthStart = pad2(m) + "-01";
-    var monthEnd = pad2(m) + "-31";
-    var windows =
-      ban.from <= ban.to
-        ? [[ban.from, ban.to]]
-        : [
-            [ban.from, "12-31"],
-            ["01-01", ban.to],
-          ]; // defensive: year-wrapping window
-    return windows.some(function (w) {
-      return !(monthEnd < w[0] || monthStart > w[1]);
-    });
-  }
-
   /* ---------- filter semantics ---------- */
 
   var SAND_CATEGORIES = [
@@ -98,64 +74,6 @@
     { value: "sand-rock", label: "Sand + rock" },
     { value: "sand-mud", label: "Sand + mud" },
   ];
-
-  function sandCategoryMatch(beach, category) {
-    if (!beach.sandy) return false;
-    switch (category) {
-      case "sand-only":
-        return beach.sediments.length === 1;
-      case "sand-shingle":
-        return beach.sediments.indexOf("shingle") !== -1;
-      case "sand-rock":
-        return beach.sediments.indexOf("rock") !== -1;
-      case "sand-mud":
-        return beach.sediments.indexOf("mud") !== -1;
-    }
-    return false;
-  }
-
-  // sel empty -> no filter; else beach must match ANY selected category.
-  // Beaches with no/other sediment data only show when sel is empty (today's "Any").
-  function sandMatch(beach, sel) {
-    if (!sel.length) return true;
-    return sel.some(function (category) {
-      return sandCategoryMatch(beach, category);
-    });
-  }
-
-  // Result: "yes" (include), "no" (exclude), "hours" (include, restricted hours)
-  function dogMatch(beach) {
-    var dogs = beach.dogs;
-    switch (state.dog) {
-      case "any":
-        return "yes";
-      case "yearround":
-        return dogs.status === "friendly" ? "yes" : "no";
-      case "banned":
-        return dogs.status === "banned" ? "yes" : "no";
-      case "unknown":
-        return dogs.status === "unknown" ? "yes" : "no";
-      case "month":
-        if (dogs.status === "friendly") return "yes";
-        if (dogs.status === "seasonal") {
-          if (!monthOverlapsBan(state.month, dogs.ban)) return "yes";
-          return dogs.ban.daily ? "hours" : "no";
-        }
-        return "no"; // banned or unknown
-    }
-    return "yes";
-  }
-
-  // Matches query against name, district, county or region. Any hit counts.
-  function searchMatch(beach, query) {
-    if (!query) return true;
-    return (
-      normalize(beach.name).indexOf(query) !== -1 ||
-      (beach.district && normalize(beach.district).indexOf(query) !== -1) ||
-      (beach.county && normalize(beach.county).indexOf(query) !== -1) ||
-      (beach.region && normalize(beach.region).indexOf(query) !== -1)
-    );
-  }
 
   // How many filter groups are active. Shown on the phone Filters toggle so
   // a collapsed panel can't silently hide an applied filter. Search is excluded:
@@ -174,16 +92,16 @@
   function applyFilters() {
     var visible = [];
     var hiddenUnknown = 0;
-    var query = normalize(state.query.trim());
+    var query = state.query.trim();
     beaches.forEach(function (beach) {
-      if (!searchMatch(beach, query)) return;
-      if (!sandMatch(beach, state.sand)) return;
+      if (!Core.searchMatch(beach, query)) return;
+      if (!Core.sandMatch(beach, state.sand)) return;
       if (state.monitored === "yes" && beach.eaMonitored !== true) return;
       if (state.monitored === "no" && beach.eaMonitored !== false) return;
       if (state.region !== "any" && beach.region !== state.region) return;
       if (state.counties.length && state.counties.indexOf(beach.county) === -1) return;
       if (state.councils.length && state.councils.indexOf(beach.district) === -1) return;
-      var dm = dogMatch(beach);
+      var dm = Core.dogMatch(beach, state.dog, state.month);
       if (dm === "no") {
         if (state.dog === "month" && beach.dogs.status === "unknown") hiddenUnknown++;
         return;
