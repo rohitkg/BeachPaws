@@ -108,6 +108,9 @@
       }
       visible.push({ beach: beach, restrictedHours: dm === "hours" });
     });
+    visible.sort(function (a, b) {
+      return Core.compareBeachLocation(a.beach, b.beach);
+    });
     renderList(visible, hiddenUnknown);
     renderMarkers(visible);
     var count = document.getElementById("result-count");

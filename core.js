@@ -14,6 +14,38 @@
     return s.toLowerCase().replace(/[`’']/g, "'");
   }
 
+  var locationCollator = new Intl.Collator(undefined, {
+    numeric: true,
+    sensitivity: "base",
+  });
+
+  function locationValue(beach, field) {
+    var value = beach[field];
+    return typeof value === "string" ? value.trim() : "";
+  }
+
+  // Missing location fields sort after known values, so beaches with complete
+  // county/council metadata remain grouped first and incomplete records have a
+  // deterministic position at the end of their comparison level.
+  function compareLocationField(a, b, field) {
+    var av = locationValue(a, field);
+    var bv = locationValue(b, field);
+
+    if (!av && !bv) return 0;
+    if (!av) return 1;
+    if (!bv) return -1;
+    return locationCollator.compare(av, bv);
+  }
+
+  function compareBeachLocation(a, b) {
+    return (
+      compareLocationField(a, b, "county") ||
+      compareLocationField(a, b, "district") ||
+      compareLocationField(a, b, "name") ||
+      locationCollator.compare(String(a.id || ""), String(b.id || ""))
+    );
+  }
+
   function pad2(n) {
     return (n < 10 ? "0" : "") + n;
   }
@@ -98,5 +130,6 @@
     sandCategoryMatch: sandCategoryMatch,
     sandMatch: sandMatch,
     searchMatch: searchMatch,
+    compareBeachLocation: compareBeachLocation,
   };
 });

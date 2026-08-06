@@ -102,3 +102,40 @@ test("search matches name, district, county and region", function () {
   assert.equal(core.searchMatch(beach, ""), true);
   assert.equal(core.searchMatch({ name: "Firestone Bay" }, "kent"), false);
 });
+
+test("beach location comparator sorts county, district, then name case-insensitively", function () {
+  var beaches = [
+    { id: "5", county: "Kent", district: "Dover", name: "samphire hoe" },
+    { id: "3", county: "Cornwall", district: "Cornwall", name: "Porthcurno" },
+    { id: "4", county: "Kent", district: "Thanet", name: "Botany Bay" },
+    { id: "1", county: "kent", district: "dover", name: "Deal Castle" },
+    { id: "2", county: "Kent", district: "Dover", name: "abbotts cliff" },
+  ];
+
+  beaches.sort(core.compareBeachLocation);
+
+  assert.deepEqual(
+    beaches.map(function (beach) {
+      return beach.id;
+    }),
+    ["3", "2", "1", "5", "4"],
+  );
+});
+
+test("beach location comparator sorts missing county or district after known values", function () {
+  var beaches = [
+    { id: "missing-county", district: "Dover", name: "No County" },
+    { id: "known", county: "Kent", district: "Dover", name: "Known Beach" },
+    { id: "missing-district", county: "Kent", name: "No District" },
+    { id: "known-district", county: "Kent", district: "Canterbury", name: "Known District" },
+  ];
+
+  beaches.sort(core.compareBeachLocation);
+
+  assert.deepEqual(
+    beaches.map(function (beach) {
+      return beach.id;
+    }),
+    ["known-district", "known", "missing-district", "missing-county"],
+  );
+});
