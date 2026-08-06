@@ -143,31 +143,37 @@
 
   function badgesFor(beach, restrictedHours) {
     var wrap = document.createElement("div");
-    wrap.className = "badges";
-    if (beach.sandy && beach.sediments.length === 1) {
-      wrap.appendChild(makeBadge("Sand only", "badge-sand"));
-    } else if (beach.sandy) {
-      wrap.appendChild(makeBadge("Mixed sand", "badge-sand"));
-    } else if (beach.sediments.length) {
-      wrap.appendChild(makeBadge("Not sandy", "badge-neutral"));
-    } else {
-      wrap.appendChild(makeBadge("Sediment unknown", "badge-grey"));
-    }
-    if (beach.sediments.length) {
-      wrap.appendChild(makeBadge(beach.sediments.join(" · "), "badge-neutral"));
-    }
-    wrap.appendChild(dogBadge(beach, restrictedHours));
+    wrap.className = "badge-groups";
+
+    var metadata = document.createElement("div");
+    metadata.className = "badges metadata-badges";
+
     if (beach.waterQuality) {
-      wrap.appendChild(
+      metadata.appendChild(
         makeBadge(
           "Water: " + beach.waterQuality.class + " (" + beach.waterQuality.year + ")",
           "badge-wq-" + beach.waterQuality.class,
         ),
       );
+    } else if (beach.eaMonitored === false) {
+      metadata.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
+    } else {
+      metadata.appendChild(makeBadge("Water quality unavailable", "badge-grey"));
     }
-    if (beach.eaMonitored === false) {
-      wrap.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
+
+    if (beach.sediments.length) {
+      metadata.appendChild(makeBadge("Sediment: " + beach.sediments.join(" · "), "badge-neutral"));
+    } else {
+      metadata.appendChild(makeBadge("Sediment unknown", "badge-grey"));
     }
+
+    wrap.appendChild(metadata);
+
+    var access = document.createElement("div");
+    access.className = "badges access-badges";
+    access.appendChild(dogBadge(beach, restrictedHours));
+    wrap.appendChild(access);
+
     return wrap;
   }
 
