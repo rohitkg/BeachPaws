@@ -355,9 +355,8 @@ main {
 
 /* ---------- badges ---------- */
 
-.badge-groups { display: flex; flex-direction: column; gap: 0.35rem; }
+.badge-groups { align-items: baseline; }
 .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.metadata-badges { align-items: baseline; }
 .badge {
   display: inline-block;
   font-size: var(--text-micro);

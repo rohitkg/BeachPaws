@@ -143,36 +143,27 @@
 
   function badgesFor(beach, restrictedHours) {
     var wrap = document.createElement("div");
-    wrap.className = "badge-groups";
-
-    var metadata = document.createElement("div");
-    metadata.className = "badges metadata-badges";
+    wrap.className = "badges badge-groups";
+    wrap.appendChild(dogBadge(beach, restrictedHours));
 
     if (beach.waterQuality) {
-      metadata.appendChild(
+      wrap.appendChild(
         makeBadge(
           "Water: " + beach.waterQuality.class + " (" + beach.waterQuality.year + ")",
           "badge-wq-" + beach.waterQuality.class,
         ),
       );
     } else if (beach.eaMonitored === false) {
-      metadata.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
+      wrap.appendChild(makeBadge("Not an EA bathing water", "badge-grey"));
     } else {
-      metadata.appendChild(makeBadge("Water quality unavailable", "badge-grey"));
+      wrap.appendChild(makeBadge("Water quality unavailable", "badge-grey"));
     }
 
     if (beach.sediments.length) {
-      metadata.appendChild(makeBadge("Sediment: " + beach.sediments.join(" · "), "badge-neutral"));
+      wrap.appendChild(makeBadge("Sediment: " + beach.sediments.join(" · "), "badge-neutral"));
     } else {
-      metadata.appendChild(makeBadge("Sediment unknown", "badge-grey"));
+      wrap.appendChild(makeBadge("Sediment unknown", "badge-grey"));
     }
-
-    wrap.appendChild(metadata);
-
-    var access = document.createElement("div");
-    access.className = "badges access-badges";
-    access.appendChild(dogBadge(beach, restrictedHours));
-    wrap.appendChild(access);
 
     return wrap;
   }
