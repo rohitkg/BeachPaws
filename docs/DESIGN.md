@@ -66,6 +66,10 @@ also `<label>`s and must stay normal case.
 ### Space, shape, elevation
 
 - Spacing: 4px scale, `--s-1` (0.25rem) … `--s-6` (2rem).
+- Control height: `--control-height` (2.4rem) keeps text inputs, multiselect
+  triggers and buttons aligned. Native selects also set an explicit height
+  because WebKit ignores their `min-height`; the phone breakpoint raises them
+  to the same 44px touch target as the other controls.
 - Radii: `--r-control` 8px (inputs, buttons), `--r-card` 12px (cards, map),
   `--r-pill` 999px (badges, region tag).
 - Shadows: `--shadow-card` (resting card), `--shadow-pop` (open popups, card

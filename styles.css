@@ -46,6 +46,7 @@
   --s-6: 2rem;
 
   /* shape + elevation */
+  --control-height: 2.4rem;
   --r-control: 8px;
   --r-card: 12px;
   --r-pill: 999px;
@@ -166,6 +167,7 @@ h1 {
   font-family: var(--font-ui);
   font-size: var(--text-body);
   color: var(--c-ink);
+  min-height: var(--control-height);
   padding: 0.4rem 0.55rem;
   border: 1px solid var(--c-line);
   border-radius: var(--r-control);
@@ -173,12 +175,14 @@ h1 {
 }
 .filter-group select:hover,
 .filter-group input[type="search"]:hover { border-color: var(--c-line-strong); }
+.filter-group select { height: var(--control-height); }
 .filter-group input[type="search"] { width: 11rem; }
 
 .multiselect { position: relative; }
 .multiselect-btn {
   font-family: var(--font-ui);
   font-size: var(--text-body);
+  min-height: var(--control-height);
   padding: 0.4rem 0.55rem;
   border: 1px solid var(--c-line);
   border-radius: var(--r-control);
@@ -244,6 +248,7 @@ h1 {
 .reset-btn {
   font-family: var(--font-ui);
   font-size: var(--text-small);
+  min-height: var(--control-height);
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--c-line);
   border-radius: var(--r-control);
@@ -507,6 +512,7 @@ footer a { color: var(--c-sea); }
   .multiselect-panel { left: 0; right: 0; min-width: 0; max-width: none; }
   .multiselect-option { min-height: 40px; padding-inline: var(--s-2); }
   .multiselect-option input { width: 1.15rem; height: 1.15rem; }
+  .filter-group select { height: 44px; }
 
   #map { height: 42vh; }
 }
