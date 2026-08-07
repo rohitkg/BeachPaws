@@ -42,7 +42,11 @@
     <legend class="visually-hidden">Beach filters</legend>
     <div class="filter-group filter-group-search">
       <label for="search-filter">Search</label>
-      <input type="search" id="search-filter" placeholder="Beach name&hellip;" autocomplete="off">
+      <input type="search" id="search-filter" placeholder="Beach, council, county, region&hellip;"
+             autocomplete="off" aria-describedby="search-filter-hint">
+      <span id="search-filter-hint" class="visually-hidden">
+        Search by beach name, council, county, or region.
+      </span>
     </div>
     <!-- Phone only (CSS hides it wider): collapses the filter panel below. -->
     <button type="button" id="filters-toggle" class="filters-toggle"

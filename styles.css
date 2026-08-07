@@ -176,7 +176,7 @@ h1 {
 .filter-group select:hover,
 .filter-group input[type="search"]:hover { border-color: var(--c-line-strong); }
 .filter-group select { height: var(--control-height); }
-.filter-group input[type="search"] { width: 11rem; }
+.filter-group input[type="search"] { width: 16rem; }
 
 .multiselect { position: relative; }
 .multiselect-btn {
